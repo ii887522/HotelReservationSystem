@@ -55,11 +55,7 @@
 
                 <div class="my-3">
                     <asp:Label class="form-label" runat="server" Text="OTP" />
-
-                    <asp:TextBox
-                        class="col form-control rounded-0 rounded-start"
-                        runat="server"
-                    />
+                    <asp:TextBox class="col form-control" runat="server" />
                 </div>
                     
                 <asp:Button
