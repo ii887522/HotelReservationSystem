@@ -13,5 +13,23 @@ namespace HotelReservationSystem
         {
 
         }
+
+        protected void ddlRecoverBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (ddlRecoverBy.SelectedValue)
+            {
+                case "Email Address":
+                    lblRecoverMethod.Text = "Email address";
+                    txtRecover.TextMode = TextBoxMode.SingleLine;
+                    txtRecover.Text = "";
+                    break;
+
+                case "Mobile Phone":
+                    lblRecoverMethod.Text = "Mobile phone";
+                    txtRecover.TextMode = TextBoxMode.Phone;
+                    txtRecover.Text = "";
+                    break;
+            }
+        }
     }
 }
