@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Assignment.Site1" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Assignment.Site1" %>
 
 <!DOCTYPE html>
 
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg" style="background-color:#63B79E;">
             <div class="container-fluid">
                 <a class="navbar-brand handwritingfont" href="#">
-                    <img src="images/r-logo.png" alt="Home page" width="30" height="30" class="d-inline-block align-text-top">
+                    <img src="images/main-logo.png" alt="Home page" width="30" height="30" class="d-inline-block align-text-top" />
                     RTC Hotel
                 </a>
                 <div class="collapse navbar-collapse" id="navbarText">
@@ -35,7 +35,7 @@
                         <li><a class="nav-link" href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <a class="d-flex nav-link" href="#">Login</a>
+                <asp:HyperLink class="d-flex nav-link" runat="server" NavigateUrl="~/User/Login.aspx">Login</asp:HyperLink>
             </div>
         </nav>
 
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-sm handwritingfont">RTC Hotel</div>
                     <div class="col-sm">
-                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
+                      <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
                             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
                             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                             <DynamicMenuStyle BackColor="#B5C7DE" />
@@ -59,6 +59,7 @@
                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                             <StaticSelectedStyle BackColor="#507CD1" />
                         </asp:Menu>
+                      
                         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
                         <!--<ul class="list-inline text-right">
                             <li class="list-inline-item"><a href="#">Home</a></li>
@@ -68,9 +69,9 @@
                         </ul>-->
                     </div>
                     <div class="col-sm">
-                        <a href="#"><span class="bi-facebook"></span></a>
-                        <a href="#"><span class="bi-twitter"></span></a>
-                        <a href="#" style="color:deeppink;"><span class="bi-instagram"></span></a>
+                        <a href="https://www.facebook.com/"><span class="bi-facebook"></span></a>
+                        <a href="https://twitter.com/"><span class="bi-twitter"></span></a>
+                        <a href="https://www.instagram.com/" style="color:deeppink;"><span class="bi-instagram"></span></a>
                     </div>
                 </div>
                 <div class="row">
