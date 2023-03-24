@@ -53,6 +53,4 @@
       <asp:Button runat="server" class="btn btn-warning w-100 mt-3 mb-4" Text="Reset" />
     </div>
   </div>
-
-  <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
 </asp:Content>

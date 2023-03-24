@@ -50,6 +50,4 @@
       </p>
     </div>
   </div>
-
-  <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
 </asp:Content>

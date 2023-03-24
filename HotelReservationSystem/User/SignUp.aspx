@@ -69,6 +69,4 @@
       <asp:HyperLink runat="server" NavigateUrl="~/User/Login.aspx">Back to login</asp:HyperLink>
     </div>
   </div>
-
-  <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
 </asp:Content>
