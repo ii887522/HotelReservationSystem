@@ -10,7 +10,7 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="px-3">
-    <div style="max-width: 512px;" class="card m-auto">
+    <div style="max-width: 512px;" class="card mx-auto my-4">
       <div class="card-body">
         <h2>
           <i class="bi bi-door-open-fill me-2"></i>
@@ -33,6 +33,7 @@
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
             type="button">
+
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -46,6 +47,7 @@
 
         <p>
           Do not have an account ?
+         
           <asp:HyperLink runat="server" NavigateUrl="~/User/SignUp.aspx">Sign up</asp:HyperLink>
         </p>
       </div>

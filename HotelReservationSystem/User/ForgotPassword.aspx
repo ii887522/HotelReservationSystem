@@ -10,7 +10,7 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="px-3">
-    <div style="max-width: 512px;" class="card m-auto">
+    <div style="max-width: 512px;" class="card mx-auto my-4">
       <div class="card-body">
         <h2>
           <i class="bi bi-pencil-square me-2"></i>

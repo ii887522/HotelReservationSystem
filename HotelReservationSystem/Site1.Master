@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" class="d-flex flex-column min-vh-100" runat="server">
         <nav class="navbar navbar-expand-lg" style="background-color:#63B79E;">
             <div class="container-fluid">
                 <asp:HyperLink class="navbar-brand handwritingfont" runat="server" NavigateUrl="~/Home.aspx">
@@ -40,14 +40,14 @@
             </div>
         </nav>
 
-        <br />
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-        <br />
+        <div class="flex-grow-1">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+        </div>
 
         <!-- Footer -->
         <footer>
-            <div class="container" style="padding-top: 12px; padding-bottom: 12px; background-color: #e4dddd;">
+            <div class="container-fluid" style="padding-top: 12px; padding-bottom: 12px; background-color: #e4dddd;">
                 <div class="row">
                     <div class="col-sm handwritingfont">RTC Hotel</div>
                     <div class="col-sm">
@@ -82,6 +82,7 @@
                 </div>
             </div>
         </footer>
+
         <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
     </form>
 </body>
