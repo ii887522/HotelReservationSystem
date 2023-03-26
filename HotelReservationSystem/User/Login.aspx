@@ -4,7 +4,7 @@
   MasterPageFile="~/Site1.Master"
   AutoEventWireup="true"
   CodeBehind="Login.aspx.cs"
-  Inherits="HotelReservationSystem.Login" %>
+  Inherits="HotelReservationSystem.User.Login" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 

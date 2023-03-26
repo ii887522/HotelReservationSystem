@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelReservationSystem
+namespace HotelReservationSystem.User
 {
 
 

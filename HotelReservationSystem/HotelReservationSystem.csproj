@@ -85,7 +85,9 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Home.aspx" />
+    <Content Include="images\cute.jpg" />
     <Content Include="images\main-logo.png" />
+    <Content Include="images\stone.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -94,6 +96,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="User\ForgotPassword.aspx" />
     <Content Include="User\Login.aspx" />
+    <Content Include="User\Profile.aspx" />
     <Content Include="User\ResetPassword.aspx" />
     <Content Include="User\SignUp.aspx" />
     <Content Include="Web.config" />
@@ -128,6 +131,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
