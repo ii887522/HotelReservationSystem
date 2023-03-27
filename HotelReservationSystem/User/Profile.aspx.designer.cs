@@ -11,7 +11,7 @@ namespace HotelReservationSystem.User
 {
 
 
-    public partial class ResetPassword
+    public partial class Profile
     {
     }
 }

@@ -4,7 +4,7 @@
   MasterPageFile="~/Site1.Master"
   AutoEventWireup="true"
   CodeBehind="ForgotPassword.aspx.cs"
-  Inherits="HotelReservationSystem.ForgotPassword" %>
+  Inherits="HotelReservationSystem.User.ForgotPassword" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 
