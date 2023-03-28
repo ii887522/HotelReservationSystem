@@ -18,15 +18,15 @@
         </h2>
 
         <div class="mt-4 mb-3">
-          <asp:Label class="form-label" runat="server" Text="Username" />
-          <asp:TextBox class="form-control" runat="server" />
+          <asp:Label CssClass="form-label" runat="server" Text="Username" />
+          <asp:TextBox CssClass="form-control" runat="server" />
         </div>
 
-        <asp:Label class="form-label" runat="server" Text="Password" />
+        <asp:Label CssClass="form-label" runat="server" Text="Password" />
 
         <div class="row gx-0">
           <asp:TextBox
-            class="col form-control rounded-0 rounded-start"
+            CssClass="col form-control rounded-0 rounded-start"
             runat="server"
             TextMode="Password" />
 
@@ -38,12 +38,12 @@
           </button>
         </div>
 
-        <asp:CheckBox class="d-block my-3" runat="server" Text="&nbsp;&nbsp;&nbsp;Remember Me" />
+        <asp:CheckBox CssClass="d-block my-3" runat="server" Text="&nbsp;&nbsp;&nbsp;Remember Me" />
 
         <asp:Button
           ID="btnLogin"
           runat="server"
-          class="btn btn-primary w-100 mt-3 mb-4"
+          CssClass="btn btn-primary w-100 mt-3 mb-4"
           Text="Login"
           PostBackUrl="~/Home.aspx"
           OnClick="btnLogin_Click" />

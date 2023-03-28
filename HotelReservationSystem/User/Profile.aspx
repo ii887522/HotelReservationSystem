@@ -15,7 +15,7 @@
         <img src="/images/cute.jpg" alt="Profile Picture" width="96" />
       </div>
 
-      <asp:LinkButton class="float-end" runat="server" PostBackUrl="~/User/EditProfile.aspx">
+      <asp:LinkButton CssClass="float-end" runat="server" PostBackUrl="~/User/EditProfile.aspx">
         <i class="bi bi-pencil-square text-danger"></i>
       </asp:LinkButton>
 
@@ -190,7 +190,7 @@
           </td>
 
           <td style="width: 0">
-            <asp:Button class="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
           </td>
         </tr>
 
@@ -206,7 +206,7 @@
           </td>
 
           <td>
-            <asp:Button class="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
           </td>
         </tr>
 
@@ -222,7 +222,7 @@
           </td>
 
           <td>
-            <asp:Button class="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
           </td>
         </tr>
       </tbody>

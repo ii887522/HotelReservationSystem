@@ -13,16 +13,16 @@
     <div style="max-width: 512px;" class="card mx-auto my-4">
       <div class="card-body">
         <h2>
-          <i class="bi bi-arrow-counterclockwise"></i>
+          <i class="bi bi-arrow-counterclockwise me-2"></i>
           Reset Password
         </h2>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Password" />
+          <asp:Label CssClass="form-label" runat="server" Text="Password" />
 
           <div class="row gx-0">
             <asp:TextBox
-              class="col form-control rounded-0 rounded-start"
+              CssClass="col form-control rounded-0 rounded-start"
               runat="server"
               TextMode="Password" />
 
@@ -35,11 +35,11 @@
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Retype password" />
+          <asp:Label CssClass="form-label" runat="server" Text="Retype password" />
 
           <div class="row gx-0">
             <asp:TextBox
-              class="col form-control rounded-0 rounded-start"
+              CssClass="col form-control rounded-0 rounded-start"
               runat="server"
               TextMode="Password" />
 
@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <asp:Button runat="server" class="btn btn-warning w-100 mt-3 mb-4" Text="Reset" />
+        <asp:Button runat="server" CssClass="btn btn-warning w-100 mt-3 mb-4" Text="Reset" />
       </div>
     </div>
   </div>

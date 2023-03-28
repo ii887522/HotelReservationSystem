@@ -13,8 +13,8 @@
     <div style="max-width: 512px;" class="card mx-auto my-4">
       <div class="card-body">
         <h2>
-          <i class="bi bi-pen-fill"></i>
-          Change Mobile Phone Number
+          <i class="bi bi-pen-fill me-2"></i>
+          Change Mobile Phone
         </h2>
 
         <div class="my-3">
@@ -44,10 +44,10 @@
           class="btn btn-primary w-100 mt-3 mb-4"
           runat="server"
           Text="Update"
-          PostBackUrl="~/User/ResetPassword.aspx" />
+          PostBackUrl="~/User/EditProfile.aspx" />
 
         <asp:HyperLink runat="server" NavigateUrl="~/User/EditProfile.aspx">
-          Back to edit your profile
+          Back to edit user profile page
         </asp:HyperLink>
       </div>
     </div>

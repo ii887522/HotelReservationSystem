@@ -18,16 +18,16 @@
         </h2>
 
         <div class="mt-4">
-          <asp:Label class="form-label" runat="server" Text="Username" />
-          <asp:TextBox class="form-control" runat="server" />
+          <asp:Label CssClass="form-label" runat="server" Text="Username" />
+          <asp:TextBox CssClass="form-control" runat="server" />
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Password" />
+          <asp:Label CssClass="form-label" runat="server" Text="Password" />
 
           <div class="row gx-0">
             <asp:TextBox
-              class="col form-control rounded-0 rounded-start"
+              CssClass="col form-control rounded-0 rounded-start"
               runat="server"
               TextMode="Password" />
 
@@ -40,11 +40,11 @@
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Retype password" />
+          <asp:Label CssClass="form-label" runat="server" Text="Retype password" />
 
           <div class="row gx-0">
             <asp:TextBox
-              class="col form-control rounded-0 rounded-start"
+              CssClass="col form-control rounded-0 rounded-start"
               runat="server"
               TextMode="Password" />
 
@@ -57,18 +57,18 @@
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Email address" />
-          <asp:TextBox class="form-control" runat="server" TextMode="Email" />
+          <asp:Label CssClass="form-label" runat="server" Text="Email address" />
+          <asp:TextBox CssClass="form-control" runat="server" TextMode="Email" />
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="Mobile phone" />
-          <asp:TextBox class="form-control" runat="server" TextMode="Phone" />
+          <asp:Label CssClass="form-label" runat="server" Text="Mobile phone" />
+          <asp:TextBox CssClass="form-control" runat="server" TextMode="Phone" />
         </div>
 
         <asp:Button
           runat="server"
-          class="btn btn-primary w-100 mt-3 mb-4"
+          CssClass="btn btn-primary w-100 mt-3 mb-4"
           Text="Sign Up"
           PostBackUrl="~/User/EditProfile.aspx" />
 
