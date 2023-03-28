@@ -66,7 +66,12 @@
           <asp:TextBox class="form-control" runat="server" TextMode="Phone" />
         </div>
 
-        <asp:Button runat="server" class="btn btn-primary w-100 mt-3 mb-4" Text="Sign Up" />
+        <asp:Button
+          runat="server"
+          class="btn btn-primary w-100 mt-3 mb-4"
+          Text="Sign Up"
+          PostBackUrl="~/User/EditProfile.aspx" />
+
         <asp:HyperLink runat="server" NavigateUrl="~/User/Login.aspx">Back to login</asp:HyperLink>
       </div>
     </div>

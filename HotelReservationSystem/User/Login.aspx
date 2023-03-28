@@ -39,7 +39,14 @@
         </div>
 
         <asp:CheckBox class="d-block my-3" runat="server" Text="&nbsp;&nbsp;&nbsp;Remember Me" />
-        <asp:Button ID="btnLogin" runat="server" class="btn btn-primary w-100 mt-3 mb-4" Text="Login" OnClick="btnLogin_Click" />
+
+        <asp:Button
+          ID="btnLogin"
+          runat="server"
+          class="btn btn-primary w-100 mt-3 mb-4"
+          Text="Login"
+          PostBackUrl="~/Home.aspx"
+          OnClick="btnLogin_Click" />
 
         <div class="text-center mb-3">
           <asp:HyperLink runat="server" NavigateUrl="~/User/ForgotPassword.aspx">Forgot password</asp:HyperLink>

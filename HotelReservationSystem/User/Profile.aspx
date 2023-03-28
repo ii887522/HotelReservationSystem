@@ -15,7 +15,7 @@
         <img src="/images/cute.jpg" alt="Profile Picture" width="96" />
       </div>
 
-      <asp:LinkButton class="float-end" runat="server">
+      <asp:LinkButton class="float-end" runat="server" PostBackUrl="~/User/EditProfile.aspx">
         <i class="bi bi-pencil-square text-danger"></i>
       </asp:LinkButton>
 
