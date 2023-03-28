@@ -18,11 +18,11 @@
         </h2>
 
         <div class="mt-4">
-          <asp:Label class="form-label" runat="server" Text="Recover by" />
+          <asp:Label CssClass="form-label" runat="server" Text="Recover by" />
 
           <asp:DropDownList
+            CssClass="form-select"
             ID="ddlRecoverBy"
-            class="form-select"
             runat="server"
             AutoPostBack="true"
             OnSelectedIndexChanged="ddlRecoverBy_SelectedIndexChanged">
@@ -32,26 +32,26 @@
         </div>
 
         <div class="my-3">
-          <asp:Label ID="lblRecoverMethod" class="form-label" runat="server" Text="Email address" />
+          <asp:Label ID="lblRecoverMethod" CssClass="form-label" runat="server" Text="Email address" />
 
           <div class="row gx-0">
             <asp:TextBox
               ID="txtRecover"
-              class="col form-control rounded-0 rounded-start"
+              CssClass="col form-control rounded-0 rounded-start"
               runat="server"
               TextMode="Email" />
 
-            <asp:Button class="col-auto btn btn-info rounded-0 rounded-end" runat="server" Text="Send" />
+            <asp:Button CssClass="col-auto btn btn-info rounded-0 rounded-end" runat="server" Text="Send" />
           </div>
         </div>
 
         <div class="my-3">
-          <asp:Label class="form-label" runat="server" Text="OTP" />
-          <asp:TextBox class="col form-control" runat="server" />
+          <asp:Label CssClass="form-label" runat="server" Text="OTP" />
+          <asp:TextBox CssClass="col form-control" runat="server" />
         </div>
 
         <asp:Button
-          class="btn btn-primary w-100 mt-3 mb-4"
+          CssClass="btn btn-primary w-100 mt-3 mb-4"
           runat="server"
           Text="Recover"
           PostBackUrl="~/User/ResetPassword.aspx" />
