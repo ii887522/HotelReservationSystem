@@ -1,5 +1,5 @@
 <%@ Page
-  Title="Activate Your Account | RTC Hotel"
+  Title="Activate Account | RTC Hotel"
   Language="C#"
   MasterPageFile="~/Site1.Master"
   AutoEventWireup="true"
@@ -18,7 +18,7 @@
         </h2>
 
         <div class="my-3">
-          <asp:Label CssClass="form-label" runat="server" Text="Your Email Address" />
+          <asp:Label CssClass="form-label" runat="server" Text="Your email address" />
 
           <div class="row gx-0">
             <asp:TextBox
@@ -36,7 +36,30 @@
         </div>
 
         <div class="my-3">
-          <asp:Label CssClass="form-label" runat="server" Text="OTP" />
+          <asp:Label CssClass="form-label" runat="server" Text="Email OTP" />
+          <asp:TextBox CssClass="col form-control" runat="server" />
+        </div>
+
+        <div class="my-3">
+          <asp:Label CssClass="form-label" runat="server" Text="Your mobile phone" />
+
+          <div class="row gx-0">
+            <asp:TextBox
+              runat="server"
+              TextMode="Phone"
+              Enabled="false"
+              CssClass="col form-control rounded-0 rounded-start"
+              Text="+60104221157" />
+
+            <asp:Button
+              CssClass="col-auto btn btn-info rounded-0 rounded-end"
+              runat="server"
+              Text="Send" />
+          </div>
+        </div>
+
+        <div class="my-3">
+          <asp:Label CssClass="form-label" runat="server" Text="Phone OTP" />
           <asp:TextBox CssClass="col form-control" runat="server" />
         </div>
 

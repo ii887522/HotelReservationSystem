@@ -16,7 +16,7 @@
       </div>
 
       <asp:LinkButton CssClass="float-end" runat="server" PostBackUrl="~/User/EditProfile.aspx">
-        <i class="bi bi-pencil-square text-danger"></i>
+        <h4 class="bi bi-pencil-square text-danger"></h4>
       </asp:LinkButton>
 
       <b class="me-2">Chimin_012</b>
