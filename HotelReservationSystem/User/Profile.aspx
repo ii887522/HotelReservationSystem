@@ -26,6 +26,10 @@
         <span>STONE</span>
       </div>
 
+      <div>
+        <span class="badge text-bg-success rounded-pill">ACTIVE</span>
+      </div>
+
       <div class="text-secondary">ID: 123456</div>
       <div style="color: cornsilk">RTC Coins: 123</div>
     </div>
@@ -37,8 +41,8 @@
     <div class="carousel-inner">
       <div class="carousel-item active px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -47,8 +51,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -57,8 +61,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -71,8 +75,8 @@
 
       <div class="carousel-item px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -81,8 +85,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -91,8 +95,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -105,8 +109,8 @@
 
       <div class="carousel-item px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -115,8 +119,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -125,8 +129,8 @@
             </div>
           </div>
 
-          <div class="card text-center">
-            <img src="..." class="card-img-top" alt="..." />
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -180,7 +184,7 @@
       <tbody>
         <tr>
           <td scope="row" style="width: 0">
-            <img src="/images/cute.jpg" alt="Profile Picture" width="64" />
+            <img src="/images/room.jpg" alt="Profile Picture" width="64" />
           </td>
 
           <td>
@@ -196,7 +200,7 @@
 
         <tr>
           <td scope="row">
-            <img src="/images/cute.jpg" alt="Profile Picture" width="64" />
+            <img src="/images/room.jpg" alt="Profile Picture" width="64" />
           </td>
 
           <td>
@@ -212,7 +216,7 @@
 
         <tr>
           <td scope="row">
-            <img src="/images/cute.jpg" alt="Profile Picture" width="64" />
+            <img src="/images/room.jpg" alt="Profile Picture" width="64" />
           </td>
 
           <td>

@@ -91,6 +91,7 @@
     <Content Include="Home.aspx" />
     <Content Include="images\cute.jpg" />
     <Content Include="images\main-logo.png" />
+    <Content Include="images\room.jpg" />
     <Content Include="images\stone.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
