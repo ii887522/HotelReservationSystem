@@ -82,7 +82,7 @@
   </style>
 </head>
 <body style="background-color: #EDEDEE">
-  <!-- This is for admin page, for reference find "ViewCustomerRecords.jsp" in Harven/Backend folder (Diploma Y2S3 - GUI) -->
+  <!-- This is for admin page -->
     <form id="form1" runat="server">
       <div class="sidebar w3-sidebar" >
             <!-- insert FULL logo here -->
