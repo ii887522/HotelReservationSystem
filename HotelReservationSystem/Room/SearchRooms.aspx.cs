@@ -16,7 +16,7 @@ namespace Assignment
       // Perform the search based on the criteria and return a list of hotels
       List<Hotel> hotels = new List<Hotel>();
 
-      SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["RoomConnectionString"].ConnectionString);
+      SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LocalSqlServer"].ConnectionString);
       con.Open();
 
       SqlCommand cmd = new SqlCommand("SELECT * FROM Room " +
