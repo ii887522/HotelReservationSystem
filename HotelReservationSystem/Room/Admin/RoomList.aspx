@@ -1,6 +1,5 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="RoomList.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.RoomList" %>
+<%@ Page Title="Room List | RTC Hotel" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="RoomList.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.RoomList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <title>Room List | RTC Hotel</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <h2>View Rooms</h2>
