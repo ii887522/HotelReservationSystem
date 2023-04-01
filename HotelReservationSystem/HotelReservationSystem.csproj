@@ -147,6 +147,7 @@
     <Compile Include="Room\Admin\RoomList.aspx.designer.cs">
       <DependentUpon>RoomList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Room\Hotel.cs" />
     <Compile Include="Room\SearchRooms.aspx.cs">
       <DependentUpon>SearchRooms.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
