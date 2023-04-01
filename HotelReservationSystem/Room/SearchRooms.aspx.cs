@@ -41,8 +41,8 @@ namespace Assignment
 
         // Calculate Price:
         // (PricePerAdult * numAdults) + (PricePerChildren * numChildren)
-        hotel.Price = double.Parse(((double.Parse(dr["PricePerAdult"].ToString()) * numAdults)
-          + (double.Parse(dr["PricePerChildren"].ToString()) * numChildren)).ToString());
+        hotel.Price = double.Parse(dr["PricePerAdult"].ToString()) * numAdults +
+          double.Parse(dr["PricePerChildren"].ToString()) * numChildren;
         hotels.Add(hotel);
       }
 

@@ -1,8 +1,7 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchRooms.aspx.cs" Inherits="Assignment.SearchRooms" %>
+<%@ Page Title="Search Rooms | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchRooms.aspx.cs" Inherits="Assignment.SearchRooms" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <!-- bigger font size -->
   <div class="text-center" style="background: linear-gradient(to bottom, #00ffff 0%, #99ccff 100%); padding-top:50px; padding-bottom:50px;">
     <p class="monofont">Search Your Desired Room</p><br />
     <asp:TextBox ID="LocationText" runat="server" placeholder="Location"></asp:TextBox>
