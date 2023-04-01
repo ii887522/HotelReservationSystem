@@ -11,7 +11,7 @@ namespace HotelReservationSystem.Room.Admin
 {
 
 
-    public partial class RoomListeu
+    public partial class RoomList
     {
 
         /// <summary>

@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="AddRoom.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.AddRoomeu" %>
+<%@ Page Title="Add Room | RTC Hotel" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="AddRoom.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.AddRoom" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

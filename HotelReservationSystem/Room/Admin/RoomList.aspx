@@ -1,8 +1,8 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="RoomList.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.RoomListeu" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.Master" AutoEventWireup="true" CodeBehind="RoomList.aspx.cs" Inherits="HotelReservationSystem.Room.Admin.RoomList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  <title>Room List | RTC Hotel</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- exactly RoomList.aspx but with admin master page -->
   <h2>View Rooms</h2>
         <div>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="RoomId" DataSourceID="RoomDataSource">

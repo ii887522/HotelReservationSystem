@@ -11,7 +11,7 @@ namespace HotelReservationSystem.Room.Admin
 {
 
 
-    public partial class AddRoomeu
+    public partial class AddRoom
     {
 
         /// <summary>
