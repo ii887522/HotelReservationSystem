@@ -58,12 +58,12 @@
 
         <div class="my-3">
           <asp:Label CssClass="form-label" runat="server" Text="Email address" />
-          <asp:TextBox CssClass="form-control" runat="server" TextMode="Email" />
+          <asp:TextBox CssClass="form-control" runat="server" TextMode="Email" placeholder="abc@example.com" />
         </div>
 
         <div class="my-3">
           <asp:Label CssClass="form-label" runat="server" Text="Mobile phone" />
-          <asp:TextBox CssClass="form-control" runat="server" TextMode="Phone" />
+          <asp:TextBox CssClass="form-control" runat="server" TextMode="Phone" placeholder="+60123456789" />
         </div>
 
         <asp:Button

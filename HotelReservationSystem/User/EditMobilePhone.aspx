@@ -19,16 +19,15 @@
 
         <div class="my-3">
           <asp:Label
-            ID="lblRecoverMethod"
             class="form-label"
             runat="server"
             Text="New Mobile Phone Number" />
 
           <div class="row gx-0">
             <asp:TextBox
-              ID="txtRecover"
               class="col form-control rounded-0 rounded-start"
               runat="server"
+              placeholder="+60123456789"
               TextMode="Phone" />
 
             <asp:Button class="col-auto btn btn-info rounded-0 rounded-end" runat="server" Text="Send" />
