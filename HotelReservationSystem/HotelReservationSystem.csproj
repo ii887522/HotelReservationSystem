@@ -72,6 +72,7 @@
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
     </Content>
     <Content Include="Booking\Booking.aspx" />
+    <Content Include="Booking\ConfirmBooking.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -90,9 +91,16 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Home.aspx" />
     <Content Include="images\cute.jpg" />
+    <Content Include="images\deluxeRoom.jpg" />
+    <Content Include="images\doubleDoubleRoom.jpg" />
+    <Content Include="images\doubleRoom.jpg" />
+    <Content Include="images\hollywoodTwinRoom.jpg" />
     <Content Include="images\main-logo.png" />
     <Content Include="images\room.jpg" />
+    <Content Include="images\singleRoom.jpg" />
     <Content Include="images\stone.png" />
+    <Content Include="images\tripleRoom.jpg" />
+    <Content Include="images\twinRoom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -118,6 +126,13 @@
     </Compile>
     <Compile Include="Booking\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Booking\ConfirmBooking.aspx.cs">
+      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking\ConfirmBooking.aspx.designer.cs">
+      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
