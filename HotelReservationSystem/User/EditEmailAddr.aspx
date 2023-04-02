@@ -24,6 +24,7 @@
             <asp:TextBox
               CssClass="col form-control rounded-0 rounded-start"
               runat="server"
+              placeholder="abc@example.com"
               TextMode="Email" />
 
             <asp:Button CssClass="col-auto btn btn-info rounded-0 rounded-end" runat="server" Text="Send" />

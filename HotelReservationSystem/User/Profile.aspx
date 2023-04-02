@@ -70,6 +70,16 @@
               <a href="#" class="btn btn-primary">Read more</a>
             </div>
           </div>
+
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -104,6 +114,16 @@
               <a href="#" class="btn btn-primary">Read more</a>
             </div>
           </div>
+
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -125,6 +145,16 @@
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+
+          <div class="card text-center p-2">
+            <img src="/images/room.jpg" class="card-img-top" alt="Room" />
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               <a href="#" class="btn btn-primary">Read more</a>
             </div>
           </div>

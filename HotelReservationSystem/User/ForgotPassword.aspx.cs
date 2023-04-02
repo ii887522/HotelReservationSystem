@@ -7,29 +7,26 @@ using System.Web.UI.WebControls;
 
 namespace HotelReservationSystem.User
 {
-    public partial class ForgotPassword : System.Web.UI.Page
+  public partial class ForgotPassword : System.Web.UI.Page
+  {
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+      switch (ddlRecoverBy.SelectedValue)
+      {
+        case "Email Address":
+          lblRecoverMethod.Text = "Email address";
+          txtRecover.TextMode = TextBoxMode.SingleLine;
+          txtRecover.Text = "";
+          txtRecover.Attributes["placeholder"] = "abc@example.com";
+          break;
 
-        }
-
-        protected void ddlRecoverBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (ddlRecoverBy.SelectedValue)
-            {
-                case "Email Address":
-                    lblRecoverMethod.Text = "Email address";
-                    txtRecover.TextMode = TextBoxMode.SingleLine;
-                    txtRecover.Text = "";
-                    break;
-
-                case "Mobile Phone":
-                    lblRecoverMethod.Text = "Mobile phone";
-                    txtRecover.TextMode = TextBoxMode.Phone;
-                    txtRecover.Text = "";
-                    break;
-            }
-        }
+        case "Mobile Phone":
+          lblRecoverMethod.Text = "Mobile phone";
+          txtRecover.TextMode = TextBoxMode.Phone;
+          txtRecover.Text = "";
+          txtRecover.Attributes["placeholder"] = "+60123456789";
+          break;
+      }
     }
+  }
 }

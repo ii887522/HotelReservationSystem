@@ -24,22 +24,20 @@
             CssClass="form-select"
             ID="ddlRecoverBy"
             runat="server"
-            AutoPostBack="true"
-            OnSelectedIndexChanged="ddlRecoverBy_SelectedIndexChanged">
+            AutoPostBack="true">
             <asp:ListItem>Email Address</asp:ListItem>
             <asp:ListItem>Mobile Phone</asp:ListItem>
           </asp:DropDownList>
         </div>
 
         <div class="my-3">
-          <asp:Label ID="lblRecoverMethod" CssClass="form-label" runat="server" Text="Email address" />
+          <asp:Label ID="lblRecoverMethod" CssClass="form-label" runat="server" />
 
           <div class="row gx-0">
             <asp:TextBox
               ID="txtRecover"
               CssClass="col form-control rounded-0 rounded-start"
-              runat="server"
-              TextMode="Email" />
+              runat="server" />
 
             <asp:Button CssClass="col-auto btn btn-info rounded-0 rounded-end" runat="server" Text="Send" />
           </div>
