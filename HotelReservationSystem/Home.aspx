@@ -20,34 +20,37 @@
     <h2>Our Featured Rooms</h2>
     <div class="card-group">
         <div class="card text-center">
-            <img src="..." class="card-img-top" alt="...">
+          <asp:Image runat="server" ImageUrl="~/images/deluxeRoom.jpg" Height="250" />
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Deluxe Room</h5>
+                <p class="card-text">It is a more spacious room with upscale furnishings and amenities.
+                  It typically includes a king-size or queen-size bed, a sitting area, and additional amenities such as a mini-fridge, mini safe, and high-end toiletries.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
             </div>
         </div>
         <div class="card text-center">
-            <img src="..." class="card-img-top" alt="...">
+            <asp:Image runat="server" ImageUrl="~/images/singleRoom.jpg" Height="250"/>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Single Room</h5>
+                <p class="card-text">Ideal for solo travelers, the Single Room is a private space equipped with a single bed and essential amenities such as a writing desk, chair, and closet.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
             </div>
         </div>
         <div class="card text-center">
-            <img src="..." class="card-img-top" alt="...">
+            <asp:Image runat="server" ImageUrl="~/images/twinRoom.jpg" Height="250"/>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <h5 class="card-title">Twin Room</h5>
+                <p class="card-text">Perfect for two friends or colleagues traveling together, the Twin Room comes with two single beds
+                  and essential amenities such as a workspace, chair, and closet.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
             </div>
         </div>
         <div class="card text-center">
-            <img src="..." class="card-img-top" alt="...">
+            <asp:Image runat="server" ImageUrl="~/images/tripleRoom.jpg" Height="250"/>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <h5 class="card-title">Triple Room</h5>
+                <p class="card-text">A practical and versatile room ideal for small groups or families, featuring either three single beds
+                  or a combination of a double bed and a single bed, along with essential amenities such as a work desk, makeup desk, chair, and wardrobe.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
             </div>
         </div>
