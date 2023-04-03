@@ -85,6 +85,10 @@
   <!-- This is for admin page -->
     <form id="form1" runat="server">
       <div class="sidebar w3-sidebar" >
+        <asp:HyperLink class="navbar-brand handwritingfont" style="font-size: 25px" runat="server" NavigateUrl="~/Home.aspx">
+          <img src="/images/main-logo.png" alt="Home page" width="30" height="30" class="d-inline-block align-text-top" />
+                  RTC Hotel
+        </asp:HyperLink>
             <!-- insert FULL logo here -->
             <!--<img src="../picture/harvenLogo.jfif" alt="HARVEN" width="100%" height="200px">-->
             

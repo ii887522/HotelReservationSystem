@@ -89,8 +89,7 @@
                   <asp:TextBox CssClass="form-control" placeholder="Additional Information" runat="server" ID="txtSpecialRequest"/>
               </div>
               <div>
-                  <asp:Button CssClass="btn btn-dark" ID="btnBookRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" OnClientClick="javascript:alert('You are now will be directed to the booking confirmation page')" PostBackUrl="~/Booking/ConfirmBooking.aspx" />
-              &nbsp;&nbsp;&nbsp;&nbsp;
+                  <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" OnClientClick="javascript:alert('You are now will be directed to the booking confirmation page')" PostBackUrl="~/Booking/ConfirmBooking.aspx" />
                   <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" />
               </div>
         </div>
