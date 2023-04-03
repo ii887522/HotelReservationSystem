@@ -3,8 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <h2>View Rooms</h2>
-        <div>
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="RoomId" DataSourceID="RoomDataSource">
+    <a href="AddRoom.aspx">Add Room</a>
+
+        <div style="margin:2%;">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="RoomId" DataSourceID="RoomDataSource" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+                <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                     <asp:BoundField DataField="PricePerChildren" HeaderText="PricePerChildren" SortExpression="PricePerChildren" />
@@ -17,6 +20,15 @@
                     <asp:BoundField DataField="RoomId" HeaderText="RoomId" SortExpression="RoomId" ReadOnly="True" />
                     <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
                 </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
             <asp:SqlDataSource ID="RoomDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:LocalSqlServer %>" SelectCommand="SELECT [PricePerChildren], [Image], [PricePerAdult], [MaxChildren], [MaxAdults], [NoRooms], [RoomLocation], [RoomName], [RoomId] FROM [Room]" DeleteCommand="DELETE FROM [Room] WHERE [RoomId] = @RoomId" InsertCommand="INSERT INTO [Room] ([PricePerChildren], [Image], [PricePerAdult], [MaxChildren], [MaxAdults], [NoRooms], [RoomLocation], [RoomName], [RoomId]) VALUES (@PricePerChildren, @Image, @PricePerAdult, @MaxChildren, @MaxAdults, @NoRooms, @RoomLocation, @RoomName, @RoomId)" UpdateCommand="UPDATE [Room] SET [PricePerChildren] = @PricePerChildren, [Image] = @Image, [PricePerAdult] = @PricePerAdult, [MaxChildren] = @MaxChildren, [MaxAdults] = @MaxAdults, [NoRooms] = @NoRooms, [RoomLocation] = @RoomLocation, [RoomName] = @RoomName WHERE [RoomId] = @RoomId">
                 <DeleteParameters>

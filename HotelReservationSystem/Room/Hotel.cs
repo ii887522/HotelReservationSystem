@@ -8,6 +8,7 @@ namespace Assignment
         public int NoRooms { get; set; }
         public int MaxAdults { get; set; }
         public int MaxChildren { get; set; }
-        public double Price { get; set; }
+        public double PricePerAdult { get; set; }
+        public double PricePerChildren { get; set; }
     }
 }
