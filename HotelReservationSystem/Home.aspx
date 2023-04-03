@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Get Started part-->
     <div class="text-center" style="background-color:#82DFC3; padding-top:50px; padding-bottom:50px;">
-        <p class="monofont">test</p>
+        <p class="monofont fw-bold">test</p>
         <br />
         <button type="button" class="btn btn-success">Get Started</button>
     </div>

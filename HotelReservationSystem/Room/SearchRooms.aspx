@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="text-center" style="background: linear-gradient(to bottom, #00ffff 0%, #99ccff 100%); padding-top:50px; padding-bottom:50px;">
-    <p class="monofont" style="font-weight:bold;">Search Your Desired Room</p><br />
+    <p class="monofont fw-bold">Search Your Desired Room</p><br />
     <asp:TextBox ID="LocationText" runat="server" placeholder="Location"></asp:TextBox>
     <asp:TextBox ID="NoRoomsText" runat="server" placeholder="Number of rooms"></asp:TextBox>
     <asp:TextBox ID="NoAdultsText" runat="server" placeholder="Number of adults"></asp:TextBox>
