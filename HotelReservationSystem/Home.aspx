@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Assignment.Home" %>
+<%@ Page Title="RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Assignment.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Get Started part-->
-    <div class="text-center" style="background-color:#82DFC3; padding-top:100px; padding-bottom:100px;">
-        <p class="monofont" style="font-weight:bold;">test</p>
+    <div class="text-center" style="background-color:#82DFC3; padding-top:50px; padding-bottom:50px;">
+        <p class="monofont">test</p>
         <br />
         <button type="button" class="btn btn-success">Get Started</button>
     </div>
@@ -13,7 +13,7 @@
         <div class="col-4"><!--image--></div>
         <div class="col-8" style="background-color:rgb(232, 233, 215); padding-top:50px; padding-bottom:50px;">
             <h2>Lorem ipsum dolar sit amet</h2>
-            <p>Lorem ipsum dolar sit amet, hahahahahaha</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </div>
     <!-- Our featured rooms -->
