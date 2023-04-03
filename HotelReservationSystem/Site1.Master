@@ -75,13 +75,14 @@
                 <% else %>
                 <% { %>
                      <asp:LinkButton
-                       CssClass="btn btn-success p-2 shadow-sm"
+                       CssClass="btn btn-success p-2"
                        runat="server"
                        PostBackUrl="~/User/Profile.aspx"
                        CausesValidation="false"
                      >
                        <img class="me-2" src="/images/cute.jpg" alt="Profile Picture" width="32" />
-                       <span class="fw-bold">Chimin_012</span>
+                       <div class="fw-bold">Chimin_012</div>
+                       <span>123456</span>
                      </asp:LinkButton>
                 <% } %>
             </div>

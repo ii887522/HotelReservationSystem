@@ -283,7 +283,6 @@
     <Content Include="AdminPage.Master" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
-    <None Include="User\packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
