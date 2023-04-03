@@ -23,13 +23,13 @@ namespace HotelReservationSystem.Booking
         TextBox EndDate = PreviousPage.FindControl("txtBkEndDate") as TextBox;
         TextBox SpecialRequest = PreviousPage.FindControl("txtSpecialRequest") as TextBox;
 
-        //lblDetail.Text = "Start Booking Date: " + StartDate.Text + "</br>" +
-        //  "End Booking Date: " + EndDate.Text + "</br>" +
-        //  "Name: " + Name.Text + "</br>" + "Email: " + Email.Text + "</br>" +
-        //  "Room Type: " + RoomType.SelectedItem.Value + "</br>" +
-        //  "Number of Guest: " + NumOfGuest.SelectedItem.Value + "</br>" +
-        //  "Number of Children: " + NumOfChildren.SelectedItem.Value + "</br>" +
-        //  "Special Request: " + SpecialRequest.Text;
+        lblDetail.Text = "Start Booking Date: " + StartDate.Text + "</br>" +
+          "End Booking Date: " + EndDate.Text + "</br>" +
+          "Name: " + Name.Text + "</br>" + "Email: " + Email.Text + "</br>" +
+          "Room Type: " + RoomType.SelectedItem.Value + "</br>" +
+          "Number of Guest: " + NumOfGuest.SelectedItem.Value + "</br>" +
+          "Number of Children: " + NumOfChildren.SelectedItem.Value + "</br>" +
+          "Special Request: " + SpecialRequest.Text;
       }
     }
   }

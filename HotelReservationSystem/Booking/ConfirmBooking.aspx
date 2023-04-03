@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="p-3">
+  <div class="p-3">
     <div style="max-width: 512px;" class="card m-auto">
         <div class="card-body">
               <h2 style="text-align:center;font-family:cursive">RTC HOTEL Booking Confirmation</h2>
