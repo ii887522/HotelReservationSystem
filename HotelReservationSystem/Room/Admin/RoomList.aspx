@@ -19,6 +19,11 @@
                     <asp:BoundField DataField="RoomName" HeaderText="RoomName" SortExpression="RoomName" />
                     <asp:BoundField DataField="RoomId" HeaderText="RoomId" SortExpression="RoomId" ReadOnly="True" />
                     <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
+                  <asp:TemplateField HeaderText="Image">
+                  <ItemTemplate>
+                    <img src='<%# "../" + Eval("Image") %>' height="150" width="150" />
+                  </ItemTemplate>
+                </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                 <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

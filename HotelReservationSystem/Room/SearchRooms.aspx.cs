@@ -38,8 +38,9 @@ namespace Assignment
         hotel.NoRooms = int.Parse(dr["NoRooms"].ToString());
         hotel.MaxAdults = int.Parse(dr["MaxAdults"].ToString());
         hotel.MaxChildren = int.Parse(dr["MaxChildren"].ToString());
-                hotel.PricePerAdult = double.Parse(dr["PricePerAdult"].ToString());
-                hotel.PricePerChildren = double.Parse(dr["PricePerChildren"].ToString());
+        hotel.PricePerAdult = double.Parse(dr["PricePerAdult"].ToString());
+        hotel.PricePerChildren = double.Parse(dr["PricePerChildren"].ToString());
+        hotel.Image = dr["Image"].ToString();
         // Calculate Price:
         // (PricePerAdult * numAdults) + (PricePerChildren * numChildren)
         hotels.Add(hotel);
