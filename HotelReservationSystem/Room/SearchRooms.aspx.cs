@@ -38,11 +38,10 @@ namespace Assignment
         hotel.NoRooms = int.Parse(dr["NoRooms"].ToString());
         hotel.MaxAdults = int.Parse(dr["MaxAdults"].ToString());
         hotel.MaxChildren = int.Parse(dr["MaxChildren"].ToString());
-
+                hotel.PricePerAdult = double.Parse(dr["PricePerAdult"].ToString());
+                hotel.PricePerChildren = double.Parse(dr["PricePerChildren"].ToString());
         // Calculate Price:
         // (PricePerAdult * numAdults) + (PricePerChildren * numChildren)
-        hotel.Price = double.Parse(dr["PricePerAdult"].ToString()) * numAdults +
-          double.Parse(dr["PricePerChildren"].ToString()) * numChildren;
         hotels.Add(hotel);
       }
 
@@ -75,29 +74,14 @@ namespace Assignment
       // Call a method to search for hotels based on the criteria
       List<Hotel> hotels = SearchHotels(location, numRooms, numAdults, numChildren);
 
-      // Bind the search results to a GridView control
+      // Bind the search results
       SearchResult.DataSource = hotels;
       SearchResult.DataBind();
-
-      // How to calculate total price and display it as a data field in ASP.NET GridView?
-    }
-
-    protected void SearchResult_RowDataBound(object sender, GridViewRowEventArgs e)
-    {
-      if (e.Row.RowType == DataControlRowType.DataRow)
-      {
-        Label lblPrice = (Label)e.Row.FindControl("lblPrice");
-        double Price = double.Parse(DataBinder.Eval(e.Row.DataItem, "Price").ToString());
-
-        // calculate total price
-        // hotels.Price;
-        //lblTotalPrice.Text = totalPrice.ToString();
-      }
     }
 
     protected void SearchResult_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+            btnBookRoom.Visible = true;
     }
   }
 }
