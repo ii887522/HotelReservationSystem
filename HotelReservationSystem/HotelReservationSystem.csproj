@@ -98,6 +98,7 @@
     <Content Include="images\singleRoom.jpg" />
     <Content Include="images\stone.png" />
     <Content Include="Room\Admin\AddRoom.aspx" />
+    <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
     <Content Include="Room\SearchRooms.aspx" />
     <Content Include="images\tripleRoom.jpg" />
@@ -162,6 +163,13 @@
     </Compile>
     <Compile Include="Room\Admin\AddRoom.aspx.designer.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\Admin\RoomAddSuccess.aspx.cs">
+      <DependentUpon>RoomAddSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\Admin\RoomAddSuccess.aspx.designer.cs">
+      <DependentUpon>RoomAddSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Room\Admin\RoomList.aspx.cs">
       <DependentUpon>RoomList.aspx</DependentUpon>
