@@ -93,6 +93,7 @@
     <Content Include="images\doubleDoubleRoom.jpg" />
     <Content Include="images\doubleRoom.jpg" />
     <Content Include="images\hollywoodTwinRoom.jpg" />
+    <Content Include="images\hotel.jpg" />
     <Content Include="images\main-logo.png" />
     <Content Include="images\room.jpg" />
     <Content Include="images\singleRoom.jpg" />
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="Booking\ConfirmBooking.aspx.designer.cs">
       <DependentUpon>ConfirmBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form.master.cs">
+      <DependentUpon>Form.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form.master.designer.cs">
+      <DependentUpon>Form.master</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -281,6 +289,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="AdminPage.Master" />
+    <Content Include="Form.master" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">

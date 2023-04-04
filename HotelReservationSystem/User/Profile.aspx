@@ -9,7 +9,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="card rounded-0 border-0" style="background: linear-gradient(#7FB2FF, #BF98D8)">
+  <div class="card rounded-0 border-0 shadow-sm" style="background: linear-gradient(#7FB2FF, #BF98D8)">
     <div class="card-body">
       <div class="float-start pe-3">
         <img src="/images/cute.jpg" alt="Profile Picture" width="96" />
@@ -41,43 +41,43 @@
     <div class="carousel-inner">
       <div class="carousel-item active px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
         </div>
@@ -85,43 +85,43 @@
 
       <div class="carousel-item px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
         </div>
@@ -129,43 +129,43 @@
 
       <div class="carousel-item px-5">
         <div class="card-group px-3 pb-3">
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
 
-          <div class="card text-center p-2">
+          <div class="card text-center p-2 shadow-sm">
             <img src="/images/room.jpg" class="card-img-top" alt="Room" />
 
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="#" class="btn btn-primary shadow-sm">Read more</a>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
           </td>
 
           <td style="width: 0">
-            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary shadow-sm" runat="server" Text="Show More" />
           </td>
         </tr>
 
@@ -240,7 +240,7 @@
           </td>
 
           <td>
-            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary shadow-sm" runat="server" Text="Show More" />
           </td>
         </tr>
 
@@ -256,7 +256,7 @@
           </td>
 
           <td>
-            <asp:Button CssClass="btn btn-primary" runat="server" Text="Show More" />
+            <asp:Button CssClass="btn btn-primary shadow-sm" runat="server" Text="Show More" />
           </td>
         </tr>
       </tbody>
