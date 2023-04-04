@@ -15,11 +15,11 @@
               <h2 style="text-align:center;font-family:cursive">Booking Details</h2>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Name:" />
-                  <asp:TextBox CssClass="form-control" runat="server" ID="txtName" />
+                  <asp:TextBox ID="txtName" CssClass="form-control" runat="server" />
               </div>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Email:" />
-                  <asp:TextBox CssClass="form-control" placeholder="name123@gmail.com" runat="server" ID="txtEmail" />
+                  <asp:TextBox ID="txtEmail" CssClass="form-control" placeholder="name123@gmail.com" runat="server"/>
               </div>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Room Type:" />
