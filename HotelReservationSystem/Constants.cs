@@ -1,6 +1,6 @@
 namespace HotelReservationSystem
 {
-  public class Constants
+  public sealed class Constants
   {
     // Database names
     public const string LocalSqlServer = "LocalSqlServer";
