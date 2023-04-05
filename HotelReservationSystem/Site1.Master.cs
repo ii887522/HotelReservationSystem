@@ -16,9 +16,9 @@ namespace Assignment
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-      var remember_me_cookie = new HttpCookie("remember_me", "1");
-      remember_me_cookie.Expires = DateTime.Now.AddDays(-1);
-      Response.SetCookie(remember_me_cookie);
+      var rememberMeCookie = new HttpCookie("remember_me", "1");
+      rememberMeCookie.Expires = DateTime.Now.AddDays(-1);
+      Response.SetCookie(rememberMeCookie);
       Session["IsLoggedIn"] = false;
       Response.Redirect(HttpContext.Current.Request.Url.AbsolutePath);
     }

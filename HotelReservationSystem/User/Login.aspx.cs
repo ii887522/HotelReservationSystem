@@ -25,9 +25,9 @@ namespace HotelReservationSystem.User
         return;
       }
 
-      var remember_me_cookie = new HttpCookie("remember_me", "1");
-      remember_me_cookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
-      Response.SetCookie(remember_me_cookie);
+      var rememberMeCookie = new HttpCookie("remember_me", "1");
+      rememberMeCookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
+      Response.SetCookie(rememberMeCookie);
       Session["IsLoggedIn"] = true;
       FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
     }
