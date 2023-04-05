@@ -109,6 +109,9 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Sql\dbo.History.sql" />
+    <Content Include="Sql\dbo.Order.sql" />
+    <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
     <Content Include="User\EditEmailAddr.aspx" />
     <Content Include="User\EditMobilePhone.aspx" />
@@ -157,7 +160,7 @@
     <Compile Include="Form.master.designer.cs">
       <DependentUpon>Form.master</DependentUpon>
     </Compile>
-	<Compile Include="Constants.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -300,6 +303,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
