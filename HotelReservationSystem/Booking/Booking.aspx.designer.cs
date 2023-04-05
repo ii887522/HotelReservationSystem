@@ -105,13 +105,13 @@ namespace HotelReservationSystem.Booking
         protected global::System.Web.UI.WebControls.TextBox txtSpecialRequest;
 
         /// <summary>
-        /// btnBookRoom control.
+        /// btnBookaRoom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBookRoom;
+        protected global::System.Web.UI.WebControls.Button btnBookaRoom;
 
         /// <summary>
         /// btnCancel control.

@@ -95,48 +95,41 @@
             <ul class="nav nav-pills flex-column" >
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#home"/></svg>--%>
-                        Order
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#home"/></svg>--%>Customer
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>
-                        Sale
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>Room
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="BookingReport.aspx" class="nav-link">
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>Booking
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#table"/></svg>--%>
-                        Product
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#grid"/></svg>--%>Sales
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#grid"/></svg>--%>
-                        Rating & Comment
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>etc
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
-                        Customer
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>Staff
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
-                        Staff
-                    </a>
-                </li>
-                <li class="nav-item dropdown" style="padding-left: 20px;">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown">Reports 
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" style="padding-left: 20px;">
-                        <li><a class="dropdown-item" href="#"> Sales Report </a></li>
-                        <li><a class="dropdown-item" href="#"> Product Report </a></li>
                         <li><a class="dropdown-item" href="#"> Customer Report </a></li>
+                        <li><a class="dropdown-item" href="#"> Sales Report </a></li>
                     </ul>
                 </li>
             </ul>
@@ -145,7 +138,7 @@
             <nav class="TopNavigation" style="margin-left:200px">
                 <table>
                     <tr>
-                        <td><p style="padding-left: 600px;padding-top: 15px;">testing</td>
+                        <td><p style="padding-left: 600px;padding-top: 15px;">RTC Hotel Admin Management</td>
                         <td><img src="~/images/people-outline.svg" alt="userIcon.png" style="margin-left: 20px; width: 30px ; height: 30px" ></td>
                     </tr>
                 </table>

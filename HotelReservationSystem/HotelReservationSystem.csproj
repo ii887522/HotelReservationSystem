@@ -69,10 +69,8 @@
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
     </Content>
-    <Content Include="Booking\Admin_Booking\BookingReport.aspx" />
+    <Content Include="Booking\Admin\BookingReport.aspx" />
     <Content Include="Booking\Booking.aspx" />
-    <Content Include="Booking\ConfirmBooking.aspx" />
-    <Content Include="ContactUs.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -90,17 +88,24 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Home.aspx" />
+    <Content Include="icons\cancel.png" />
+    <Content Include="icons\delete.png" />
+    <Content Include="icons\edit.png" />
+    <Content Include="icons\select.png" />
+    <Content Include="icons\update.png" />
     <Content Include="images\cute.jpg" />
     <Content Include="images\deluxeRoom.jpg" />
     <Content Include="images\doubleDoubleRoom.jpg" />
     <Content Include="images\doubleRoom.jpg" />
     <Content Include="images\ghkl.png" />
     <Content Include="images\hollywoodTwinRoom.jpg" />
+    <Content Include="images\hotel.jpg" />
     <Content Include="images\main-logo.png" />
     <Content Include="images\room.jpg" />
     <Content Include="images\singleRoom.jpg" />
     <Content Include="images\slh.png" />
     <Content Include="images\stone.png" />
+    <Content Include="Room Detail\RoomDetails.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
@@ -113,6 +118,9 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Sql\dbo.History.sql" />
+    <Content Include="Sql\dbo.Order.sql" />
+    <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
     <Content Include="User\EditEmailAddr.aspx" />
     <Content Include="User\EditMobilePhone.aspx" />
@@ -140,11 +148,11 @@
     <Compile Include="AdminPage.Master.designer.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="Booking\Admin_Booking\BookingReport.aspx.cs">
+    <Compile Include="Booking\Admin\BookingReport.aspx.cs">
       <DependentUpon>BookingReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Booking\Admin_Booking\BookingReport.aspx.designer.cs">
+    <Compile Include="Booking\Admin\BookingReport.aspx.designer.cs">
       <DependentUpon>BookingReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Booking\Booking.aspx.cs">
@@ -168,12 +176,27 @@
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Form.master.cs">
+      <DependentUpon>Form.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form.master.designer.cs">
+      <DependentUpon>Form.master</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room Detail\RoomDetails.aspx.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room Detail\RoomDetails.aspx.designer.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Room\Admin\AddRoom.aspx.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
@@ -307,9 +330,9 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="AdminPage.Master" />
+    <Content Include="Form.master" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
-    <None Include="User\packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -317,6 +340,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
