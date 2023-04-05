@@ -1,14 +1,14 @@
 <%@ Page
   Title="Booking | RTC Hotel"
   Language="C#"
-  MasterPageFile="~/Site1.Master"
+  MasterPageFile="~/Form.master"
   AutoEventWireup="true"
   CodeBehind="Booking.aspx.cs"
   Inherits="HotelReservationSystem.Booking.Booking" %>
     
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ContentPlaceHolderID="main" runat="server">
     <div class="p-3">
     <div style="max-width: 512px;" class="card m-auto">
         <div class="card-body">
@@ -90,7 +90,7 @@
               </div>
               <div>
                 <%--<a href="#" CssClass="btn btn-dark me-md-3" id="btnBookRoom" style="color: #C0C0C0";BackColor="#999999";>Book a Room</a>--%>
-                <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookaRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" PostBackUrl="#payment" />
+                <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookaRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" PostBackUrl="&lt;!-- TODO: something --&gt;" />
                   <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" PostBackUrl="~/Home.aspx" />
               </div>
         </div>
