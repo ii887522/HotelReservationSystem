@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
 
-    <style>
+    <style type="text/css">
         .handwritingfont {
             font-family: "Lucida Handwriting", "Courier New", monospace;
         }
+
         .monofont {
             font-family: "Courier New", Courier, monospace;
         }
@@ -74,31 +75,50 @@
                 <% } %>
                 <% else %>
                 <% { %>
-                     <asp:LinkButton
-                       CssClass="btn btn-success p-2 shadow-sm"
-                       runat="server"
-                       PostBackUrl="~/User/Profile.aspx"
-                       CausesValidation="false"
-                     >
-                       <img class="me-2" src="/images/cute.jpg" alt="Profile Picture" width="32" />
-                       <span class="fw-bold">Chimin_012</span>
-                     </asp:LinkButton>
+                     <div class="dropdown">
+                       <button
+                         type="button"
+                         class="btn btn-success p-2 shadow-sm dropdown-toggle"
+                         aria-expanded="false"
+                         data-bs-toggle="dropdown"
+                       >
+                         <img class="me-2" src="/images/cute.jpg" alt="Profile Picture" width="32" />
+                         <span class="fw-bold">Chimin_012</span>
+                       </button>
+
+                       <div class="dropdown-menu">
+                         <asp:HyperLink
+                           CssClass="dropdown-item"
+                           runat="server"
+                           NavigateUrl="~/User/Profile.aspx"
+                           Text="Profile"
+                         />
+
+                         <asp:Button
+                           ID="btnLogout"
+                           CssClass="dropdown-item"
+                           runat="server"
+                           Text="Logout"
+                           OnClick="btnLogout_Click"
+                         />
+                       </div>
+                     </div>
                 <% } %>
             </div>
         </nav>
 
-        <div class="flex-grow-1">
+        <div class="d-flex flex-column flex-grow-1">
           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
           </asp:ContentPlaceHolder>
         </div>
 
         <!-- Footer -->
         <footer>
-            <div class="container-fluid" style="padding-top: 12px; padding-bottom: 12px; background-color: #e4dddd;">
+            <div class="container-fluid shadow" style="padding-top: 12px; padding-bottom: 12px; background-color: #e4dddd;">
                 <div class="row">
                     <div class="col-sm handwritingfont">RTC Hotel</div>
                     <div class="col-sm">
-                      <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
+                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
                             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
                             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                             <DynamicMenuStyle BackColor="#B5C7DE" />
@@ -130,7 +150,7 @@
             </div>
         </footer>
 
-        <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
     </form>
 </body>
 </html>

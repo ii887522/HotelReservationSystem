@@ -1,0 +1,23 @@
+<%@ Master
+  Language="C#"
+  MasterPageFile="~/Site1.Master"
+  AutoEventWireup="true"
+  CodeBehind="Form.master.cs"
+  Inherits="HotelReservationSystem.Form" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  <style type="text/css">
+    .main {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/hotel.jpg);
+      background-position: center center;
+      background-size: cover;
+    }
+  </style>
+  <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  <div class="main flex-grow-1 px-3">
+    <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+  </div>
+</asp:Content>
