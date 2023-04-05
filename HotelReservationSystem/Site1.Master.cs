@@ -1,3 +1,4 @@
+using HotelReservationSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,10 @@ namespace Assignment
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-      var rememberMeCookie = new HttpCookie("remember_me", "1");
+      var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
       rememberMeCookie.Expires = DateTime.Now.AddDays(-1);
       Response.SetCookie(rememberMeCookie);
-      Session["IsLoggedIn"] = false;
+      Session[Constants.IsLoggedIn] = false;
       Response.Redirect(HttpContext.Current.Request.Url.AbsolutePath);
     }
   }

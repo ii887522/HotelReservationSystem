@@ -25,10 +25,10 @@ namespace HotelReservationSystem.User
         return;
       }
 
-      var rememberMeCookie = new HttpCookie("remember_me", "1");
+      var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
       rememberMeCookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
       Response.SetCookie(rememberMeCookie);
-      Session["IsLoggedIn"] = true;
+      Session[Constants.IsLoggedIn] = true;
       FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
     }
   }

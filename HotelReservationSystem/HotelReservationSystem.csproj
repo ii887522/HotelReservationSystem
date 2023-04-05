@@ -157,6 +157,7 @@
     <Compile Include="Form.master.designer.cs">
       <DependentUpon>Form.master</DependentUpon>
     </Compile>
+	<Compile Include="Constants.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
