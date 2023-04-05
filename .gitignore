@@ -359,5 +359,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/HotelReservationSystem/App_Data/HotelReservationSystem.mdf
-/HotelReservationSystem/App_Data/HotelReservationSystem_log.ldf

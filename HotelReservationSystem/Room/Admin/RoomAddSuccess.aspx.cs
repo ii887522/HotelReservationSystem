@@ -35,21 +35,12 @@ namespace HotelReservationSystem.Room.Admin
         priceChildren = cookie.Values["PricePerChildren"];
         image = cookie.Values["Image"];
       }
-      /*
-      TextBox RoomName = PreviousPage.FindControl("RoomNameTxt") as TextBox;
-      TextBox RoomLocation = PreviousPage.FindControl("RoomLocationTxt") as TextBox;
-      TextBox NoRooms = PreviousPage.FindControl("NoRoomsTxt") as TextBox;
-      TextBox MaxAdults = PreviousPage.FindControl("NoAdultsTxt") as TextBox;
-      TextBox MaxChildren = PreviousPage.FindControl("NoChildrenTxt") as TextBox;
-      TextBox PriceAdult = PreviousPage.FindControl("PriceAdult") as TextBox;
-      TextBox PriceChildren = PreviousPage.FindControl("PriceChildren") as TextBox;
-      */
 
       Content.Text = "Room ID: " + roomId + "<br/>Room Name: " + roomName + "<br/>Room Location: " +
         roomLocation + "<br/>No. Rooms: " + noRooms + "<br/>Max. number of Adults: " +
         maxAdults + "<br/>Max. number of Children" + maxChildren +
         "<br/>Price per Adult: " + priceAdult + "<br/>Price per Children: " + priceChildren
-        + "<br/>Image: " + image;
+        + "<br/>Image:<br/>" + "<img src=../../images/" + image + " height=150 width=150 />";
     }
   }
 }

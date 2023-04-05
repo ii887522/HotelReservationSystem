@@ -20,7 +20,7 @@
                     <asp:BoundField DataField="RoomId" HeaderText="RoomId" SortExpression="RoomId" ReadOnly="True" />
                   <asp:TemplateField HeaderText="Image">
                   <ItemTemplate>
-                    <img src='<%# "../" + Eval("Image") %>' />
+                    <img src='<%# "../" + Eval("Image") %>' height="150" width="150" />
                   </ItemTemplate>
                 </asp:TemplateField>
                 </Columns>
