@@ -1,38 +1,11 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="RoomDetails.aspx.cs" Inherits="HotelReservationSystem.Room_Detail.RoomDetails" %>
+<%@ Page
+  Title="Room Details | RTC Hotel"
+  Language="C#"
+  MasterPageFile="~/Site1.Master"
+  AutoEventWireup="true"
+  CodeBehind="RoomDetails.aspx.cs"
+  Inherits="HotelReservationSystem.Room_Detail.RoomDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            --bs-card-spacer-y: 1rem;
-            --bs-card-spacer-x: 1rem;
-            --bs-card-title-spacer-y: 0.5rem;
-            --bs-card-border-width: 1px;
-            --bs-card-border-color: var(--bs-border-color-translucent);
-            --bs-card-border-radius: 0.375rem;
-            --bs-card-box-shadow: ;
-            --bs-card-inner-border-radius: calc(0.375rem - 1px);
-            --bs-card-cap-padding-y: 0.5rem;
-            --bs-card-cap-padding-x: 1rem;
-            --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
-            --bs-card-cap-color: ;
-            --bs-card-height: ;
-            --bs-card-color: ;
-            --bs-card-bg: #fff;
-            --bs-card-img-overlay-padding: 1rem;
-            --bs-card-group-margin: 0.75rem;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-            height: var(--bs-card-height);
-            word-wrap: break-word;
-            background-color: var(--bs-card-bg);
-            background-clip: border-box;
-            border-radius: var(--bs-card-border-radius);
-            width: 25rem;
-            left: 0px;
-            top: 0px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="text-center" style="background-color:#ebf6f9;padding-top:15px; padding-bottom:15px;">
@@ -50,7 +23,7 @@
           <li class="list-group-item">One single bed</li>
           <li class="list-group-item">Writing desk</li>
           <li class="list-group-item">Closet</li>
-          <li class="list-group-item">Only RM 199.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 199.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowSingleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -69,7 +42,7 @@
           <li class="list-group-item">Armoire</li>
           <li class="list-group-item">Large TV</li>
 <%--          <li class="list-group-item">Dresser</li>--%>
-          <li class="list-group-item">Only RM 299.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 299.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -87,7 +60,7 @@
           <li class="list-group-item">Three single beds/One double bed & a single bed</li>
           <li class="list-group-item">Makeup desk</li>
           <li class="list-group-item">Wardrobe</li>
-          <li class="list-group-item">Only RM 399.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 399.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowTripleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -105,7 +78,7 @@
           <li class="list-group-item">Two beds</li>
           <li class="list-group-item">Seating area</li>
           <li class="list-group-item">Toilet with bathtub</li>
-          <li class="list-group-item">Only RM 388.00</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 388.00</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowDeluxeRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -124,7 +97,7 @@
           <li class="list-group-item">A cozy couch</li>
           <li class="list-group-item">Big closet</li>
 <%--          <li class="list-group-item">Safe</li>--%>
-          <li class="list-group-item">Only RM 499.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 499.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowDoubleDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -142,7 +115,7 @@
           <li class="list-group-item">Two single beds</li>
           <li class="list-group-item">Workspace</li>
           <li class="list-group-item">Wardrobe</li>
-          <li class="list-group-item">Only RM 259.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 259.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
@@ -161,7 +134,7 @@
           <li class="list-group-item">Two single beds</li>
           <li class="list-group-item">Air cleaner/humidifier</li>
           <li class="list-group-item">Hot water dispenser</li>
-          <li class="list-group-item">Only RM 329.99</li>
+          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 329.99</li>
         </ul>
         <div class="card-body">
           <asp:HyperLink ID="bookNowHollywoodTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
