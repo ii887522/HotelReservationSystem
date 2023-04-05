@@ -37,7 +37,7 @@
                           <asp:HyperLink
                             runat="server"
                             CssClass="nav-link"
-                            NavigateUrl="#"
+                            NavigateUrl="AboutUs.aspx"
                             Text="About Us" />
                         </li>
 
@@ -53,7 +53,7 @@
                           <asp:HyperLink
                             runat="server"
                             CssClass="nav-link"
-                            NavigateUrl="#"
+                            NavigateUrl="ContactUs.aspx"
                             Text="Contact Us" />
                         </li>
                     </ul>

@@ -10,5 +10,6 @@ namespace Assignment
         public int MaxChildren { get; set; }
         public double PricePerAdult { get; set; }
         public double PricePerChildren { get; set; }
+        public string Image { set; get; }
     }
 }
