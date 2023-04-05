@@ -16,7 +16,7 @@
       <span>Edit User Profile</span>
     </h2>
 
-    <div class="card m-3">
+    <div class="card m-3 shadow-sm">
       <div class="card-body">
         <h4>Account Status</h4>
 
@@ -32,23 +32,23 @@
         <h4>Edit Profile Picture</h4>
 
         <asp:Image CssClass="mb-3" runat="server" ImageUrl="~/images/cute.jpg" Width="256" />
-        <asp:FileUpload CssClass="form-control mb-5 w-auto" runat="server" />
+        <asp:FileUpload CssClass="form-control mb-5 w-auto shadow-sm" runat="server" />
 
         <h4>Edit User Details</h4>
 
         <div class="my-4">
           <asp:Label CssClass="form-label me-3" runat="server" Text="Username" />
           <asp:TextBox CssClass="form-control d-inline me-3 align-middle" runat="server" Width="256" Text="Chimin_012" />
-          <asp:Button CssClass="btn btn-primary" runat="server" Text="Save" />
+          <asp:Button CssClass="btn btn-primary shadow-sm" runat="server" Text="Save" />
         </div>
 
-        <asp:Button CssClass="btn btn-primary d-block mb-3" runat="server" Text="Change Password" PostBackUrl="~/User/EditPassword.aspx" />
-        <asp:Button CssClass="btn btn-primary d-block mb-3" runat="server" Text="Change Email Address" PostBackUrl="~/User/EditEmailAddr.aspx" />
-        <asp:Button CssClass="btn btn-primary d-block mb-5" runat="server" Text="Change Mobile Phone" PostBackUrl="~/User/EditMobilePhone.aspx" />
+        <asp:Button CssClass="btn btn-primary d-block mb-3 shadow-sm" runat="server" Text="Change Password" PostBackUrl="~/User/EditPassword.aspx" />
+        <asp:Button CssClass="btn btn-primary d-block mb-3 shadow-sm" runat="server" Text="Change Email Address" PostBackUrl="~/User/EditEmailAddr.aspx" />
+        <asp:Button CssClass="btn btn-primary d-block mb-5 shadow-sm" runat="server" Text="Change Mobile Phone" PostBackUrl="~/User/EditMobilePhone.aspx" />
 
         <h4>Clear Browsing History</h4>
         <p>It will delete all your records of previously viewed rooms in your user profile. THIS ACTION CANNOT BE UNDONE.</p>
-        <asp:Button CssClass="btn btn-danger mb-4" runat="server" Text="Clear" />
+        <asp:Button CssClass="btn btn-danger mb-4 shadow-sm" runat="server" Text="Clear" />
       </div>
     </div>
   </div>

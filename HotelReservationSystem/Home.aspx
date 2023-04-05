@@ -17,12 +17,21 @@
     <div class="text-center" style="background-color:#82DFC3; padding-top:50px; padding-bottom:50px;">
         <p class="monofont fw-bold h2">Welcome to RTC Hotel</p>
         <br />
-        <button type="button" class="btn btn-success shadow-sm">Get Started</button>
+
+        <asp:LinkButton
+          CssClass="btn btn-success shadow-sm"
+          runat="server"
+          PostBackUrl="~/Room/SearchRooms.aspx"
+        >
+          Get Started
+        </asp:LinkButton>
     </div>
     <!-- image with lorem ipsum-->
-    <div class="row">
-        <div class="col-4"><!--image--></div>
-        <div class="col-8" style="background-color:rgb(232, 233, 215); padding-top:50px; padding-bottom:50px;">
+    <div class="row gx-0">
+        <div class="col-4">
+          <!--image-->
+        </div>
+        <div class="col-8 px-2" style="background-color:rgb(232, 233, 215); padding-top:50px; padding-bottom:50px;">
             <h2>Lorem ipsum dolar sit amet</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
