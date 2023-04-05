@@ -15,11 +15,11 @@
               <h2 style="text-align:center;font-family:cursive">Booking Details</h2>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Name:" />
-                  <asp:TextBox CssClass="form-control" runat="server" ID="txtName" />
+                  <asp:TextBox ID="txtName" CssClass="form-control" runat="server" />
               </div>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Email:" />
-                  <asp:TextBox CssClass="form-control" placeholder="name123@gmail.com" runat="server" ID="txtEmail" />
+                  <asp:TextBox ID="txtEmail" CssClass="form-control" placeholder="name123@gmail.com" runat="server"/>
               </div>
               <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Room Type:" />
@@ -89,8 +89,9 @@
                   <asp:TextBox CssClass="form-control" placeholder="Additional Information" runat="server" ID="txtSpecialRequest"/>
               </div>
               <div>
-                  <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" OnClientClick="javascript:alert('You are now will be directed to the booking confirmation page')" PostBackUrl="~/Booking/ConfirmBooking.aspx" />
-                  <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" />
+                <%--<a href="#" CssClass="btn btn-dark me-md-3" id="btnBookRoom" style="color: #C0C0C0";BackColor="#999999";>Book a Room</a>--%>
+                <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookaRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" PostBackUrl="#payment" />
+                  <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" PostBackUrl="~/Home.aspx" />
               </div>
         </div>
     </div>
