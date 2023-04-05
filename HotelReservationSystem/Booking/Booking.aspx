@@ -1,14 +1,14 @@
 <%@ Page
   Title="Booking | RTC Hotel"
   Language="C#"
-  MasterPageFile="~/Site1.Master"
+  MasterPageFile="~/Form.master"
   AutoEventWireup="true"
   CodeBehind="Booking.aspx.cs"
   Inherits="HotelReservationSystem.Booking.Booking" %>
     
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 
-<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ContentPlaceHolderID="main" runat="server">
     <div class="p-3">
     <div style="max-width: 512px;" class="card m-auto">
         <div class="card-body">
