@@ -7,29 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelReservationSystem.User
+namespace HotelReservationSystem.User.Admin
 {
 
 
-    public partial class ResetPassword
+    public partial class UserList
     {
 
         /// <summary>
-        /// txtPassword control.
+        /// UserSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
-        /// <summary>
-        /// txtRetypePassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRetypePassword;
+        protected global::System.Web.UI.WebControls.SqlDataSource UserSource;
     }
 }

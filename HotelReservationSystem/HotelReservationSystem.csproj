@@ -122,6 +122,7 @@
     <Content Include="Sql\dbo.Order.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
+    <Content Include="User\Admin\UserList.aspx" />
     <Content Include="User\EditEmailAddr.aspx" />
     <Content Include="User\EditMobilePhone.aspx" />
     <Content Include="User\EditPassword.aspx" />
@@ -198,6 +199,7 @@
     <Compile Include="Room\RoomDetails.aspx.designer.cs">
       <DependentUpon>RoomDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Room\Admin\AddRoom.aspx.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -240,6 +242,13 @@
     </Compile>
     <Compile Include="User\ActivateAccount.aspx.designer.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Admin\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Admin\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\EditEmailAddr.aspx.cs">
       <DependentUpon>EditEmailAddr.aspx</DependentUpon>
@@ -341,9 +350,7 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -376,7 +383,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

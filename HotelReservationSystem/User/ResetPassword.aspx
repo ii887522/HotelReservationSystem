@@ -21,13 +21,18 @@
 
         <div class="row gx-0">
           <asp:TextBox
+            ID="txtPassword"
             CssClass="col form-control rounded-0 rounded-start"
             runat="server"
-            TextMode="Password" />
+            TextMode="Password"
+            ClientIDMode="Static"
+          />
 
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
-            type="button">
+            type="button"
+            onclick='togglePasswordVisibility("txtPassword")'
+          >
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -38,13 +43,18 @@
 
         <div class="row gx-0">
           <asp:TextBox
+            ID="txtRetypePassword"
             CssClass="col form-control rounded-0 rounded-start"
             runat="server"
-            TextMode="Password" />
+            TextMode="Password"
+            ClientIDMode="Static"
+          />
 
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
-            type="button">
+            type="button"
+            onclick='togglePasswordVisibility("txtRetypePassword")'
+          >
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -53,4 +63,16 @@
       <asp:Button runat="server" CssClass="btn btn-warning w-100 mt-3 mb-4 shadow-sm" Text="Reset" />
     </div>
   </div>
+
+  <script type="text/javascript">
+    function togglePasswordVisibility(txtId) {
+      const txtPassword = document.getElementById(txtId)
+
+      if (txtPassword.getAttribute("type") == "password") {
+        txtPassword.setAttribute("type", "text")
+      } else {
+        txtPassword.setAttribute("type", "password")
+      }
+    }
+  </script>
 </asp:Content>

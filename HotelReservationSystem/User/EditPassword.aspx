@@ -21,13 +21,18 @@
 
         <div class="row gx-0">
           <asp:TextBox
+            ID="txtCurrentPassword"
             CssClass="col form-control rounded-0 rounded-start"
             runat="server"
-            TextMode="Password" />
+            TextMode="Password"
+            ClientIDMode="Static"
+          />
 
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
-            type="button">
+            type="button"
+            onclick='togglePasswordVisibility("txtCurrentPassword")'
+          >
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -38,13 +43,18 @@
 
         <div class="row gx-0">
           <asp:TextBox
+            ID="txtNewPassword"
             CssClass="col form-control rounded-0 rounded-start"
             runat="server"
-            TextMode="Password" />
+            TextMode="Password"
+            ClientIDMode="Static"
+          />
 
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
-            type="button">
+            type="button"
+            onclick='togglePasswordVisibility("txtNewPassword")'
+          >
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -55,13 +65,18 @@
 
         <div class="row gx-0">
           <asp:TextBox
+            ID="txtRetypeNewPassword"
             CssClass="col form-control rounded-0 rounded-start"
             runat="server"
-            TextMode="Password" />
+            TextMode="Password"
+            ClientIDMode="Static"
+          />
 
           <button
             class="col-auto btn btn-danger rounded-0 rounded-end"
-            type="button">
+            type="button"
+            onclick='togglePasswordVisibility("txtRetypeNewPassword")'
+          >
             <i class="bi bi-eye"></i>
           </button>
         </div>
@@ -78,4 +93,16 @@
       </asp:HyperLink>
     </div>
   </div>
+
+  <script type="text/javascript">
+    function togglePasswordVisibility(txtId) {
+      const txtPassword = document.getElementById(txtId)
+
+      if (txtPassword.getAttribute("type") == "password") {
+        txtPassword.setAttribute("type", "text")
+      } else {
+        txtPassword.setAttribute("type", "password")
+      }
+    }
+  </script>
 </asp:Content>

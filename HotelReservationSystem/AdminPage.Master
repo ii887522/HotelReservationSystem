@@ -123,6 +123,12 @@
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>Staff
                     </a>
                 </li>
+              <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
+                        User
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown">Reports 
                         <b class="caret"></b>
