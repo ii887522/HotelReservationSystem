@@ -92,6 +92,7 @@
     <Content Include="icons\edit.png" />
     <Content Include="icons\select.png" />
     <Content Include="icons\update.png" />
+    <Content Include="images\check.png" />
     <Content Include="images\cute.jpg" />
     <Content Include="images\deluxeRoom.jpg" />
     <Content Include="images\doubleDoubleRoom.jpg" />
@@ -102,6 +103,9 @@
     <Content Include="images\room.jpg" />
     <Content Include="images\singleRoom.jpg" />
     <Content Include="images\stone.png" />
+    <Content Include="Payment\AdminPayment.aspx" />
+    <Content Include="Payment\Payment.aspx" />
+    <Content Include="Payment\Receipt.aspx" />
     <Content Include="Room Detail\RoomDetails.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
@@ -151,13 +155,6 @@
     <Compile Include="Booking\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Booking\ConfirmBooking.aspx.cs">
-      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Booking\ConfirmBooking.aspx.designer.cs">
-      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Form.master.cs">
       <DependentUpon>Form.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +169,27 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\AdminPayment.aspx.cs">
+      <DependentUpon>AdminPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\AdminPayment.aspx.designer.cs">
+      <DependentUpon>AdminPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Room Detail\RoomDetails.aspx.cs">
       <DependentUpon>RoomDetails.aspx</DependentUpon>
