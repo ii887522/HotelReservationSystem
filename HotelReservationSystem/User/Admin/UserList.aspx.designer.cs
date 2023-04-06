@@ -15,6 +15,24 @@ namespace HotelReservationSystem.User.Admin
     {
 
         /// <summary>
+        /// gvUsers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvUsers;
+
+        /// <summary>
+        /// UserListSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource UserListSource;
+
+        /// <summary>
         /// UserSource control.
         /// </summary>
         /// <remarks>
