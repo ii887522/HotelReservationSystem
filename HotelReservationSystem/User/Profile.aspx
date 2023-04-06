@@ -211,15 +211,34 @@
 
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">All</a>
+      <asp:Button
+        ID="btnAll"
+        runat="server"
+        CssClass="nav-link active"
+        aria-current="page"
+        Text="All"
+        OnClick="btnAll_Click"
+      />
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="#">Reserved</a>
+      <asp:Button
+        ID="btnReserved"
+        runat="server"
+        CssClass="nav-link"
+        Text="Reserved"
+        OnClick="btnReserved_Click"
+      />
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="#">Paid</a>
+      <asp:Button
+        ID="btnPaid"
+        runat="server"
+        CssClass="nav-link"
+        Text="Paid"
+        OnClick="btnPaid_Click"
+      />
     </li>
   </ul>
 
