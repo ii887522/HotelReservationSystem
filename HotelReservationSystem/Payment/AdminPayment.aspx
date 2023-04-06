@@ -30,9 +30,9 @@
               <ItemTemplate>
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandName="DeleteItem" ForeColor="#005A27">
                                             <div class="icon"><i class="bi bi-trash3-fill"></i></div>
-                                        </asp:LinkButton>
-                                    </ItemTemplate>
-            </asp:TemplateField>
+          </asp:LinkButton>
+        </ItemTemplate>
+      </asp:TemplateField>
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />

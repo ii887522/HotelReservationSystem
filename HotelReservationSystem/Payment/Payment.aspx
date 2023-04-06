@@ -52,6 +52,7 @@
     }
     </script>
 
+    <script src="https://kit.fontawesome.com/6b764a3e0e.js" crossorigin="anonymous"></script>
   <div style="background-color:white">
     <table style="width:77%; margin-left:150px; margin-top:30px; border-bottom:2px solid #C4C4C4;">
       <tr>
@@ -153,6 +154,14 @@
                   <asp:Panel ID="panelOverlay" Style="visibility:hidden" runat="server" class="Overlay" Visible="true"></asp:Panel>
                   <asp:Panel ID="panelPopUpPanel" Style="visibility: hidden" runat="server" class="PopUpPanel" Visible="true">
                   <table style="width:100%" >
+                    <%--<tr>
+                      <td>
+                        <div>
+                          <asp:LinkButton></asp:LinkButton>
+                          <asp:Button ID="Button1" OnClientClick="self.closepopup(); return false" Text="No" runat="server" CssClass="btn btn-secondary" />
+                        </div>
+                      </td>
+                    </tr>--%>
                     <tr>
                       <td>
                         <div style="text-align:center">Are you going to cancel your payment? If click Yes, you will proceed to Homepage.</div>

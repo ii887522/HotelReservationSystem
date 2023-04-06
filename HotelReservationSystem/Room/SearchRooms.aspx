@@ -31,7 +31,7 @@
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
                 <asp:CommandField ShowSelectButton="true" />
-              <asp:BoundField DataField="RoomId" HeaderText="RoomId" SortExpression="RoomId" />
+                <asp:BoundField DataField="RoomId" HeaderText="RoomId" SortExpression="RoomId" />
                 <asp:BoundField DataField="RoomName" HeaderText="RoomName" SortExpression="RoomName" />
                 <asp:BoundField DataField="RoomLocation" HeaderText="RoomLocation" SortExpression="RoomLocation" />
                 <asp:BoundField DataField="NoRooms" HeaderText="NoRooms" SortExpression="NoRooms" />
@@ -39,6 +39,13 @@
                 <asp:BoundField DataField="MaxChildren" HeaderText="MaxChildren" SortExpression="MaxChildren" />
                 <asp:BoundField DataField="PricePerAdult" HeaderText="PricePerAdult" SortExpression="PricePerAdult" />
                 <asp:BoundField DataField="PricePerChildren" HeaderText="PricePerChildren" SortExpression="PricePerChildren" />
+                
+                <asp:TemplateField HeaderText="Image">
+                  <ItemTemplate>
+                    <img src='<%# Eval("Image") %>' height="150" width="150" />
+                  </ItemTemplate>
+                </asp:TemplateField>
+                
             </Columns>
             <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
@@ -82,4 +89,5 @@
         <!-- show Book Now button when a record is selected -->
         <asp:Button ID="btnBookRoom" runat="server" Visible="false" Text="Book Now" OnClientClick="javascript:alert('You are now will be directed to the booking confirmation page')" PostBackUrl="#" />
     </div>
+  <br />
 </asp:Content>
