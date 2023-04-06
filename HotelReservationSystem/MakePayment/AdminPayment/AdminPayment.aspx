@@ -8,8 +8,6 @@
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  <script src="https://kit.fontawesome.com/6b764a3e0e.js" crossorigin="anonymous"></script>
-
 <div>
   <div>
     <h3 style="text-align:center">Payment Table</h3>
