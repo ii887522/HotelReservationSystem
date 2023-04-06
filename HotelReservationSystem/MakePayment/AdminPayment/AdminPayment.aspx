@@ -42,7 +42,7 @@
         <SortedDescendingCellStyle BackColor="#E5E5E5" />
         <SortedDescendingHeaderStyle BackColor="#275353" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear] FROM [Payment]" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ connectionStrings:LocalSqlServer %>" SelectCommand="SELECT [PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear] FROM [Payment]" ProviderName="<%$ connectionStrings:LocalSqlServer.ProviderName %>"></asp:SqlDataSource>
     </div>
 </div>
 </asp:Content>    

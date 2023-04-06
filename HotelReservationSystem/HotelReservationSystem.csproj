@@ -125,7 +125,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
-    <Content Include="Sql\dbo.Payment.data.sql" />
+    <Content Include="Sql\dbo.Payment.sql" />
     <Content Include="Sql\dbo.Room.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
