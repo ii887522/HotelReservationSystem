@@ -1,0 +1,10 @@
+﻿insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00001', 'Debit', '1234567812345678', '1234', 'Ng Zhi Chin', 'May', '2023');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00002', 'Credit', '3133567812345678', '1224', 'Leong Voon Hui', 'February', '2024');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00003', 'Credit', '7224577812345978', '2234', 'Lim Sze Yi', 'April', '2023');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00004', 'Debit', '6233267811145678', '4431', 'Khoo Chyi Ze', 'August', '2026');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00005', 'Credit', '2890567812665678', '6766', 'Lee Min Xuan', 'January', '2025');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00006', 'Credit', '2234567812345678', '5890', 'Wong Zhi Wei', 'November', '2024');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00007', 'Debit', '9234567812345678', '1298', 'Wong Wai Zhong', 'November', '2027');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00008', 'Credit', '3234567812345678', '4901', 'Ng Wei Hao', 'October', '2031');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00009', 'Credit', '1134562813345678', '5116', 'Teoh Seng Tian', 'July', '2028');
+insert into dbo.Payment (PaymentId, PaymentMethod, CardNum, CardCvv, CardHolderName, ExpMonth, ExpYear) values ('00010', 'Debit', '1434537812245678', '7720', 'Ding Zhi Ling', 'June', '2024');

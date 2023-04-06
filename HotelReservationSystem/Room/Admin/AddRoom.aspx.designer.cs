@@ -33,6 +33,33 @@ namespace HotelReservationSystem.Room.Admin
         protected global::System.Web.UI.WebControls.TextBox RoomLocationTxt;
 
         /// <summary>
+        /// NoRoomsTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NoRoomsTxt;
+
+        /// <summary>
+        /// NoAdultsTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NoAdultsTxt;
+
+        /// <summary>
+        /// NoChildrenTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NoChildrenTxt;
+
+        /// <summary>
         /// PriceAdult control.
         /// </summary>
         /// <remarks>
@@ -49,5 +76,23 @@ namespace HotelReservationSystem.Room.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PriceChildren;
+
+        /// <summary>
+        /// ImageFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload ImageFile;
+
+        /// <summary>
+        /// BtnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
     }
 }

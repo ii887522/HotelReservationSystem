@@ -64,12 +64,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="App_Data\HotelReservationSystem.mdf" />
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
     </Content>
     <Content Include="Booking\Admin\BookingReport.aspx" />
     <Content Include="Booking\Booking.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -96,14 +98,17 @@
     <Content Include="images\deluxeRoom.jpg" />
     <Content Include="images\doubleDoubleRoom.jpg" />
     <Content Include="images\doubleRoom.jpg" />
+    <Content Include="images\ghkl.png" />
     <Content Include="images\hollywoodTwinRoom.jpg" />
     <Content Include="images\hotel.jpg" />
     <Content Include="images\main-logo.png" />
     <Content Include="images\room.jpg" />
     <Content Include="images\singleRoom.jpg" />
+    <Content Include="images\slh.png" />
     <Content Include="images\stone.png" />
     <Content Include="Room\RoomDetails.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
+    <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
     <Content Include="Room\SearchRooms.aspx" />
     <Content Include="images\tripleRoom.jpg" />
@@ -116,8 +121,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
+    <Content Include="Sql\dbo.Room.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
+    <Content Include="User\Admin\UserList.aspx" />
     <Content Include="User\EditEmailAddr.aspx" />
     <Content Include="User\EditMobilePhone.aspx" />
     <Content Include="User\EditPassword.aspx" />
@@ -130,6 +137,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.Master.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +164,13 @@
     </Compile>
     <Compile Include="Booking\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Form.master.cs">
       <DependentUpon>Form.master</DependentUpon>
@@ -173,12 +194,20 @@
     <Compile Include="Room\RoomDetails.aspx.designer.cs">
       <DependentUpon>RoomDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Room\Admin\AddRoom.aspx.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Room\Admin\AddRoom.aspx.designer.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\Admin\RoomAddSuccess.aspx.cs">
+      <DependentUpon>RoomAddSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\Admin\RoomAddSuccess.aspx.designer.cs">
+      <DependentUpon>RoomAddSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Room\Admin\RoomList.aspx.cs">
       <DependentUpon>RoomList.aspx</DependentUpon>
@@ -208,6 +237,13 @@
     </Compile>
     <Compile Include="User\ActivateAccount.aspx.designer.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Admin\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Admin\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\EditEmailAddr.aspx.cs">
       <DependentUpon>EditEmailAddr.aspx</DependentUpon>
@@ -309,9 +345,7 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -344,7 +378,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
