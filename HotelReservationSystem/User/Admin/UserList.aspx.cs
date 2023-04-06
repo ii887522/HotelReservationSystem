@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +12,11 @@ namespace HotelReservationSystem.User.Admin
     protected void Page_Load(object sender, EventArgs e)
     {
 
+    }
+
+    protected void gvUsers_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+      e.Cancel = true;
     }
   }
 }
