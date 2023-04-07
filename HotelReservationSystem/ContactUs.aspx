@@ -17,7 +17,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="img-bg" style="padding-top:75px; padding-bottom:75px;">
-      <p class="monofont fw-bold h2 text-primary text-center">About Us</p>
+      <p class="monofont fw-bold h2 text-primary text-center">Contact Us</p>
   </div>
   <p>We are delighted to assist you with your booking and answer any questions you may have. Please find below the contact details for our team.</p>
   <div class="card-group mx-2 shadow-sm">

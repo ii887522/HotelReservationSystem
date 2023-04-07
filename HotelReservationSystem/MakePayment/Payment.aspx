@@ -52,7 +52,6 @@
     }
     </script>
 
-    <script src="https://kit.fontawesome.com/6b764a3e0e.js" crossorigin="anonymous"></script>
   <div style="background-color:white">
     <table style="width:77%; margin-left:150px; margin-top:30px; border-bottom:2px solid #C4C4C4;">
       <tr>
@@ -67,7 +66,7 @@
         <div class="card" style="margin-left:150px;background-color:#E8E8E8; border-color:#E8E8E8" >
           <div class="card-body">
             <div style="font-size: x-large">
-              <i class="fa-solid fa-circle-info"></i>
+              <i class="bi bi-info-circle-fill"></i>
               Personal Info<br />
               <br />
             </div>
@@ -94,7 +93,7 @@
         <div class="card" style="margin-right: 200px; border: none">
           <div class="card-body">
             <div style="font-size: x-large">
-              <i class="fa-solid fa-credit-card"></i>
+              <i class="bi bi-credit-card-fill"></i>
               Payment Method<br />
               <br />
             </div>
@@ -145,7 +144,7 @@
         <td>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-            <asp:Button ID="btnPay" runat="server" Text="PAY" CssClass="btn btn-success" Width="10%" PostBackUrl="~/Payment/Receipt.aspx" />
+            <asp:Button ID="btnPay" runat="server" Text="PAY" CssClass="btn btn-success" Width="10%" PostBackUrl="~/MakePayment/Receipt.aspx" />
             <asp:Button ID="btnBack" runat="server" Text="BACK" CssClass="btn btn-danger" Width="10%" OnClick="btnBack_Click" /> <%--OnClientClick="openModal()"--%>
             <!--Modal-->
             <table>
@@ -154,17 +153,9 @@
                   <asp:Panel ID="panelOverlay" Style="visibility:hidden" runat="server" class="Overlay" Visible="true"></asp:Panel>
                   <asp:Panel ID="panelPopUpPanel" Style="visibility: hidden" runat="server" class="PopUpPanel" Visible="true">
                   <table style="width:100%" >
-                    <%--<tr>
-                      <td>
-                        <div>
-                          <asp:LinkButton></asp:LinkButton>
-                          <asp:Button ID="Button1" OnClientClick="self.closepopup(); return false" Text="No" runat="server" CssClass="btn btn-secondary" />
-                        </div>
-                      </td>
-                    </tr>--%>
                     <tr>
                       <td>
-                        <div style="text-align:center">Are you sure to cancel your payment? If click yes you will proceed to Homepage.</div>
+                        <div style="text-align:center">Are you going to cancel your payment? If click Yes, you will proceed to Homepage.</div>
                       </td>
                     </tr>
                     <tr >

@@ -94,6 +94,7 @@
     <Content Include="icons\edit.png" />
     <Content Include="icons\select.png" />
     <Content Include="icons\update.png" />
+    <Content Include="images\check.png" />
     <Content Include="images\cute.jpg" />
     <Content Include="images\deluxeRmToilet.jpeg" />
     <Content Include="images\deluxeRoom.jpg" />
@@ -115,6 +116,10 @@
     <Content Include="Payment\Receipt.aspx" />
     <Content Include="Room\RoomDetail.aspx" />
     <Content Include="Room\RoomLists.aspx" />
+    <Content Include="MakePayment\AdminPayment\AdminPayment.aspx" />
+    <Content Include="MakePayment\Payment.aspx" />
+    <Content Include="MakePayment\Receipt.aspx" />
+    <Content Include="Room\RoomDetails.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
@@ -130,6 +135,7 @@
     <Content Include="Sql\dbo.Book.sql" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
+    <Content Include="Sql\dbo.Payment.sql" />
     <Content Include="Sql\dbo.Room.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
@@ -226,6 +232,29 @@
     </Compile>
     <Compile Include="Room\RoomLists.aspx.cs">
       <DependentUpon>RoomLists.aspx</DependentUpon>
+    <Compile Include="MakePayment\AdminPayment\AdminPayment.aspx.cs">
+      <DependentUpon>AdminPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakePayment\AdminPayment\AdminPayment.aspx.designer.cs">
+      <DependentUpon>AdminPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakePayment\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakePayment\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakePayment\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakePayment\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails.aspx.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Room\RoomLists.aspx.designer.cs">

@@ -100,14 +100,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>Room
-                    </a>
+                    <asp:Hyperlink
+                      runat="server"
+                      CssClass="nav-link"
+                      NavigateUrl="~/Room/Admin/RoomList.aspx"
+                      Text="Room"
+                    />
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>
                 </li>
                 <li class="nav-item">
-                    <a href="BookingReport.aspx" class="nav-link">
-                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>Booking
-                    </a>
+                    <asp:Hyperlink
+                      runat="server"
+                      CssClass="nav-link"
+                      NavigateUrl="~/Booking/Admin/BookingReport.aspx"
+                      Text="Booking"
+                    />
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -124,11 +132,23 @@
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>Staff
                     </a>
                 </li>
-              <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
-                        User
-                    </a>
+                <li class="nav-item">
+                    <asp:Hyperlink
+                      runat="server"
+                      CssClass="nav-link"
+                      NavigateUrl="~/User/Admin/UserList.aspx"
+                      Text="User"
+                    />
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
+                </li>
+                <li class="nav-item">
+                    <asp:Hyperlink
+                      runat="server"
+                      CssClass="nav-link"
+                      NavigateUrl="~/MakePayment/AdminPayment/AdminPayment.aspx"
+                      Text="Payment"
+                    />
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown">Reports 
@@ -145,8 +165,14 @@
             <nav class="TopNavigation" style="margin-left:200px">
                 <table>
                     <tr>
-                        <td><p style="padding-left: 600px;padding-top: 15px;">RTC Hotel Admin Management</td>
-                        <td><img src="~/images/people-outline.svg" alt="userIcon.png" style="margin-left: 20px; width: 30px ; height: 30px" ></td>
+                        <td>
+                          <p style="padding-left: 600px;padding-top: 15px;">RTC Hotel Admin Management
+                        </td>
+
+                        <td>
+                          <img class="mx-2" src="/images/cute.jpg" alt="User Icon" width="48" />
+                          <span class="fw-bold">Chimin_012</span>
+                        </td>
                     </tr>
                 </table>
             </nav>

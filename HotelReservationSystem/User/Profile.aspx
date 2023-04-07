@@ -207,7 +207,40 @@
     </button>
   </div>
 
-  <h2 class="m-3">Purchase Order</h2>
+  <h2 class="m-3">Order History</h2>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <asp:Button
+        ID="btnAll"
+        runat="server"
+        CssClass="nav-link active"
+        aria-current="page"
+        Text="All"
+        OnClick="btnAll_Click"
+      />
+    </li>
+
+    <li class="nav-item">
+      <asp:Button
+        ID="btnReserved"
+        runat="server"
+        CssClass="nav-link"
+        Text="Reserved"
+        OnClick="btnReserved_Click"
+      />
+    </li>
+
+    <li class="nav-item">
+      <asp:Button
+        ID="btnPaid"
+        runat="server"
+        CssClass="nav-link"
+        Text="Paid"
+        OnClick="btnPaid_Click"
+      />
+    </li>
+  </ul>
 
   <div class="m-3">
     <table class="table">
@@ -221,6 +254,12 @@
             <b>Room Name #1</b>
             <br />
             <span class="text-secondary">#1234567890ABCDEF</span>
+          </td>
+
+          <td class="text-center" style="width: 0">
+            <h5 class="mt-1">
+              <span class="badge text-bg-secondary">Reserved</span>
+            </h5>
           </td>
 
           <td style="width: 0">
@@ -239,6 +278,12 @@
             <span class="text-secondary">#1234567890ABCDEF</span>
           </td>
 
+          <td class="text-center" style="width: 0">
+            <h5 class="mt-1">
+              <span class="badge text-bg-secondary">Reserved</span>
+            </h5>
+          </td>
+
           <td>
             <asp:Button CssClass="btn btn-primary shadow-sm" runat="server" Text="Show More" />
           </td>
@@ -253,6 +298,12 @@
             <b>Room Name #3</b>
             <br />
             <span class="text-secondary">#1234567890ABCDEF</span>
+          </td>
+
+          <td class="text-center" style="width: 0">
+            <h5 class="mt-1">
+              <span class="badge text-bg-secondary">Paid</span>
+            </h5>
           </td>
 
           <td>
