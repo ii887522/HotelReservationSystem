@@ -1,4 +1,16 @@
-﻿INSERT INTO [dbo].[Payment] ([PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear]) VALUES (N'00001', N'Debit', N'1234567812345678', N'1234', N'Ng Zhi Chin', N'May', N'2023')
+CREATE TABLE [dbo].[Payment] (
+    [PaymentId]      VARCHAR (50) NOT NULL,
+    [PaymentMethod]  VARCHAR (50) NULL,
+    [CardNum]        VARCHAR (50) NULL,
+    [CardCvv]        VARCHAR (50) NULL,
+    [CardHolderName] VARCHAR (50) NULL,
+    [ExpMonth]       VARCHAR (50) NULL,
+    [ExpYear]        VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([PaymentId] ASC)
+);
+
+
+INSERT INTO [dbo].[Payment] ([PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear]) VALUES (N'00001', N'Debit', N'1234567812345678', N'1234', N'Ng Zhi Chin', N'May', N'2023')
 INSERT INTO [dbo].[Payment] ([PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear]) VALUES (N'00002', N'Credit', N'3133567812345678', N'1224', N'Leong Voon Hui', N'February', N'2024')
 INSERT INTO [dbo].[Payment] ([PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear]) VALUES (N'00003', N'Credit', N'7224577812345978', N'2234', N'Lim Sze Yi', N'April', N'2023')
 INSERT INTO [dbo].[Payment] ([PaymentId], [PaymentMethod], [CardNum], [CardCvv], [CardHolderName], [ExpMonth], [ExpYear]) VALUES (N'00004', N'Debit', N'6233267811145678', N'4431', N'Khoo Chyi Ze', N'August', N'2026')
