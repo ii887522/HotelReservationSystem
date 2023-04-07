@@ -1,5 +1,6 @@
-<%@
-  Page Language="C#"
+<%@ Page
+  Title="Payment | RTC Hotel"
+  Language="C#"
   MasterPageFile="~/AdminPage.Master"
   AutoEventWireup="true"
   CodeBehind="AdminPayment.aspx.cs"

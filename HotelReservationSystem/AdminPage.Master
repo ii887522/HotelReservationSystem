@@ -132,12 +132,21 @@
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>Staff
                     </a>
                 </li>
-              <li class="nav-item">
+                <li class="nav-item">
                     <asp:Hyperlink
                       runat="server"
                       CssClass="nav-link"
                       NavigateUrl="~/User/Admin/UserList.aspx"
                       Text="User"
+                    />
+                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
+                </li>
+                <li class="nav-item">
+                    <asp:Hyperlink
+                      runat="server"
+                      CssClass="nav-link"
+                      NavigateUrl="~/MakePayment/AdminPayment/AdminPayment.aspx"
+                      Text="Payment"
                     />
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
                 </li>
