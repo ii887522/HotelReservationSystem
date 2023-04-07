@@ -96,6 +96,7 @@
     <Content Include="icons\update.png" />
     <Content Include="images\check.png" />
     <Content Include="images\cute.jpg" />
+    <Content Include="images\deluxeRmToilet.jpeg" />
     <Content Include="images\deluxeRoom.jpg" />
     <Content Include="images\doubleDoubleRoom.jpg" />
     <Content Include="images\doubleRoom.jpg" />
@@ -107,10 +108,13 @@
     <Content Include="images\singleRoom.jpg" />
     <Content Include="images\slh.png" />
     <Content Include="images\stone.png" />
+    <Content Include="images\tripleRmToilet.jpg" />
+    <Content Include="images\twinRmToilet.jpeg" />
     <Content Include="MakePayment\AdminPayment\AdminPayment.aspx" />
     <Content Include="MakePayment\Payment.aspx" />
     <Content Include="MakePayment\Receipt.aspx" />
     <Content Include="Room\RoomDetails.aspx" />
+    <Content Include="Room\RoomLists.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
@@ -123,6 +127,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Sql\dbo.Book.sql" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
     <Content Include="Sql\dbo.Payment.sql" />
@@ -219,6 +224,13 @@
     </Compile>
     <Compile Include="Room\RoomDetails.aspx.designer.cs">
       <DependentUpon>RoomDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomLists.aspx.cs">
+      <DependentUpon>RoomLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomLists.aspx.designer.cs">
+      <DependentUpon>RoomLists.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Room\Admin\AddRoom.aspx.cs">
