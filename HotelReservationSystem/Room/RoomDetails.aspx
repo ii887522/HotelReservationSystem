@@ -1,145 +1,145 @@
-<%@ Page
-  Title="Room Details | RTC Hotel"
-  Language="C#"
-  MasterPageFile="~/Site1.Master"
-  AutoEventWireup="true"
-  CodeBehind="RoomDetails.aspx.cs"
-  Inherits="HotelReservationSystem.Room_Detail.RoomDetails" %>
+<%@ Page Title="Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="RoomDetails.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<style>
+.checked {
+  color: orange;
+}
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="text-center" style="background-color:#ebf6f9;padding-top:15px; padding-bottom:15px;">
-    <h1>Rooms</h1>
+  <div style="text-align:center;font-family:'Brush Script MT'";>
+    <h1>===Deluxe Room===</h1>
   </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mx-4">
-    <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/singleRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Single Room</h5>
-          <p class="card-text">There is a room available that is suitable for solo travelers.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">One single bed</li>
-          <li class="list-group-item">Writing desk</li>
-          <li class="list-group-item">Closet</li>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 199.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowSingleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
+  <div id="roomSlideImages" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#roomSlideImages" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#roomSlideImages" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#roomSlideImages" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner mx-2">
+    <div class="carousel-item active">
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/deluxeRoom.jpg" Height="500px"/>
+    </div>
+    <div class="carousel-item">
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/deluxeRmToilet.jpeg" Height="500px"/>
+    </div>
+    <div class="carousel-item">
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/tripleRmToilet.jpg" Height="500px"/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#roomSlideImages" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#roomSlideImages" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  <div class="mb-2 mx-2" style="background-color:#f2f2f2;font-family:'Times New Roman';font-size:large;text-align:center">
+    <p class="mt-4 mx-4">Our comfortable room gives you the best possible view of the places!!
+       Enjoy gazing at there from your guest room window at your leiure.
+       Plus our generous and user-friendly bath is also ideal for customers with small children.</p>
+  </div>
+
+  <div class="mt-4" style="text-align:center;font-family:'Brush Script MT'";>
+    <h1 >==Room Information==</h1>
+  </div>
+  <div class="container mb-4 mx-auto">
+   <div class="col-6 col-md-8 mx-auto">
+        <div class="card-group rounded-circle">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Check In/Check Out Info</li>
+              </ul>
+            </div>
+           </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Check In 2:00 p.m.</li>
+                <li>Check Out 10:00 a.m.</li>
+              </ul>
+              <br />
+              <ul>
+                <p style="font-weight:bold;text-decoration:underline">Late Check Out Notice</p>
+                <li style="list-style:inside">30% surcharge on the regular room charge as an extension fee for 10:00am to 3:00pm.</li>
+              </ul>  
+            </div>
+          </div>
+       </div>
+      </div>
+     <div class="card-group rounded-circle">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Room Facilities / Amenities</li>
+              </ul>
+            </div>
+           </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>TV (digital compatible models on all floors)</li>
+                <li>Refrigerator</li>
+                <li>Air-conditioner (adjustable)</li>
+                <li>Toilet with bathtub</li>
+                <li>Hot water dispenser</li>
+                <li>Air cleaner/humidifier</li>
+              </ul> 
+            </div>
+          </div>
+       </div>
+      </div>
+     <div class="card-group rounded-circle">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Items available on request free of charge</li>
+              </ul>
+            </div>
+           </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Iron</li>
+                <li>Coffee, mineral water</li>
+                <li>Soap</li>
+                <li>Toothbrush Kit</li>
+                <li>Nightwear</li>
+              </ul>  
+            </div>
+          </div>
+       </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/doubleRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Double Room</h5>
-          <p class="card-text">The room is a good choice for couples or solo travelers who prefer a bigger bed.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Two double beds/A king size bed</li>
-          <li class="list-group-item">Armoire</li>
-          <li class="list-group-item">Large TV</li>
-<%--          <li class="list-group-item">Dresser</li>--%>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 299.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/tripleRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Triple Room</h5>
-          <p class="card-text">The room is ideal for small families or groups of three.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Three single beds/One double bed & a single bed</li>
-          <li class="list-group-item">Makeup desk</li>
-          <li class="list-group-item">Wardrobe</li>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 399.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowTripleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+  </div>
+
+  <div class="mb-2 mx-2" style="background-color:#f2f2f2;font-family:'Times New Roman';font-size:large;text-align:center">
+    <p class="mt-4 mx-4" style="font-weight:bold;font-family:Bahnschrift">What Our Customers Say</p>
+    <div class="col-6 col-md-5 mx-auto mb-2 bg-light text-dark">
+      <div class="card-group rounded-circle">
+        <div class="card">
+          <div class="card-body">
+            <p style="text-align:left;font-weight:bold">RTC Hotel Rating</p>
+              <div style="text-align:left">
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star"></span>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <asp:Button ID="btnReview" class="me-md-2" runat="server" Text="Write a Review" BackColor="#CCCCCC"/>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/deluxeRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Deluxe Room</h5>
-          <p class="card-text">The Deluxe room is a spacious and luxurious accommodation with extra amenities, including a mini-fridge, mini safe, and high-end toiletries.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Two beds</li>
-          <li class="list-group-item">Seating area</li>
-          <li class="list-group-item">Toilet with bathtub</li>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 388.00</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowDeluxeRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
-      </div>
-    </div>
-      <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/doubleDoubleRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Double-Double Room (Quad Room)</h5>
-          <p class="card-text">If you're traveling with family or friends and need more sleeping space, this room type is a great option.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Two double beds</li>
-          <li class="list-group-item">A cozy couch</li>
-          <li class="list-group-item">Big closet</li>
-<%--          <li class="list-group-item">Safe</li>--%>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 499.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowDoubleDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
-      </div>
-    </div>
-      <div class="col">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/twinRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Twin Room</h5>
-          <p class="card-text">This type of room is ideal for those who would like to sleep in separate beds, such as friends or family members.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Two single beds</li>
-          <li class="list-group-item">Workspace</li>
-          <li class="list-group-item">Wardrobe</li>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 259.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
-      </div>
-    </div>
-      <div class="col mb-4">
-      <div class="card" style="width: 25rem;">
-        <asp:Image CssClass="img-fluid rounded-top" runat="server" ImageUrl="~/images/hollywoodTwinRoom.jpg" Height="260px"/>
-        <div class="card-body">
-          <h5 class="card-title">Hollywood Twin Room</h5>
-          <p class="card-text">This is a room type that features two single beds positioned adjacent to each other, with a space in the middle,
-            making it a good choice for friends or family members who desire individual sleeping areas while staying in the same room.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Two single beds</li>
-          <li class="list-group-item">Air cleaner/humidifier</li>
-          <li class="list-group-item">Hot water dispenser</li>
-          <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 329.99</li>
-        </ul>
-        <div class="card-body">
-          <asp:HyperLink ID="bookNowHollywoodTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
-        </div>
-      </div>
-    </div>
   </div>
 </asp:Content>
