@@ -21,7 +21,7 @@
         <asp:LinkButton
           CssClass="btn btn-success shadow-sm"
           runat="server"
-          PostBackUrl="~/Room/RoomDetails.aspx"
+          PostBackUrl="~/Room/RoomLists.aspx"
         >
           Get Started
         </asp:LinkButton>
