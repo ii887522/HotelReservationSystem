@@ -88,6 +88,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="icons\cancel.png" />
     <Content Include="icons\delete.png" />
@@ -132,6 +133,7 @@
     <Content Include="Sql\dbo.Order.sql" />
     <Content Include="Sql\dbo.Payment.sql" />
     <Content Include="Sql\dbo.Room.sql" />
+    <Content Include="Sql\dbo.RoomInst.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
     <Content Include="User\Admin\UserList.aspx" />
@@ -190,6 +192,9 @@
       <DependentUpon>Form.master</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

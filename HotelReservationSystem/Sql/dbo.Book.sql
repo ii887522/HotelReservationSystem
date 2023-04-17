@@ -1,11 +1,11 @@
 CREATE TABLE [dbo].[Book] (
     [BookID]        NVARCHAR(10) NOT NULL,
 	  [UserID]        INT NOT NULL,
-    [Username]      NVARCHAR (40) NULL,
     [StartBookDate] DATETIME      NULL,
     [EndBookDate]   DATETIME      NULL,
-    [RoomType]      NVARCHAR (30) NULL,
-    [Status]        NVARCHAR (15) NULL,
+    [Qty]           INT NOT NULL DEFAULT(1),
+    [RoomId]        INT NOT NULL,
+    [OrderId]       INT NOT NULL,
     CONSTRAINT [PK_Booking] PRIMARY KEY CLUSTERED ([BookID] ASC)
 );
 
@@ -19,4 +19,3 @@ insert into Book (BookID, UserID, Username, StartBookDate, EndBookDate, RoomType
 insert into Book (BookID, UserID, Username, StartBookDate, EndBookDate, RoomType, Status) values ('B000008', '000008', 'laslum7', '11/03/2023 08:25:00', '13/03/2023 13:30:00', 'deluxe', 'Paid');
 insert into Book (BookID, UserID, Username, StartBookDate, EndBookDate, RoomType, Status) values ('B000009', '000009', 'hminger8', '20/09/2023 11:30:00', '22/09/2023 14:00:00', 'double double', 'Reserve');
 insert into Book (BookID, UserID, Username, StartBookDate, EndBookDate, RoomType, Status) values ('B000010', '000010', 'tmckevany9', '09/02/2023 09:45:00', '11/02/2023 13:45:00', 'twin', 'Paid');
-

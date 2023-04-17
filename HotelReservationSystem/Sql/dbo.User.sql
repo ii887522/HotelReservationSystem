@@ -1,5 +1,6 @@
 CREATE TABLE [dbo].[User] (
     [Id]                INT              NOT NULL IDENTITY(1, 1),
+    [FullName]          NVARCHAR (MAX)   NOT NULL,
     [MobilePhone]       NVARCHAR (13)    NULL,
     [EmailOtp]          NCHAR (6)        NULL,
     [PhoneOtp]          NCHAR (6)        NULL,
