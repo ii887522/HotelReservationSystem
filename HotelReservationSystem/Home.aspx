@@ -1,7 +1,7 @@
 <%@ Page Title="RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Assignment.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <style type="text/css">
+    <style type="text/css">
     .photo-first {
       border-top-left-radius: var(--bs-border-radius);
     }
@@ -21,7 +21,7 @@
         <asp:LinkButton
           CssClass="btn btn-success shadow-sm"
           runat="server"
-          PostBackUrl="~/Room/RoomDetails.aspx"
+          PostBackUrl="~/Room/RoomLists.aspx"
         >
           Get Started
         </asp:LinkButton>

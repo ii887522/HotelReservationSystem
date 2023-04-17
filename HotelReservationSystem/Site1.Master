@@ -46,7 +46,7 @@
                           <asp:HyperLink
                             runat="server"
                             CssClass="nav-link"
-                            NavigateUrl="~/Room/RoomDetails.aspx"
+                            NavigateUrl="~/Room/RoomLists.aspx"
                             Text="Browse Rooms" />
                         </li>
 
