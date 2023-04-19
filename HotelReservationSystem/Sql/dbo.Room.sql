@@ -1,13 +1,12 @@
-﻿CREATE TABLE [dbo].[Room] (
+CREATE TABLE [dbo].[Room] (
     [RoomId]           INT            NOT NULL,
-    [RoomName]         VARCHAR (50)   NULL,
-    [RoomLocation]     VARCHAR (50)   NULL,
-    [NoRooms]          INT            NULL,
+    [RoomType]         VARCHAR (50)   NOT NULL,
+    [RoomDesc]         VARCHAR (200)  NOT NULL,
+    [AvailableQty]     INT            NOT NULL,
+    [TotalQty]         INT            NOT NULL,
     [MaxAdults]        INT            NULL,
     [MaxChildren]      INT            NULL,
-    [PricePerAdult]    DECIMAL (5, 2) NULL,
-    [PricePerChildren] DECIMAL (5, 2) NULL,
+    [Price]            DECIMAL (5, 2) NOT NULL,
     [Image]            NCHAR (100)    NULL,
     PRIMARY KEY CLUSTERED ([RoomId] ASC)
 );
-
