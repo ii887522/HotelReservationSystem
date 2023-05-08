@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AddToCart\Cart.aspx" />
     <Content Include="App_Data\HotelReservationSystem.mdf" />
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.Master.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
