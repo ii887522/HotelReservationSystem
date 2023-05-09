@@ -33,33 +33,6 @@ namespace HotelReservationSystem.Booking
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// ddlRoomType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRoomType;
-
-        /// <summary>
-        /// ddlNumOfGuest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNumOfGuest;
-
-        /// <summary>
-        /// ddlNumOfChildren control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNumOfChildren;
-
-        /// <summary>
         /// calendarStartDate control.
         /// </summary>
         /// <remarks>
@@ -94,6 +67,33 @@ namespace HotelReservationSystem.Booking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBkEndDate;
+
+        /// <summary>
+        /// IncreaseButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton IncreaseButton;
+
+        /// <summary>
+        /// quantityNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox quantityNum;
+
+        /// <summary>
+        /// DecreaseButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton DecreaseButton;
 
         /// <summary>
         /// txtSpecialRequest control.

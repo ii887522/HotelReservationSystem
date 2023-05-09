@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Comment]
+(
+	[CommentID] INT NOT NULL,
+	[UserID] INT NOT NULL,
+	[Rating] INT NOT NULL,
+	[Comment] VARCHAR NOT NULL,
+	[RoomID] INT NOT NULL,
+	CONSTRAINT CHK_Rating CHECK (Rating BETWEEN 1 AND 5),
+	PRIMARY KEY CLUSTERED ([CommentID] ASC)
+)

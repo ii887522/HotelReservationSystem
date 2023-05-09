@@ -90,9 +90,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="icons\add.png" />
     <Content Include="icons\cancel.png" />
     <Content Include="icons\delete.png" />
     <Content Include="icons\edit.png" />
+    <Content Include="icons\minus.png" />
     <Content Include="icons\select.png" />
     <Content Include="icons\update.png" />
     <Content Include="images\check.png" />
@@ -129,6 +131,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Sql\dbo.Book.sql" />
+    <Content Include="Sql\dbo.Comment.sql" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
     <Content Include="Sql\dbo.Payment.sql" />

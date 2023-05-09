@@ -21,44 +21,6 @@
                   <asp:Label CssClass="form-label" runat="server" Text="Email:" />
                   <asp:TextBox ID="txtEmail" CssClass="form-control" placeholder="name123@gmail.com" runat="server"/>
               </div>
-              <div class="mb-3">
-                  <asp:Label CssClass="form-label" runat="server" Text="Room Type:" />
-                  <asp:DropDownList CssClass="form-select" ID="ddlRoomType" runat="server">
-                        <asp:ListItem Value="Pick a room"></asp:ListItem>
-                        <asp:ListItem>Single Room</asp:ListItem>
-                        <asp:ListItem>Double Room</asp:ListItem>
-                        <asp:ListItem>Triple Room</asp:ListItem>
-                        <asp:ListItem Value="Deluxe">Deluxe Room</asp:ListItem>
-                        <asp:ListItem>Twin Room</asp:ListItem>
-                        <asp:ListItem>Double-double Room</asp:ListItem>
-                        <asp:ListItem>Hollywood Twin Room</asp:ListItem>
-                  </asp:DropDownList>
-              </div>
-              <div class="mb-3">
-                  <asp:Label CssClass="form-label" runat="server" Text="Number of Guests:" />
-                  <asp:DropDownList CssClass="form-select" ID="ddlNumOfGuest" runat="server">
-                        <asp:ListItem Value="Number of Guest"></asp:ListItem>
-                        <asp:ListItem Value="1"></asp:ListItem>
-                        <asp:ListItem Value="2"></asp:ListItem>
-                        <asp:ListItem Value="3"></asp:ListItem>
-                        <asp:ListItem Value="4"></asp:ListItem>
-                        <asp:ListItem Value="5"></asp:ListItem>
-                        <asp:ListItem Value="6"></asp:ListItem>
-                    </asp:DropDownList>
-              </div>
-              <div class="mb-3">
-                  <asp:Label CssClass="form-label" runat="server" Text="Number of Childrens:" />
-                  <asp:DropDownList CssClass="form-select" ID="ddlNumOfChildren" runat="server">
-                        <asp:ListItem Value="Number of Children"></asp:ListItem>
-                        <asp:ListItem Value="0"></asp:ListItem>
-                        <asp:ListItem Value="1"></asp:ListItem>
-                        <asp:ListItem Value="2"></asp:ListItem>
-                        <asp:ListItem Value="3"></asp:ListItem>
-                        <asp:ListItem Value="4"></asp:ListItem>
-                        <asp:ListItem Value="5"></asp:ListItem>
-                        <asp:ListItem Value="6"></asp:ListItem>
-                    </asp:DropDownList>
-              </div>
               <div class="col-md-9">
                   <asp:Label CssClass="form-label" runat="server" Text="Start Date (Time):" />
                   <asp:Calendar ID="calendarStartDate" runat="server" BackColor="#EBEBEB" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="180px" NextPrevFormat="FullMonth" Width="340px" OnSelectionChanged="calendarStartDate_SelectionChanged">
@@ -71,7 +33,7 @@
                   </asp:Calendar>
                   <asp:TextBox ID="txtBkStartDate" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
-              <div class="col-md-9">
+              <div class="col-md-9 mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="End Date (Time):" />
                   <br />
                   <asp:Calendar ID="calendarEndDate" runat="server" BackColor="#EBEBEB" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="calendarEndDate_SelectionChanged">
@@ -85,11 +47,17 @@
                 <asp:TextBox ID="txtBkEndDate" CssClass="form-control" runat="server"></asp:TextBox>
               </div>
               <div class="mb-3">
+                <%--quantity--%>
+                <label for="quantityNum">Quantity of Room:</label>
+                <asp:ImageButton ID="IncreaseButton" runat="server" Height="26px" ImageUrl="~/icons/add.png" OnClick="IncreaseButton_Click" Width="26px" />
+                <asp:TextBox ID="quantityNum" runat="server" Text="1" type="number" min="1" max="10" Width="120px" ReadOnly="true" Height="26px" Wrap="False"/>
+                <asp:ImageButton ID="DecreaseButton" runat="server" Height="26px" ImageUrl="~/icons/minus.png" OnClick="DecreaseButton_Click" Width="26px" />
+              </div>
+              <div class="mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="Special Request [Optional]:" />
                   <asp:TextBox CssClass="form-control" placeholder="Additional Information" runat="server" ID="txtSpecialRequest"/>
               </div>
               <div>
-                <%--<a href="#" CssClass="btn btn-dark me-md-3" id="btnBookRoom" style="color: #C0C0C0";BackColor="#999999";>Book a Room</a>--%>
                 <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookaRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" PostBackUrl="~/MakePayment/Payment.aspx" />
                   <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" PostBackUrl="~/Room/RoomLists.aspx" />
               </div>
