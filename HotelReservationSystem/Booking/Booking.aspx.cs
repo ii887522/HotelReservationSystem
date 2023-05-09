@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace HotelReservationSystem.Booking
 {
@@ -32,5 +33,25 @@ namespace HotelReservationSystem.Booking
         {
 
         }
-    }
+
+        protected void IncreaseButton_Click(object sender, ImageClickEventArgs e)
+        {
+          int currentQuantity = Int32.Parse(quantityNum.Text);
+          if (currentQuantity < 10)
+          {
+            currentQuantity++;
+            quantityNum.Text = currentQuantity.ToString();
+          }
+        }
+
+        protected void DecreaseButton_Click(object sender, ImageClickEventArgs e)
+        {
+          int currentQuantity = Int32.Parse(quantityNum.Text);
+          if (currentQuantity > 1)
+          {
+            currentQuantity--;
+            quantityNum.Text = currentQuantity.ToString();
+          }
+        }
+  }
 }
