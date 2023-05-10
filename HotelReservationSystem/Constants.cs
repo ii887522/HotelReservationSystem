@@ -15,6 +15,6 @@ namespace HotelReservationSystem
     public const string RoleUser = "User";
     public const string RoleAdmin = "Admin";
     public const string RoleManager = "Manager";
-    public static string[] AllRoles = new string[] { RoleUser, RoleAdmin, RoleManager };
+    public const string RoleReseter = "Reseter";
   }
 }
