@@ -11,10 +11,6 @@
             width: 60%x;
             height: 22px;
         }
-        .auto-style2 {
-            width: 40%;
-            height: 22px;
-        }
         .auto-style3 {
             height: 21px;
         }
@@ -65,31 +61,42 @@
     </tr>
     <tr>
       <td>Room Type</td>
-      <td style="text-align:right">Single</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblRoomtype" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
       <td class="auto-style3">Number of room</td>
-      <td style="text-align:right" class="auto-style3">2</td>
+      <td style="text-align:right" class="auto-style3">
+          <asp:Label ID="lblRoomQty" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
-      <td>Unit Price</td>
-      <td style="text-align:right">199.00</td>
+      <td>Unit Price (Adult/Child)</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblUnitprice" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
       <td>Subtotal</td>
-      <td style="text-align:right">398.00</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblSubtotal" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
       <td>Total</td>
-      <td style="text-align:right">398.00</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblTotal" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr style="border-bottom:2px dashed black">
       <td>&nbsp;</td>
       <td style="text-align:right">&nbsp;</td>
     </tr>
     <tr>
-      <td class="auto-style1">Payment ID:
-          <asp:Label ID="lblPaymentID" runat="server"></asp:Label>
+      <td class="auto-style1">
+        <h5>Payment ID:
+          <asp:Label ID="lblPaymentID" runat="server"></asp:Label></h5>
         </td>
       <td style="text-align:right">
           </td>
@@ -105,22 +112,30 @@
     </tr>
     <tr>
       <td>Card</td>
-      <td style="text-align:right">Debit</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblCardtype" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
       <td>Card's Holder Name</td>
-      <td style="text-align:right">XXX XXXX XXX</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblCardHolder" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr style="border-bottom:2px double black; ">
       <td>Card Number</td>
-      <td style="text-align:right">XXXX XXXX XXXX XXXX</td>
+      <td style="text-align:right">
+          <asp:Label ID="lblCardNum" runat="server"></asp:Label>
+        </td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td style="text-align:right">&nbsp;</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
+      <td>
+          <asp:Label ID="lblError" runat="server"></asp:Label>
+        </td>
       <td style="text-align:right">
           <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-secondary" PostBackUrl="~/Home.aspx" Width="30%" />
         </td>

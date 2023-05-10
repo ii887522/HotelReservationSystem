@@ -33,15 +33,6 @@ namespace HotelReservationSystem.Payment
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// txtEmail2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail2;
-
-        /// <summary>
         /// txtPhone control.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace HotelReservationSystem.Payment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
+
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// btnCredit control.
@@ -69,6 +69,15 @@ namespace HotelReservationSystem.Payment
         protected global::System.Web.UI.WebControls.Button btnDebit;
 
         /// <summary>
+        /// RFVCardNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVCardNum;
+
+        /// <summary>
         /// txtCardNum control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,15 @@ namespace HotelReservationSystem.Payment
         protected global::System.Web.UI.WebControls.TextBox txtCardNum;
 
         /// <summary>
+        /// RFVCvv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVCvv;
+
+        /// <summary>
         /// txtCvv control.
         /// </summary>
         /// <remarks>
@@ -85,6 +103,15 @@ namespace HotelReservationSystem.Payment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCvv;
+
+        /// <summary>
+        /// RFVName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVName;
 
         /// <summary>
         /// txtCardHolder control.

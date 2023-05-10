@@ -50,7 +50,7 @@
     <table style="width:100%; text-align:center; margin-top:20px">
         <tr>
             <td>
-              <h1 style="color:#555555">MY BOOKING LIST</h1>
+              <h1 style="color:#555555">MYMY BOOKING LIST</h1>
             </td>
         </tr>
     </table>
@@ -153,7 +153,7 @@
                   
                     <SelectedRowStyle BackColor="White" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RoomName], [PricePerAdult], [PricePerChildren] FROM [Room]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Room]"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Book]"></asp:SqlDataSource>
             </td>
         </tr>
@@ -165,7 +165,7 @@
         <td style="width:50%; text-align:right;">
           <div style="margin-top: 30px; margin-left:350px; margin-right: 100px;border-top: 3px double black ;border-bottom: 3px double black; padding-top:15px; padding-bottom:15px; padding-right:50px">
             <h5>Total Price: RM
-              <asp:Label ID="lblTotalPriceOfBooking" runat="server" Text=""></asp:Label>
+              sp:Label ID="lblTotalPriceOfBooking" runat="server" Text=""></asp:Label>
             </h5>
           </div>
           
