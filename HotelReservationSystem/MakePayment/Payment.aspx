@@ -8,7 +8,7 @@
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  <style type="text/css">
+    <style type="text/css">
     .Overlay {
       position: fixed;
       top: 0px;
@@ -109,6 +109,8 @@
               <div class="col">
                 Card Number:
                           <asp:RequiredFieldValidator ID="RFVCardNum" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Please Fill Up!" ForeColor="Red" ValidationGroup="PaymentValidation">*</asp:RequiredFieldValidator>     
+                        <asp:CompareValidator ID="CVCardNum" runat="server" ControlToValidate="txtCardNum" ForeColor="Red" ValidationGroup="PaymentValidation" Operator="DataTypeCheck">*This is not number</asp:CompareValidator>
+                        <asp:RegularExpressionValidator ID="REVCardNum" runat="server" ControlToValidate="txtCardNum" ForeColor="Red" ValidationGroup="PaymentValidation" ValidationExpression="\w{16}">*This require 16 digits</asp:RegularExpressionValidator>
                         <asp:TextBox ID="txtCardNum" runat="server" CssClass="form-control" placeholder="Please insert 16 numbers" ValidationGroup="PaymentValidation"></asp:TextBox>
                   <%--
                   <asp:CompareValidator ID="CVCardNum" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Card Number should be number." ForeColor="Red">*</asp:CompareValidator>
@@ -117,6 +119,7 @@
               <div class="col">
                 CVV:
                 &nbsp<asp:RequiredFieldValidator ID="RFVCvv" runat="server" ControlToValidate="txtCvv" ErrorMessage="Please Fill Up!" ForeColor="Red" ValidationGroup="PaymentValidation">*</asp:RequiredFieldValidator>
+                  <asp:CompareValidator ID="CVCardCVV" runat="server" ControlToValidate="txtCvv" ErrorMessage="" ForeColor="Red" ValidationGroup="PaymentValidation" Operator="DataTypeCheck">*This is not number</asp:CompareValidator>
                 <br />
                 <asp:TextBox ID="txtCvv" runat="server" CssClass="form-control" placeholder="Please insert 4 numbers"></asp:TextBox>
                   <%--

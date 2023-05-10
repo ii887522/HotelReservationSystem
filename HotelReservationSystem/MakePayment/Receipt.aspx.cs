@@ -24,7 +24,9 @@ namespace HotelReservationSystem.Payment
         SqlConnection con = new SqlConnection(strConnStr);
         con.Open();
         //str = "SELECT * from User WHERE FullName = '" + Session["FullName"] + "'";
-        str = "SELECT * from Payment WHERE PaymentId = 'PAY0013'";
+
+        //str = "SELECT * from Payment WHERE PaymentId = 'PAY0013'";
+        str = "SELECT MAX(PaymentId) from Payment";
         cmd = new SqlCommand(str, con);
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();

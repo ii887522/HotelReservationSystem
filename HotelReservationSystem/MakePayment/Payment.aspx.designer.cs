@@ -78,6 +78,24 @@ namespace HotelReservationSystem.Payment
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVCardNum;
 
         /// <summary>
+        /// CVCardNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVCardNum;
+
+        /// <summary>
+        /// REVCardNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVCardNum;
+
+        /// <summary>
         /// txtCardNum control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace HotelReservationSystem.Payment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVCvv;
+
+        /// <summary>
+        /// CVCardCVV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVCardCVV;
 
         /// <summary>
         /// txtCvv control.

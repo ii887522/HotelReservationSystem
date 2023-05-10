@@ -51,7 +51,7 @@
           <asp:Label ID="lblTime" runat="server"></asp:Label>
         </td>
     </tr>
-    <tr>
+    <%--<tr>
       <td>Booking Details: </td>
       <td></td>
     </tr>
@@ -88,15 +88,15 @@
       <td style="text-align:right">
           <asp:Label ID="lblTotal" runat="server"></asp:Label>
         </td>
-    </tr>
+    </tr>--%>
     <tr style="border-bottom:2px dashed black">
       <td>&nbsp;</td>
       <td style="text-align:right">&nbsp;</td>
     </tr>
     <tr>
       <td class="auto-style1">
-        <h5>Payment ID:
-          <asp:Label ID="lblPaymentID" runat="server"></asp:Label></h5>
+        Payment ID:
+          <asp:Label ID="lblPaymentID" runat="server"></asp:Label>
         </td>
       <td style="text-align:right">
           </td>

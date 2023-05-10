@@ -24,15 +24,16 @@ namespace HotelReservationSystem.Payment
       {
         SqlConnection con = new SqlConnection(strConnStr);
         con.Open();
-        str = "Select * from User where UserId = '" + Session["UserId"] + "'";
+        //str = "Select * from User where UserId = '" + Session["UserId"] + "'";
+        str = "Select * from User where Id = '" + Session[Constants.AuthUserId] + "'";
         cmd = new SqlCommand(str, con);
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         try
         {
           da.Fill(ds);
-          txtName.Text = ds.Tables[0].Rows[0]["FullName"].ToString();
-          txtEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+          txtName.Text = ds.Tables[0].Rows[0]["Username"].ToString();
+          //txtEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
           txtPhone.Text = ds.Tables[0].Rows[0]["MobilePhone"].ToString();
 
 
