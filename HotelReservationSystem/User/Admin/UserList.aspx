@@ -10,6 +10,20 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  <div class="row">
+    <h2 class="col">
+      <span class="bi bi-person-circle"></span>
+      <span>User List</span>
+    </h2>
+
+    <div class="col-auto">
+      <asp:LinkButton runat="server" CssClass="btn btn-success py-1 shadow-sm" PostBackUrl="~/User/Admin/AddUser.aspx">
+        <span class="bi bi-plus h5"></span>
+        <span class="align-text-bottom">Add</span>
+      </asp:LinkButton>
+    </div>
+  </div>
+
   <asp:GridView
     ID="gvUsers"
     CssClass="table shadow-sm"
@@ -56,19 +70,39 @@
         <ItemStyle HorizontalAlign="Center" />
       </asp:CheckBoxField>
 
-      <asp:CommandField
-        ShowSelectButton="True"
-        ButtonType="Image"
-        SelectImageUrl="~/icons/select.png"
-        HeaderText="Actions"
-        DeleteImageUrl="~/icons/delete.png"
-        ShowDeleteButton="True"
-      >
+      <asp:TemplateField HeaderText="Actions" ShowHeader="False">
+        <ItemTemplate>
+          <asp:ImageButton
+            ID="ImageButton1"
+            runat="server"
+            CausesValidation="False"
+            CommandName="Select"
+            ImageUrl="~/icons/select.png"
+            Text="Select"
+          />
+
+          <asp:ImageButton
+            ID="ImageButton2"
+            runat="server"
+            CausesValidation="False"
+            CommandName="Delete"
+            ImageUrl="~/icons/delete.png"
+            Text="Delete"
+            OnClientClick="return confirm('Are you sure you want to delete this user?');"
+          />
+        </ItemTemplate>
+
         <ItemStyle HorizontalAlign="Center" />
-      </asp:CommandField>
+      </asp:TemplateField>
     </Columns>
 
     <EditRowStyle BackColor="#7C6F57" />
+
+    <EmptyDataTemplate>
+      <span class="bi bi-exclamation-triangle-fill"></span>
+      <span>What? No users can access to this system??? Please add in some users NOW!!!</span>
+    </EmptyDataTemplate>
+
     <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
     <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" />
     <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
@@ -112,7 +146,7 @@
     runat="server"
     ConnectionString="<%$ connectionStrings:LocalSqlServer %>"
     ProviderName="System.Data.SqlClient"
-    SelectCommand="SELECT [User].Id [User ID], aspnet_Users.UserName [Username], aspnet_Membership.Email, [User].MobilePhone [Mobile Phone], [User].IsActive [Active], [User].RtcCoinEarned [RTC Coin Earned], [User].RtcCoin [RTC Coin] FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId INNER JOIN aspnet_Membership ON [User].MembershipId = aspnet_Membership.UserId WHERE [User].Id = @UserId"
+    SelectCommand="WITH Roles AS (SELECT [User].Id AS UserId, aspnet_Roles.RoleName FROM [User] INNER JOIN aspnet_Users ON [User].RoleId = aspnet_Users.UserId INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserId = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId) SELECT FORMAT(User_1.Id, '000000') AS [User ID], aspnet_Users_1.UserName AS [User Name], aspnet_Membership.Email, User_1.MobilePhone AS [Mobile Phone], User_1.IsActive AS Active, User_1.RtcCoin AS [RTC Coin], User_1.RtcCoinEarned AS [RTC Coin Earned], Roles_1.RoleName AS Role FROM [User] AS User_1 INNER JOIN aspnet_Users AS aspnet_Users_1 ON User_1.MembershipId = aspnet_Users_1.UserId INNER JOIN aspnet_Membership ON User_1.MembershipId = aspnet_Membership.UserId INNER JOIN Roles AS Roles_1 ON User_1.Id = Roles_1.UserId WHERE User_1.Id = @UserId"
   >
     <SelectParameters>
       <asp:ControlParameter ControlID="gvUsers" Name="UserId" PropertyName="SelectedValue" />

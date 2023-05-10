@@ -12,7 +12,11 @@ namespace HotelReservationSystem
 
     protected void Application_Start(object sender, EventArgs e)
     {
-
+      // Set up membership roles in the database, should only be called 1 time
+      // Roles.CreateRole(Constants.RoleUser);
+      // Roles.CreateRole(Constants.RoleAdmin);
+      // Roles.CreateRole(Constants.RoleManager);
+      // Roles.CreateRole(Constants.RoleReseter);
     }
 
     protected void Session_Start(object sender, EventArgs e)

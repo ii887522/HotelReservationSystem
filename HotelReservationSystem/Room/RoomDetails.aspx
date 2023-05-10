@@ -1,14 +1,17 @@
 <%@ Page Title="Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="RoomDetails.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style>
+    <style>
 .checked {
   color: orange;
 }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div style="text-align:center;font-family:'Brush Script MT'";>
+    <div style="text-align:center;font-family:'Brush Script MT'";>
     <h1>===Deluxe Room===</h1>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
+    <asp:Button ID="btnBookNow" class="btn btn-primary me-md-2" runat="server" Text="BookNow" PostBackUrl="~/Booking/Booking.aspx"/>
   </div>
   <div id="roomSlideImages" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
