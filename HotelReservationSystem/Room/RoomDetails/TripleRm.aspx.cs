@@ -9,9 +9,14 @@ using System.Web.UI.WebControls;
 
 namespace HotelReservationSystem.Room.RoomDetails
 {
-  public partial class SingleRm : System.Web.UI.Page
+  public partial class TripleRm : System.Web.UI.Page
   {
     protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnBookNow_Click(object sender, EventArgs e)
     {
 
     }
@@ -45,11 +50,6 @@ namespace HotelReservationSystem.Room.RoomDetails
 
       // display a success message
       Response.Write("Your rating and comment have been saved.");
-    }
-
-    protected void btnBookNow_Click(object sender, EventArgs e)
-    {
-
     }
   }
 }
