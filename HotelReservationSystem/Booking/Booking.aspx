@@ -21,8 +21,9 @@
                   <asp:Label CssClass="form-label" runat="server" Text="Email:" />
                   <asp:TextBox ID="txtEmail" CssClass="form-control" placeholder="name123@gmail.com" runat="server"/>
               </div>
-              <div class="col-md-9">
+              <div class="col-md-9 mb-2">
                   <asp:Label CssClass="form-label" runat="server" Text="Start Date (Time):" />
+                  &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBkStartDate" ErrorMessage="Start Date (Time) is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                   <asp:Calendar ID="calendarStartDate" runat="server" BackColor="#EBEBEB" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="180px" NextPrevFormat="FullMonth" Width="340px" OnSelectionChanged="calendarStartDate_SelectionChanged">
                       <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                       <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
@@ -35,7 +36,7 @@
               </div>
               <div class="col-md-9 mb-3">
                   <asp:Label CssClass="form-label" runat="server" Text="End Date (Time):" />
-                  <br />
+                  &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBkEndDate" ErrorMessage="End Date (Time) is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                   <asp:Calendar ID="calendarEndDate" runat="server" BackColor="#EBEBEB" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="calendarEndDate_SelectionChanged">
                       <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                       <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
@@ -50,7 +51,7 @@
                 <%--quantity--%>
                 <label for="quantityNum">Quantity of Room:</label>
                 <asp:ImageButton ID="IncreaseButton" runat="server" Height="26px" ImageUrl="~/icons/add.png" OnClick="IncreaseButton_Click" Width="26px" />
-                <asp:TextBox ID="quantityNum" runat="server" Text="1" type="number" min="1" max="10" Width="120px" ReadOnly="true" Height="26px" Wrap="False"/>
+                <asp:TextBox ID="quantityNum" CssClass="rounded" runat="server" Text="1" type="number" min="1" max="10" Width="120px" ReadOnly="true" Height="26px" Wrap="False" BorderColor="#CCCCCC"/>
                 <asp:ImageButton ID="DecreaseButton" runat="server" Height="26px" ImageUrl="~/icons/minus.png" OnClick="DecreaseButton_Click" Width="26px" />
               </div>
               <div class="mb-3">
@@ -60,6 +61,9 @@
               <div>
                 <asp:Button CssClass="btn btn-dark me-md-3" ID="btnBookaRoom" runat="server" Text="Book a Room" OnClick="BookRoom_Click" BackColor="#999999" PostBackUrl="~/MakePayment/Payment.aspx" />
                   <asp:Button ID="btnCancel" runat="server" BackColor="#999999" CssClass="btn btn-dark" OnClick="Cancel_Click" Text="Cancel" PostBackUrl="~/Room/RoomLists.aspx" />
+                  <br />
+                  <br />
+                  <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
               </div>
         </div>
     </div>

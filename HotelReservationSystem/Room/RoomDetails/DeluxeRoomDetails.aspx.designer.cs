@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelReservationSystem.Room
+namespace HotelReservationSystem.Room.RoomDetails
 {
 
 
-    public partial class RoomDetails
+    public partial class DeluxeRoomDetails
     {
 
         /// <summary>
@@ -24,12 +24,21 @@ namespace HotelReservationSystem.Room
         protected global::System.Web.UI.WebControls.Button btnBookNow;
 
         /// <summary>
-        /// btnReview control.
+        /// commentBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReview;
+        protected global::System.Web.UI.WebControls.TextBox commentBox;
+
+        /// <summary>
+        /// submitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitBtn;
     }
 }
