@@ -15,22 +15,58 @@ namespace HotelReservationSystem.Room.Admin
     {
 
         /// <summary>
-        /// RoomNameTxt control.
+        /// RoomType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RoomNameTxt;
+        protected global::System.Web.UI.WebControls.TextBox RoomType;
 
         /// <summary>
-        /// RoomLocationTxt control.
+        /// RoomTypeRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RoomLocationTxt;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RoomTypeRequiredValidator;
+
+        /// <summary>
+        /// RoomTypeCharacterValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RoomTypeCharacterValidator;
+
+        /// <summary>
+        /// RoomDescTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox RoomDescTxt;
+
+        /// <summary>
+        /// RoomDescRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RoomDescRequiredValidator;
+
+        /// <summary>
+        /// RoomDescCharacterValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RoomDescCharacterValidator;
 
         /// <summary>
         /// NoRoomsTxt control.
@@ -42,49 +78,139 @@ namespace HotelReservationSystem.Room.Admin
         protected global::System.Web.UI.WebControls.TextBox NoRoomsTxt;
 
         /// <summary>
-        /// NoAdultsTxt control.
+        /// NoRoomsRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NoAdultsTxt;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoRoomsRequiredValidator;
 
         /// <summary>
-        /// NoChildrenTxt control.
+        /// NoRoomsFormatValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NoChildrenTxt;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NoRoomsFormatValidator;
 
         /// <summary>
-        /// PriceAdult control.
+        /// MaxAdultsTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PriceAdult;
+        protected global::System.Web.UI.WebControls.TextBox MaxAdultsTxt;
 
         /// <summary>
-        /// PriceChildren control.
+        /// MaxAdultsRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PriceChildren;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator MaxAdultsRequiredValidator;
 
         /// <summary>
-        /// ImageFile control.
+        /// MaxAdultsFormatValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload ImageFile;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator MaxAdultsFormatValidator;
+
+        /// <summary>
+        /// MaxChildrenTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MaxChildrenTxt;
+
+        /// <summary>
+        /// MaxChildrenRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator MaxChildrenRequiredValidator;
+
+        /// <summary>
+        /// MaxChildrenFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator MaxChildrenFormatValidator;
+
+        /// <summary>
+        /// PriceTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PriceTxt;
+
+        /// <summary>
+        /// PriceRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PriceRequiredValidator;
+
+        /// <summary>
+        /// PriceFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PriceFormatValidator;
+
+        /// <summary>
+        /// PriceRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator PriceRangeValidator;
+
+        /// <summary>
+        /// RoomImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload RoomImg;
+
+        /// <summary>
+        /// RoomImgPreview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image RoomImgPreview;
+
+        /// <summary>
+        /// RoomImgValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RoomImgValidator;
 
         /// <summary>
         /// BtnSubmit control.
@@ -94,5 +220,14 @@ namespace HotelReservationSystem.Room.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSubmit;
+
+        /// <summary>
+        /// BtnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReset;
     }
 }
