@@ -36,12 +36,14 @@ namespace HotelReservationSystem.User
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
       if (!Page.IsValid) return;
+      Roles.AddUserToRole(txtUsername.Text.Trim(), Constants.RoleUser);
+      var roleId = Models.User.GetUserId(userName: txtUsername.Text.Trim());
 
-      var userId =
+      var membershipId =
         Membership.CreateUser(txtUsername.Text.Trim(), txtPassword.Text, txtEmailAddr.Text.Trim())
           .ProviderUserKey.ToString();
 
-      Models.User.Create(membershipId: userId, mobilePhone: txtPhone.Text.Trim());
+      Models.User.Create(membershipId: membershipId, roleId: roleId, mobilePhone: txtPhone.Text.Trim());
       Response.Redirect("Login.aspx");
     }
   }

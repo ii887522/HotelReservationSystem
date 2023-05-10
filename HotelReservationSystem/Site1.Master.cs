@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -21,6 +22,7 @@ namespace Assignment
       rememberMeCookie.Expires = DateTime.Now.AddDays(-1);
       Response.SetCookie(rememberMeCookie);
       Session[Constants.IsLoggedIn] = false;
+      FormsAuthentication.SignOut();
       Response.Redirect(HttpContext.Current.Request.Url.AbsolutePath);
     }
   }

@@ -1,6 +1,5 @@
 CREATE TABLE [dbo].[User] (
-    [Id]                INT              NOT NULL IDENTITY(1, 1),
-    [FullName]          NVARCHAR (MAX)   NULL,
+    [Id]                INT              IDENTITY (1, 1) NOT NULL,
     [MobilePhone]       NVARCHAR (13)    NULL,
     [EmailOtp]          NCHAR (6)        NULL,
     [PhoneOtp]          NCHAR (6)        NULL,
@@ -11,9 +10,9 @@ CREATE TABLE [dbo].[User] (
     [RtcCoinEarned]     BIGINT           DEFAULT ((0)) NOT NULL,
     [RtcCoin]           BIGINT           DEFAULT ((0)) NOT NULL,
     [MembershipId]      UNIQUEIDENTIFIER NOT NULL,
+    [RoleId]            UNIQUEIDENTIFIER NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_User_To_aspnet_Membership] FOREIGN KEY ([MembershipId]) REFERENCES [dbo].[aspnet_Membership] ([UserId]),
-    CONSTRAINT [FK_User_To_aspnet_Users] FOREIGN KEY ([MembershipId]) REFERENCES [dbo].[aspnet_Users] ([UserId])
+    CONSTRAINT [FK_User_To_aspnet_Membership] FOREIGN KEY ([MembershipId]) REFERENCES [dbo].[aspnet_Membership] ([UserId])
 );
 
 INSERT INTO [dbo].[aspnet_Users] ([ApplicationId], [UserId], [UserName], [LoweredUserName], [MobileAlias], [IsAnonymous], [LastActivityDate]) VALUES (N'ea63d1ef-9208-4947-b949-00d0c57b4b9e', N'b65b9a20-5db4-4699-b53d-c470cc1c814e', N'chiminyong', N'chiminyong', NULL, 0, N'2023-04-17 16:01:42')

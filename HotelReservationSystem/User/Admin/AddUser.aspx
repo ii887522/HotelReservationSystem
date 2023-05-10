@@ -235,6 +235,16 @@
       </div>
 
       <div class="my-3">
+        <asp:Label CssClass="form-label" runat="server" Text="Role" />
+
+        <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-select">
+          <asp:ListItem Value="User">User</asp:ListItem>
+          <asp:ListItem Value="Admin">Admin</asp:ListItem>
+          <asp:ListItem Value="Manager">Manager</asp:ListItem>
+        </asp:DropDownList>
+      </div>
+
+      <div class="my-3">
         <asp:Label ID="lblProfilePic" CssClass="form-label" runat="server" Text="Profile Picture" />
 
         <asp:Image

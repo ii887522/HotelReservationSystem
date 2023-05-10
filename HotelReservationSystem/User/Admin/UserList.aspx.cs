@@ -17,7 +17,14 @@ namespace HotelReservationSystem.User.Admin
 
     protected void gvUsers_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-      if (Models.User.Delete(id: e.Keys[0].ToString()) == 1) Membership.DeleteUser(e.Values[0].ToString());
+      if (Models.User.Delete(id: e.Keys[0].ToString()) == 1)
+      {
+        var userName = e.Values[0].ToString();
+        Membership.DeleteUser(userName);
+        Roles.RemoveUserFromRole(userName, Models.User.GetRole(userName: userName));
+        Models.User.DeleteFromAspNet(userName);
+      }
+
       gvUsers.DataBind();
       e.Cancel = true;
     }
