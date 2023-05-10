@@ -23,24 +23,26 @@ namespace HotelReservationSystem.Room.RoomDetails
           string rating = Request.Form["rating"];
           string comment = commentBox.Text;
 
-          //var commentId = Models.Comment.Comment(rating.selectedItem, comment.Text.Trim())
-          //.ProviderUserKey.ToString();
+      //var commentId = Models.Comment.Comment(rating.selectedItem, comment.Text.Trim())
+      //.ProviderUserKey.ToString();
 
-          //Models.User.Create(rating, comment.Text.Trim());
+      //Models.User.Create(rating, comment.Text.Trim());
 
-      //// save the rating and comment to the database
-      //string connectionString = ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString;
-      //using (SqlConnection connection = new SqlConnection(connectionString))
-      //{
-      //  string query = "INSERT INTO [Comment] (Rating, Comment) VALUES (@Rating, @Comment)";
-      //  using (SqlCommand command = new SqlCommand(query, connection))
-      //  {
-      //    command.Parameters.AddWithValue("@Rating", rating);
-      //    command.Parameters.AddWithValue("@Comment", comment);
-      //    connection.Open();
-      //    command.ExecuteNonQuery();
-      //  }
-      //}
+          // save the rating and comment to the database
+          string connectionString = ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString;
+          using (SqlConnection connection = new SqlConnection(connectionString))
+          {
+            connection.Open();
+        //string query = "SELECT RoomId from Room WHERE RoomId = 1";
+            string query = "INSERT INTO [Comment] (Rating, Comment) VALUES (@Rating, @Comment)";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+              command.Parameters.AddWithValue("@Rating", rating);
+              command.Parameters.AddWithValue("@Comment", comment);
+              connection.Open();
+              command.ExecuteNonQuery();
+            }
+          }
 
       // display a success message
       Response.Write("Your rating and comment have been saved.");
