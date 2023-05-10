@@ -21,7 +21,7 @@ namespace Assignment
       var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
       rememberMeCookie.Expires = DateTime.Now.AddDays(-1);
       Response.SetCookie(rememberMeCookie);
-      Session[Constants.IsLoggedIn] = false;
+      Session[Constants.AuthUserId] = null;
       FormsAuthentication.SignOut();
       Response.Redirect(HttpContext.Current.Request.Url.AbsolutePath);
     }

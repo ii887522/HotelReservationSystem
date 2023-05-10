@@ -10,6 +10,7 @@ namespace HotelReservationSystem
 
     // Session keys
     public const string IsLoggedIn = "IsLoggedIn";
+    public const string AuthUserId = "AuthUserId";
 
     // User roles
     public const string RoleUser = "User";

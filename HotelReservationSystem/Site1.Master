@@ -62,8 +62,7 @@
 
                 <% if (
                      (Request.Cookies["remember_me"] == null ||
-                     Request.Cookies["remember_me"].Value != "1") &&
-                     (Session["IsLoggedIn"] == null || !(bool)Session["IsLoggedIn"])
+                     Request.Cookies["remember_me"].Value != "1")
                    ) %>
                 <% { %>
                      <asp:HyperLink
@@ -128,7 +127,7 @@
                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                             <StaticSelectedStyle BackColor="#507CD1" />
                         </asp:Menu>
-                      
+
                         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
                         <!--<ul class="list-inline text-right">
                             <li class="list-inline-item"><a href="#">Home</a></li>
