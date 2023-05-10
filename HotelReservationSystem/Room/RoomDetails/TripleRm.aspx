@@ -1,4 +1,4 @@
-<%@ Page Title="Single Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SingleRm.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails.SingleRm" %>
+<%@ Page Title="Triple Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="TripleRm.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails.TripleRm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <style>
@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="text-align:center;font-family:'Brush Script MT'";>
-    <h1>=====Single Room===</h1>
+    <h1>=====Triple Room===</h1>
   </div>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
     <asp:Button ID="btnBookNow" class="btn btn-primary me-md-2" runat="server" Text="BookNow" PostBackUrl="~/Booking/Booking.aspx" OnClick="btnBookNow_Click"/>
@@ -23,7 +23,7 @@
   </div>
   <div class="carousel-inner mx-2">
     <div class="carousel-item active">
-      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/singleRoom.jpg" Height="500px"/>
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/tripleRoom.jpg" Height="500px"/>
     </div>
     <div class="carousel-item">
       <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/twinRmToilet.jpeg" Height="500px"/>

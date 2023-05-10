@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -14,7 +15,24 @@ namespace HotelReservationSystem.Room.RoomDetails
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+      //string roomType = Request.QueryString["roomtype"];
+      //StringBuilder sb = new StringBuilder();
+
+      //switch (roomType)
+      //{
+      //  case "double":
+      //    sb.Append("<h1>=== Double Room ===</h1>");
+      //    break;
+      //  case "deluxe":
+      //    sb.Append("<h1>=== Deluxe Room ===</h1>");
+      //    break;
+      //  case "triple":
+      //    sb.Append("<h1>=== Triple Room ===</h1>");
+      //    break;
+      //  default:
+      //    // Display default content if no room type was specified
+      //    break;
+      //}
     }
 
         protected void submitBtn_Click(object sender, EventArgs e)

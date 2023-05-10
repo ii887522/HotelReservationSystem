@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace HotelReservationSystem.Room.RoomDetails
 {
-  public partial class SingleRm : System.Web.UI.Page
+  public partial class DoubleRm : System.Web.UI.Page
   {
     protected void Page_Load(object sender, EventArgs e)
     {
