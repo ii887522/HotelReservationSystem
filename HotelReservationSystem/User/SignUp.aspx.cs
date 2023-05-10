@@ -20,26 +20,28 @@ namespace HotelReservationSystem.User
 
     protected void usernameValidator_ServerValidate(object source, ServerValidateEventArgs args)
     {
-      args.IsValid = Models.User.IsUsernameUnique(txtUsername.Text.Trim());
+      args.IsValid = Models.User.IsUsernameUnique(value: txtUsername.Text.Trim());
     }
 
     protected void emailValidator_ServerValidate(object source, ServerValidateEventArgs args)
     {
-      args.IsValid = Models.User.IsEmailUnique(txtEmailAddr.Text.Trim());
+      args.IsValid = Models.User.IsEmailUnique(value: txtEmailAddr.Text.Trim());
     }
 
     protected void phoneValidator_ServerValidate(object source, ServerValidateEventArgs args)
     {
-      args.IsValid = Models.User.IsPhoneUnique(txtPhone.Text.Trim());
+      args.IsValid = Models.User.IsPhoneUnique(value: txtPhone.Text.Trim());
     }
 
     protected void btnSignUp_Click(object sender, EventArgs e)
-    { 
+    {
+      if (!Page.IsValid) return;
+
       var userId =
         Membership.CreateUser(txtUsername.Text.Trim(), txtPassword.Text, txtEmailAddr.Text.Trim())
           .ProviderUserKey.ToString();
 
-      Models.User.Create(userId, txtPhone.Text.Trim());
+      Models.User.Create(membershipId: userId, mobilePhone: txtPhone.Text.Trim());
       Response.Redirect("Login.aspx");
     }
   }

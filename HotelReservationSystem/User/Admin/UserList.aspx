@@ -10,6 +10,20 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  <div class="row">
+    <h2 class="col">
+      <span class="bi bi-person-circle"></span>
+      <span>User List</span>
+    </h2>
+
+    <div class="col-auto">
+      <asp:LinkButton runat="server" CssClass="btn btn-success py-1 shadow-sm" PostBackUrl="~/User/Admin/AddUser.aspx">
+        <span class="bi bi-plus h5"></span>
+        <span class="align-text-bottom">Add</span>
+      </asp:LinkButton>
+    </div>
+  </div>
+
   <asp:GridView
     ID="gvUsers"
     CssClass="table shadow-sm"
@@ -56,16 +70,30 @@
         <ItemStyle HorizontalAlign="Center" />
       </asp:CheckBoxField>
 
-      <asp:CommandField
-        ShowSelectButton="True"
-        ButtonType="Image"
-        SelectImageUrl="~/icons/select.png"
-        HeaderText="Actions"
-        DeleteImageUrl="~/icons/delete.png"
-        ShowDeleteButton="True"
-      >
+      <asp:TemplateField HeaderText="Actions" ShowHeader="False">
+        <ItemTemplate>
+          <asp:ImageButton
+            ID="ImageButton1"
+            runat="server"
+            CausesValidation="False"
+            CommandName="Select"
+            ImageUrl="~/icons/select.png"
+            Text="Select"
+          />
+
+          <asp:ImageButton
+            ID="ImageButton2"
+            runat="server"
+            CausesValidation="False"
+            CommandName="Delete"
+            ImageUrl="~/icons/delete.png"
+            Text="Delete"
+            OnClientClick="return confirm('Are you sure you want to delete this user?');"
+          />
+        </ItemTemplate>
+
         <ItemStyle HorizontalAlign="Center" />
-      </asp:CommandField>
+      </asp:TemplateField>
     </Columns>
 
     <EditRowStyle BackColor="#7C6F57" />
@@ -112,7 +140,7 @@
     runat="server"
     ConnectionString="<%$ connectionStrings:LocalSqlServer %>"
     ProviderName="System.Data.SqlClient"
-    SelectCommand="SELECT [User].Id [User ID], aspnet_Users.UserName [Username], aspnet_Membership.Email, [User].MobilePhone [Mobile Phone], [User].IsActive [Active], [User].RtcCoinEarned [RTC Coin Earned], [User].RtcCoin [RTC Coin] FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId INNER JOIN aspnet_Membership ON [User].MembershipId = aspnet_Membership.UserId WHERE [User].Id = @UserId"
+    SelectCommand="SELECT FORMAT([User].Id, '000000') [User ID], aspnet_Users.UserName [Username], aspnet_Membership.Email, [User].MobilePhone [Mobile Phone], [User].IsActive [Active], [User].RtcCoinEarned [RTC Coin Earned], [User].RtcCoin [RTC Coin] FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId INNER JOIN aspnet_Membership ON [User].MembershipId = aspnet_Membership.UserId WHERE [User].Id = @UserId"
   >
     <SelectParameters>
       <asp:ControlParameter ControlID="gvUsers" Name="UserId" PropertyName="SelectedValue" />
