@@ -387,7 +387,6 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="AdminPage.Master" />
     <Content Include="Form.master" />
-    <Content Include="Booking\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="upload\user\profile_pic\.gitkeep" />

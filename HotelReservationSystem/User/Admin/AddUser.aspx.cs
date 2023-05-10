@@ -52,12 +52,16 @@ namespace HotelReservationSystem.User.Admin
         }
       }
 
-      var userId =
+      Roles.AddUserToRole(txtUsername.Text.Trim(), ddlRole.SelectedValue);
+      var roleId = Models.User.GetUserId(userName: txtUsername.Text.Trim());
+
+      var membershipId =
         Membership.CreateUser(txtUsername.Text.Trim(), txtPassword.Text, txtEmailAddr.Text.Trim())
           .ProviderUserKey.ToString();
 
       Models.User.Create(
-        membershipId: userId,
+        membershipId: membershipId,
+        roleId: roleId,
         mobilePhone: txtPhone.Text.Trim(),
         isActive: chkActive.Checked,
         profilePicUrl: profilePicUrl,

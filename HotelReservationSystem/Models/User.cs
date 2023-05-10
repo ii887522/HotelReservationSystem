@@ -11,13 +11,6 @@ namespace HotelReservationSystem.Models
 {
   public sealed class User
   {
-    public string userName;
-    public string email;
-    public string mobilePhone;
-    public bool isActive;
-    public long rtcCoin;
-    public string profilePicUrl;
-
     public static bool IsUsernameUnique(string value)
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
@@ -53,6 +46,7 @@ namespace HotelReservationSystem.Models
 
     public static void Create(
       string membershipId,
+      string roleId,
       string mobilePhone = "",
       bool isActive = false,
       string profilePicUrl = "",
@@ -63,51 +57,40 @@ namespace HotelReservationSystem.Models
       conn.Open();
 
       var cmd = new SqlCommand(
-        "INSERT INTO [User] (MobilePhone, MembershipId, IsActive, ProfilePicUrl, RtcCoin) VALUES (@MobilePhone, @MembershipId, @IsActive, @ProfilePicUrl, @RtcCoin)",
+        "INSERT INTO [User] (MobilePhone, IsActive, ProfilePicUrl, RtcCoin, MembershipId, RoleId) VALUES (@MobilePhone, @IsActive, @ProfilePicUrl, @RtcCoin, @MembershipId, @RoleId)",
         conn
       );
 
       cmd.Parameters.AddWithValue("@MobilePhone", mobilePhone != "" ? (object)mobilePhone : DBNull.Value);
-      cmd.Parameters.AddWithValue("@MembershipId", membershipId);
       cmd.Parameters.AddWithValue("@IsActive", isActive);
       cmd.Parameters.AddWithValue("@ProfilePicUrl", profilePicUrl != "" ? (object)profilePicUrl : DBNull.Value);
       cmd.Parameters.AddWithValue("@RtcCoin", rtcCoin);
+      cmd.Parameters.AddWithValue("@MembershipId", membershipId);
+      cmd.Parameters.AddWithValue("@RoleId", roleId);
       cmd.ExecuteNonQuery();
       conn.Close();
     }
 
-    public static User Read(string id)
+    public static string GetUserId(string userName)
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
       conn.Open();
-
-      var cmd = new SqlCommand(
-        "SELECT aspnet_Users.UserName, aspnet_Membership.Email, [User].MobilePhone, [User].IsActive, [User].RtcCoin, [User].ProfilePicUrl FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId INNER JOIN aspnet_Membership ON [User].MembershipId = aspnet_Membership.UserId WHERE [User].Id = @UserId",
-        conn
-      );
-
-      cmd.Parameters.AddWithValue("@UserId", id);
-      var reader = cmd.ExecuteReader();
-      reader.Read();
-
-      var userName = reader.GetString(reader.GetOrdinal("UserName"));
-      var email = reader.GetString(reader.GetOrdinal("Email"));
-      var mobilePhone = reader.IsDBNull(reader.GetOrdinal("MobilePhone")) ? "" : reader.GetString(reader.GetOrdinal("MobilePhone"));
-      var isActive = reader.GetBoolean(reader.GetOrdinal("IsActive"));
-      var rtcCoin = reader.GetInt64(reader.GetOrdinal("RtcCoin"));
-      var profilePicUrl = reader.IsDBNull(reader.GetOrdinal("ProfilePicUrl")) ? "" : reader.GetString(reader.GetOrdinal("ProfilePicUrl"));
-
+      var cmd = new SqlCommand("SELECT UserId FROM aspnet_Users WHERE UserName = @UserName", conn);
+      cmd.Parameters.AddWithValue("@UserName", userName);
+      var result = ((Guid)cmd.ExecuteScalar()).ToString();
       conn.Close();
+      return result;
+    }
 
-      return new User()
-      {
-        userName = userName,
-        email = email,
-        mobilePhone = mobilePhone,
-        isActive = isActive,
-        rtcCoin = rtcCoin,
-        profilePicUrl = profilePicUrl
-      };
+    public static string GetRole(string userName)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var cmd = new SqlCommand("SELECT aspnet_Roles.RoleName FROM aspnet_Users INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserId = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId WHERE aspnet_Users.UserName = @UserName", conn);
+      cmd.Parameters.AddWithValue("@UserName", userName);
+      var result = (string)cmd.ExecuteScalar();
+      conn.Close();
+      return result;
     }
 
     public static int Delete(string id)
@@ -133,6 +116,16 @@ namespace HotelReservationSystem.Models
       conn.Close();
       return result;
     }
+
+    public static void DeleteFromAspNet(string userName)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var cmd = new SqlCommand("DELETE FROM aspnet_Users WHERE UserName = @UserName", conn);
+      cmd.Parameters.AddWithValue("@UserName", userName);
+      cmd.ExecuteNonQuery();
+      conn.Close();
+    }
   }
 
   // Dummy records
@@ -140,23 +133,28 @@ namespace HotelReservationSystem.Models
   // Username: ii887522
   // Password: admin@admin1
   // Email address: ii887522@gmail.com
+  // Role: User
   //
   // Username: meiyi127
   // Password: meiyi@127
   // Email address: meiyi_127@gmail.com
   // Mobile Phone: +60178715867
+  // Role: Admin
   //
   // Username: hatata_murakata
   // Password: muraka#ha1a1a
   // Email address: hatmur@gmail.com
   // Mobile Phone: +60149302328
+  // Role: Manager
   //
   // Username: murakata_wakaka
   // Password: m1r2k3!@#
   // Email address: murat.129@gmail.com
+  // Role: User
   //
   // Username: chiminyong
   // Password: ii88877@@
   // Email address: yongcm-wm19@student.tarc.edu.my
   // Mobile Phone: +60104221157
+  // Role: User
 }

@@ -17,7 +17,7 @@ namespace HotelReservationSystem.User
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-      if (!Membership.ValidateUser(txtUsername.Text, txtPassword.Text))
+      if (!Membership.ValidateUser(txtUsername.Text.Trim(), txtPassword.Text))
       {
         lblError.Visible = true;
         return;
