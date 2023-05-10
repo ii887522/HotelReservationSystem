@@ -78,8 +78,6 @@
     <asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" />
   </div>
   <!--Search box-->
-  <!--Click search button, go to SearchRooms.aspx, then display the results with Repeater? -->
-
 
   <div class="text-center" style="background-color:#ebf6f9;padding-top:15px; padding-bottom:15px;">
     <h1>Rooms</h1>
