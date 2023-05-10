@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AddToCart\Cart.aspx" />
     <Content Include="App_Data\HotelReservationSystem.mdf" />
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
@@ -107,6 +108,7 @@
     <Content Include="images\hollywoodTwinRoom.jpg" />
     <Content Include="images\hotel.jpg" />
     <Content Include="images\main-logo.png" />
+    <Content Include="images\placeholder.png" />
     <Content Include="images\room.jpg" />
     <Content Include="images\singleRoom.jpg" />
     <Content Include="images\slh.png" />
@@ -140,6 +142,7 @@
     <Content Include="Sql\dbo.RoomInst.sql" />
     <Content Include="Sql\dbo.User.sql" />
     <Content Include="User\ActivateAccount.aspx" />
+    <Content Include="User\Admin\AddUser.aspx" />
     <Content Include="User\Admin\UserList.aspx" />
     <Content Include="User\EditEmailAddr.aspx" />
     <Content Include="User\EditMobilePhone.aspx" />
@@ -159,6 +162,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.Master.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
@@ -293,6 +303,13 @@
     <Compile Include="User\ActivateAccount.aspx.designer.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\Admin\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Admin\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\Admin\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,8 +407,16 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="AdminPage.Master" />
     <Content Include="Form.master" />
+    <Content Include="Booking\Admin\Web.config" />
+    <Content Include="Booking\Web.config" />
+    <Content Include="MakePayment\AdminPayment\Web.config" />
+    <Content Include="MakePayment\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="upload\user\profile_pic\.gitkeep" />
+    <Content Include="Room\Admin\Web.config" />
+    <Content Include="User\Admin\Web.config" />
+    <Content Include="User\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -34,6 +34,7 @@
         box-sizing: border-box;
         width: 100%;
         padding: 10px 15px;
+        z-index: 1;
     }
     .main {
       margin-left: 200px;
@@ -176,6 +177,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+      <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
     </form>
 </body>
 </html>
