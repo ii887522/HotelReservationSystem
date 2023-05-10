@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -10,6 +11,13 @@ namespace HotelReservationSystem.Models
 {
   public sealed class User
   {
+    public string userName;
+    public string email;
+    public string mobilePhone;
+    public bool isActive;
+    public long rtcCoin;
+    public string profilePicUrl;
+
     public static bool IsUsernameUnique(string value)
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
@@ -43,15 +51,87 @@ namespace HotelReservationSystem.Models
       return count == 0;
     }
 
-    public static void Create(string membershipId, string mobilePhone)
+    public static void Create(
+      string membershipId,
+      string mobilePhone = "",
+      bool isActive = false,
+      string profilePicUrl = "",
+      long rtcCoin = 0
+    )
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
       conn.Open();
-      var cmd = new SqlCommand("INSERT INTO [User] (MobilePhone, MembershipId) VALUES (@MobilePhone, @MembershipId)", conn);
-      cmd.Parameters.AddWithValue("@MobilePhone", mobilePhone);
+
+      var cmd = new SqlCommand(
+        "INSERT INTO [User] (MobilePhone, MembershipId, IsActive, ProfilePicUrl, RtcCoin) VALUES (@MobilePhone, @MembershipId, @IsActive, @ProfilePicUrl, @RtcCoin)",
+        conn
+      );
+
+      cmd.Parameters.AddWithValue("@MobilePhone", mobilePhone != "" ? (object)mobilePhone : DBNull.Value);
       cmd.Parameters.AddWithValue("@MembershipId", membershipId);
+      cmd.Parameters.AddWithValue("@IsActive", isActive);
+      cmd.Parameters.AddWithValue("@ProfilePicUrl", profilePicUrl != "" ? (object)profilePicUrl : DBNull.Value);
+      cmd.Parameters.AddWithValue("@RtcCoin", rtcCoin);
       cmd.ExecuteNonQuery();
       conn.Close();
+    }
+
+    public static User Read(string id)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+
+      var cmd = new SqlCommand(
+        "SELECT aspnet_Users.UserName, aspnet_Membership.Email, [User].MobilePhone, [User].IsActive, [User].RtcCoin, [User].ProfilePicUrl FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId INNER JOIN aspnet_Membership ON [User].MembershipId = aspnet_Membership.UserId WHERE [User].Id = @UserId",
+        conn
+      );
+
+      cmd.Parameters.AddWithValue("@UserId", id);
+      var reader = cmd.ExecuteReader();
+      reader.Read();
+
+      var userName = reader.GetString(reader.GetOrdinal("UserName"));
+      var email = reader.GetString(reader.GetOrdinal("Email"));
+      var mobilePhone = reader.IsDBNull(reader.GetOrdinal("MobilePhone")) ? "" : reader.GetString(reader.GetOrdinal("MobilePhone"));
+      var isActive = reader.GetBoolean(reader.GetOrdinal("IsActive"));
+      var rtcCoin = reader.GetInt64(reader.GetOrdinal("RtcCoin"));
+      var profilePicUrl = reader.IsDBNull(reader.GetOrdinal("ProfilePicUrl")) ? "" : reader.GetString(reader.GetOrdinal("ProfilePicUrl"));
+
+      conn.Close();
+
+      return new User()
+      {
+        userName = userName,
+        email = email,
+        mobilePhone = mobilePhone,
+        isActive = isActive,
+        rtcCoin = rtcCoin,
+        profilePicUrl = profilePicUrl
+      };
+    }
+
+    public static int Delete(string id)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+
+      // Delete stored profile picture
+      var cmd = new SqlCommand("SELECT [ProfilePicUrl] FROM [User] WHERE Id = @Id", conn);
+      cmd.Parameters.AddWithValue("@Id", id);
+      var profilePicUrl = cmd.ExecuteScalar();
+
+      if (profilePicUrl != DBNull.Value)
+      {
+        File.Delete(AppDomain.CurrentDomain.BaseDirectory + "upload/user/profile_pic/" + profilePicUrl);
+      }
+
+      // Delete user record
+      cmd = new SqlCommand("DELETE FROM [User] WHERE Id = @Id", conn);
+      cmd.Parameters.AddWithValue("@Id", id);
+      var result = cmd.ExecuteNonQuery();
+
+      conn.Close();
+      return result;
     }
   }
 

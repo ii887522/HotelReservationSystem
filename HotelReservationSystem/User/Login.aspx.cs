@@ -17,8 +17,6 @@ namespace HotelReservationSystem.User
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-      // "ii887522", "admin@admin", "ii887522@gmail.com"
-
       if (!Membership.ValidateUser(txtUsername.Text, txtPassword.Text))
       {
         lblError.Visible = true;
