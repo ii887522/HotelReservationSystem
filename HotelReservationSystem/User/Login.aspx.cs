@@ -26,8 +26,8 @@ namespace HotelReservationSystem.User
       var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
       rememberMeCookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
       Response.SetCookie(rememberMeCookie);
-      Session[Constants.IsLoggedIn] = true;
-      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
+      Session[Constants.AuthUserId] = Models.User.GetUserId(userName: txtUsername.Text.Trim());
+      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text.Trim(), true);
     }
   }
 }

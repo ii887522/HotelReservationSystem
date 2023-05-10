@@ -16,6 +16,7 @@ namespace HotelReservationSystem
       // Roles.CreateRole(Constants.RoleUser);
       // Roles.CreateRole(Constants.RoleAdmin);
       // Roles.CreateRole(Constants.RoleManager);
+      // Roles.CreateRole(Constants.RoleReseter);
     }
 
     protected void Session_Start(object sender, EventArgs e)
