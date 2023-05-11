@@ -64,6 +64,8 @@
                   <br />
                   <br />
                   <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                  <br />
+                  <asp:Label ID="lblError" runat="server"></asp:Label>
               </div>
         </div>
     </div>
