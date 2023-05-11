@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AddToCart\Cart.aspx" />
     <Content Include="App_Data\HotelReservationSystem.mdf" />
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
@@ -90,9 +91,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="icons\add.png" />
     <Content Include="icons\cancel.png" />
     <Content Include="icons\delete.png" />
     <Content Include="icons\edit.png" />
+    <Content Include="icons\minus.png" />
     <Content Include="icons\select.png" />
     <Content Include="icons\update.png" />
     <Content Include="images\check.png" />
@@ -115,12 +118,18 @@
     <Content Include="MakePayment\AdminPayment\AdminPayment.aspx" />
     <Content Include="MakePayment\Payment.aspx" />
     <Content Include="MakePayment\Receipt.aspx" />
-    <Content Include="Room\RoomDetails.aspx" />
+    <Content Include="Room\RoomDetails\DeluxeRoomDetails.aspx" />
+    <Content Include="Room\RoomDetails\DoubleDoubleRm.aspx" />
+    <Content Include="Room\RoomDetails\DoubleRm.aspx" />
+    <Content Include="Room\RoomDetails\HollywoodTwinRm.aspx" />
+    <Content Include="Room\RoomDetails\SingleRm.aspx" />
+    <Content Include="Room\RoomDetails\TripleRm.aspx" />
+    <Content Include="Room\RoomDetails\TwinRm.aspx" />
     <Content Include="Room\RoomLists.aspx" />
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
-    <Content Include="Room\SearchRooms.aspx" />
+    <Content Include="Room\SearchResults.aspx" />
     <Content Include="images\tripleRoom.jpg" />
     <Content Include="images\twinRoom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -130,6 +139,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Sql\dbo.Book.sql" />
+    <Content Include="Sql\dbo.Comment.sql" />
     <Content Include="Sql\dbo.History.sql" />
     <Content Include="Sql\dbo.Order.sql" />
     <Content Include="Sql\dbo.Payment.sql" />
@@ -157,6 +167,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.Master.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
@@ -225,12 +242,59 @@
     <Compile Include="MakePayment\Receipt.aspx.designer.cs">
       <DependentUpon>Receipt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Room\RoomDetails\DeluxeRoomDetails.aspx.cs">
+      <DependentUpon>DeluxeRoomDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rooms.cs" />
     <Compile Include="Room\RoomDetails.aspx.cs">
       <DependentUpon>RoomDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Room\RoomDetails.aspx.designer.cs">
-      <DependentUpon>RoomDetails.aspx</DependentUpon>
+    <Compile Include="Room\RoomDetails\DeluxeRoomDetails.aspx.designer.cs">
+      <DependentUpon>DeluxeRoomDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\DoubleDoubleRm.aspx.cs">
+      <DependentUpon>DoubleDoubleRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\DoubleDoubleRm.aspx.designer.cs">
+      <DependentUpon>DoubleDoubleRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\DoubleRm.aspx.cs">
+      <DependentUpon>DoubleRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\DoubleRm.aspx.designer.cs">
+      <DependentUpon>DoubleRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\HollywoodTwinRm.aspx.cs">
+      <DependentUpon>HollywoodTwinRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\HollywoodTwinRm.aspx.designer.cs">
+      <DependentUpon>HollywoodTwinRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\SingleRm.aspx.cs">
+      <DependentUpon>SingleRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\SingleRm.aspx.designer.cs">
+      <DependentUpon>SingleRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\TripleRm.aspx.cs">
+      <DependentUpon>TripleRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\TripleRm.aspx.designer.cs">
+      <DependentUpon>TripleRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\TwinRm.aspx.cs">
+      <DependentUpon>TwinRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetails\TwinRm.aspx.designer.cs">
+      <DependentUpon>TwinRm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Room\RoomLists.aspx.cs">
       <DependentUpon>RoomLists.aspx</DependentUpon>
@@ -261,13 +325,12 @@
     <Compile Include="Room\Admin\RoomList.aspx.designer.cs">
       <DependentUpon>RoomList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Hotel.cs" />
-    <Compile Include="Room\SearchRooms.aspx.cs">
-      <DependentUpon>SearchRooms.aspx</DependentUpon>
+    <Compile Include="Room\SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Room\SearchRooms.aspx.designer.cs">
-      <DependentUpon>SearchRooms.aspx</DependentUpon>
+    <Compile Include="Room\SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

@@ -8,7 +8,7 @@
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-  <style type="text/css">
+    <style type="text/css">
     .Overlay {
       position: fixed;
       top: 0px;
@@ -72,22 +72,24 @@
             </div>
             <div class="mb-3">
               Full Name:<br />
-              <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Eg. DXXX JXXX HXXX"></asp:TextBox>
+              <asp:TextBox ID="txtName" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
               <br />
               Email address:<br />
               <div class="input-group">
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Eg. abc"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                <%--<asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Eg. abc"></asp:TextBox>
                 <span class="input-group-text">@</span>
                 <asp:TextBox ID="txtEmail2" runat="server" CssClass="form-control" placeholder="Eg. gmail"></asp:TextBox>
-                <span class="input-group-text">.com</span>
+                <span class="input-group-text">.com</span>--%>
               </div>
 
               <br />
               Phone Number:<br />
-              <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="Eg. 012-XXXXXXXXX"></asp:TextBox>
+              <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
             </div>
           </div>
         </div>
+          <asp:Label ID="lblError" runat="server"></asp:Label>
         </div>
         <div class="col-sm-6 mb-3 mb-sm-0" style="width: 60%">
         <div class="card" style="margin-right: 200px; border: none">
@@ -106,31 +108,52 @@
             <div class="row">
               <div class="col">
                 Card Number:
-                               
-                        <asp:TextBox ID="txtCardNum" runat="server" CssClass="form-control" placeholder="Please insert 16 numbers"></asp:TextBox>
+                          <asp:RequiredFieldValidator ID="RFVCardNum" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Please Fill Up!" ForeColor="Red" ValidationGroup="PaymentValidation">*</asp:RequiredFieldValidator>     
+                        <asp:CompareValidator ID="CVCardNum" runat="server" ControlToValidate="txtCardNum" ForeColor="Red" ValidationGroup="PaymentValidation" Operator="DataTypeCheck">*This is not number</asp:CompareValidator>
+                        <asp:RegularExpressionValidator ID="REVCardNum" runat="server" ControlToValidate="txtCardNum" ForeColor="Red" ValidationGroup="PaymentValidation" ValidationExpression="\w{16}">*This require 16 digits</asp:RegularExpressionValidator>
+                        <asp:TextBox ID="txtCardNum" runat="server" CssClass="form-control" placeholder="Please insert 16 numbers" ValidationGroup="PaymentValidation"></asp:TextBox>
+                  <%--
+                  <asp:CompareValidator ID="CVCardNum" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Card Number should be number." ForeColor="Red">*</asp:CompareValidator>
+                  <asp:RegularExpressionValidator ID="REVCardNum" runat="server" ControlToValidate="txtCardNum" ErrorMessage="You Must enter 16 digits." ForeColor="Red" ValidationExpression="\w(16)">*</asp:RegularExpressionValidator>--%>
               </div>
               <div class="col">
-                CVV:<br />
+                CVV:
+                &nbsp<asp:RequiredFieldValidator ID="RFVCvv" runat="server" ControlToValidate="txtCvv" ErrorMessage="Please Fill Up!" ForeColor="Red" ValidationGroup="PaymentValidation">*</asp:RequiredFieldValidator>
+                  <asp:CompareValidator ID="CVCardCVV" runat="server" ControlToValidate="txtCvv" ErrorMessage="" ForeColor="Red" ValidationGroup="PaymentValidation" Operator="DataTypeCheck">*This is not number</asp:CompareValidator>
+                <br />
                 <asp:TextBox ID="txtCvv" runat="server" CssClass="form-control" placeholder="Please insert 4 numbers"></asp:TextBox>
+                  <%--
+                  <asp:CompareValidator ID="CVCvv" runat="server" ControlToValidate="txtCvv" ErrorMessage="CVV Number should be number. " ForeColor="Red">*</asp:CompareValidator>
+                  <asp:RegularExpressionValidator ID="REVCvv" runat="server" ControlToValidate="txtCvv" ErrorMessage="You Must enter 4 digits." ForeColor="Red" ValidationExpression="\w(4)">*</asp:RegularExpressionValidator>--%>
               </div>
             </div>
             <br />
             <div class="mb-3">
-              Card Holder Name:<br />
+              Card Holder Name:
+              <asp:RequiredFieldValidator ID="RFVName" runat="server" ControlToValidate="txtCardHolder" ErrorMessage="Name is required." ForeColor="Red" ValidationGroup="PaymentValidation">*</asp:RequiredFieldValidator>
+              <br />
               <asp:TextBox ID="txtCardHolder" runat="server" CssClass="form-control" placeholder="Please insert card's holder full name"></asp:TextBox>
+                
               <br />
               Card Expiry Date:<br />
               <div class="col; btn-group" style="width: 100%">
                 <asp:DropDownList ID="ddlExpMon" runat="server" CssClass="form-select">
+                    <asp:ListItem>-Select-</asp:ListItem>
                   <asp:ListItem>JANUARY</asp:ListItem>
                   <asp:ListItem>FEBRUARY</asp:ListItem>
                   <asp:ListItem>MARCH</asp:ListItem>
+                    <asp:ListItem>APRIL</asp:ListItem>
+                    <asp:ListItem>MAY</asp:ListItem>
+                    <asp:ListItem>JUNE</asp:ListItem>
+                    <asp:ListItem>JULY</asp:ListItem>
+                    <asp:ListItem>AUGUST</asp:ListItem>
+                    <asp:ListItem>SEPTEMBER</asp:ListItem>
+                    <asp:ListItem>OCTOBER</asp:ListItem>
+                    <asp:ListItem>NOVENMER</asp:ListItem>
+                    <asp:ListItem>DECEMBER</asp:ListItem>
                 </asp:DropDownList>
                 <span class="input-group-text">/</span>
                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="form-select">
-                  <asp:ListItem>2023</asp:ListItem>
-                  <asp:ListItem>2024</asp:ListItem>
-                  <asp:ListItem>2025</asp:ListItem>
                 </asp:DropDownList>
               </div>
             </div>
@@ -144,7 +167,7 @@
         <td>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-            <asp:Button ID="btnPay" runat="server" Text="PAY" CssClass="btn btn-success" Width="10%" PostBackUrl="~/MakePayment/Receipt.aspx" />
+            <asp:Button ID="btnPay" runat="server" Text="PAY" CssClass="btn btn-success" Width="10%" OnClick="btnPay_Click" ValidationGroup="PaymentValidation" />
             <asp:Button ID="btnBack" runat="server" Text="BACK" CssClass="btn btn-danger" Width="10%" OnClick="btnBack_Click" /> <%--OnClientClick="openModal()"--%>
             <!--Modal-->
             <table>

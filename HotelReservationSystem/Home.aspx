@@ -1,7 +1,7 @@
 <%@ Page Title="RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Assignment.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <style type="text/css">
+    <style type="text/css">
     .photo-first {
       border-top-left-radius: var(--bs-border-radius);
     }
@@ -50,7 +50,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/DeluxeRoomDetails.aspx"
                   Text="Read more"
                 />
             </div>
@@ -63,7 +63,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/SingleRm.aspx"
                   Text="Read more"
                 />
             </div>
@@ -78,7 +78,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/TwinRm.aspx"
                   Text="Read more"
                 />
             </div>
@@ -93,7 +93,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/TripleRm.aspx"
                   Text="Read more"
                 />
             </div>
@@ -111,7 +111,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/DeluxeRoomDetails.aspx"
                   Text="Read more"
                 />
             </div>
@@ -125,7 +125,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/TwinRm.aspx"
                   Text="Read more"
                 />
             </div>
@@ -139,7 +139,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/TripleRm.aspx"
                   Text="Read more"
                 />
             </div>
@@ -153,7 +153,7 @@
                 <asp:HyperLink
                   CssClass="btn btn-primary shadow-sm"
                   runat="server"
-                  NavigateUrl="~/Room/RoomDetails.aspx"
+                  NavigateUrl="~/Room/RoomDetails/SingleRm.aspx"
                   Text="Read more"
                 />
             </div>

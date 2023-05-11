@@ -1,14 +1,19 @@
-<%@ Page Title="Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="RoomDetails.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails" %>
+<%@ Page Title="Single Room Details | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SingleRm.aspx.cs" Inherits="HotelReservationSystem.Room.RoomDetails.SingleRm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style>
-.checked {
-  color: orange;
-}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    .radio-list label {
+                display: inline-block;
+                margin-right: 10px;
+    }
+  </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div style="text-align:center;font-family:'Brush Script MT'";>
-    <h1>===Deluxe Room===</h1>
+    <div style="text-align:center;font-family:'Brush Script MT'";>
+    <h1>=====Single Room===</h1>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
+    <asp:Button ID="btnBookNow" class="btn btn-primary me-md-2" runat="server" Text="BookNow" PostBackUrl="~/Booking/Booking.aspx" OnClick="btnBookNow_Click"/>
   </div>
   <div id="roomSlideImages" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -18,10 +23,10 @@
   </div>
   <div class="carousel-inner mx-2">
     <div class="carousel-item active">
-      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/deluxeRoom.jpg" Height="500px"/>
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/singleRoom.jpg" Height="500px"/>
     </div>
     <div class="carousel-item">
-      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/deluxeRmToilet.jpeg" Height="500px"/>
+      <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/twinRmToilet.jpeg" Height="500px"/>
     </div>
     <div class="carousel-item">
       <asp:Image runat="server" CssClass="d-block w-100" ImageUrl="~/images/tripleRmToilet.jpg" Height="500px"/>
@@ -29,7 +34,7 @@
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#roomSlideImages" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Previousan>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#roomSlideImages" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -126,20 +131,27 @@
       <div class="card-group rounded-circle">
         <div class="card">
           <div class="card-body">
-            <p style="text-align:left;font-weight:bold">RTC Hotel Rating</p>
+            <h3 style="text-align:left;font-weight:bold">RTC Hotel Rating</h3>
               <div style="text-align:left">
-                <span class="bi bi-star-fill"></span>
-                <span class="bi bi-star-fill"></span>
-                <span class="bi bi-star-fill"></span>
-                <span class="bi bi-star-fill"></span>
-                <span class="bi bi-star"></span>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <asp:Button ID="btnReview" class="me-md-2" runat="server" Text="Write a Review" BackColor="#CCCCCC"/>
+                <div class="radio-list">
+                  <label><input type="radio" name="rating" value="1" />1</label>
+                  <label><input type="radio" name="rating" value="2" />2</label>
+                  <label><input type="radio" name="rating" value="3" />3</label>
+                  <label><input type="radio" name="rating" value="4" />4</label>
+                  <label><input type="radio" name="rating" value="5" />5</label>
+              </div>
+                <%--<input type="hidden" id="ratingValue" name="ratingValue" value="" />--%>
+                <%--<div class="d-grid gap-2 d-md-flex justify-content-md-end">--%>
+                <%--<asp:Button ID="btnReview" class="me-md-2" runat="server" Text="Write a Review" BackColor="#CCCCCC"/>--%>
+                  <h5>Leave a comment:</h5>
+                  <asp:TextBox ID="commentBox" runat="server" TextMode="MultiLine"></asp:TextBox>
+                  <div class="mt-2 mb-2">
+                    <asp:Button ID="submitBtn" runat="server" Text="Submit" OnClick="submitBtn_Click" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </div>
 </asp:Content>
