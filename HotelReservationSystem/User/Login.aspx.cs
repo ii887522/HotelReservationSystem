@@ -36,7 +36,7 @@ namespace HotelReservationSystem.User
       }
 
       Session[Constants.AuthUserId] = userId;
-      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text.Trim(), true);
+      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text.Trim(), false);
     }
   }
 }
