@@ -117,7 +117,7 @@ namespace HotelReservationSystem.Room
         room.TotalQty = int.Parse(dr["TotalQty"].ToString());
         room.MaxAdults = int.Parse(dr["MaxAdults"].ToString());
         room.MaxChildren = int.Parse(dr["MaxChildren"].ToString());
-        room.Price = double.Parse(dr["MaxChildren"].ToString());
+        room.Price = double.Parse(dr["Price"].ToString());
         room.Image = "~/images/" + dr["Image"].ToString();
         rooms.Add(room);
       }

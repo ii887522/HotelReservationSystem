@@ -71,7 +71,11 @@
     <br />
     <asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" />
   </div>
-
+  
+  <!-- Rooms Header -->
+  <div class="text-center" style="background-color:#ebf6f9;padding-top:15px; padding-bottom:15px;">
+    <h1>Rooms</h1>
+  </div>
   <!-- Search results -->
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mx-4">
   <asp:Repeater ID="rptSearchResults" runat="server">
