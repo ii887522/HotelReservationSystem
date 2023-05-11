@@ -18,9 +18,9 @@ namespace Assignment
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-      var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
-      rememberMeCookie.Expires = DateTime.Now.AddDays(-1);
-      Response.SetCookie(rememberMeCookie);
+      var permaTokenCookie = new HttpCookie(Constants.PermaToken, "");
+      permaTokenCookie.Expires = DateTime.Now.AddDays(-1);
+      Response.SetCookie(permaTokenCookie);
       Session[Constants.AuthUserId] = null;
       FormsAuthentication.SignOut();
       Response.Redirect(HttpContext.Current.Request.Url.AbsolutePath);
