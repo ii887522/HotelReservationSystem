@@ -17,9 +17,7 @@ namespace HotelReservationSystem.User
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-      // "ii887522", "admin@admin", "ii887522@gmail.com"
-
-      if (!Membership.ValidateUser(txtUsername.Text, txtPassword.Text))
+      if (!Membership.ValidateUser(txtUsername.Text.Trim(), txtPassword.Text))
       {
         lblError.Visible = true;
         return;
@@ -28,8 +26,8 @@ namespace HotelReservationSystem.User
       var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
       rememberMeCookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
       Response.SetCookie(rememberMeCookie);
-      Session[Constants.IsLoggedIn] = true;
-      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
+      Session[Constants.AuthUserId] = Models.User.GetUserId(userName: txtUsername.Text.Trim());
+      FormsAuthentication.RedirectFromLoginPage(txtUsername.Text.Trim(), true);
     }
   }
 }

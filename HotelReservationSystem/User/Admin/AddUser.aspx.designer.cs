@@ -7,146 +7,146 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelReservationSystem.Booking
+namespace HotelReservationSystem.User.Admin
 {
 
 
-    public partial class Booking
+    public partial class AddUser
     {
 
         /// <summary>
-        /// txtName control.
+        /// txtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
-        /// txtEmail control.
+        /// usernameValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.CustomValidator usernameValidator;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// calendarStartDate control.
+        /// txtRetypePassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendarStartDate;
+        protected global::System.Web.UI.WebControls.TextBox txtRetypePassword;
 
         /// <summary>
-        /// txtBkStartDate control.
+        /// txtEmailAddr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBkStartDate;
+        protected global::System.Web.UI.WebControls.TextBox txtEmailAddr;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// emailValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.CustomValidator emailValidator;
 
         /// <summary>
-        /// calendarEndDate control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendarEndDate;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
-        /// txtBkEndDate control.
+        /// phoneValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBkEndDate;
+        protected global::System.Web.UI.WebControls.CustomValidator phoneValidator;
 
         /// <summary>
-        /// IncreaseButton control.
+        /// chkActive control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton IncreaseButton;
+        protected global::System.Web.UI.WebControls.CheckBox chkActive;
 
         /// <summary>
-        /// quantityNum control.
+        /// txtRtcCoin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox quantityNum;
+        protected global::System.Web.UI.WebControls.TextBox txtRtcCoin;
 
         /// <summary>
-        /// DecreaseButton control.
+        /// ddlRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton DecreaseButton;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
 
         /// <summary>
-        /// txtSpecialRequest control.
+        /// lblProfilePic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSpecialRequest;
+        protected global::System.Web.UI.WebControls.Label lblProfilePic;
 
         /// <summary>
-        /// btnBookaRoom control.
+        /// imgProfilePic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBookaRoom;
+        protected global::System.Web.UI.WebControls.Image imgProfilePic;
 
         /// <summary>
-        /// btnCancel control.
+        /// fuProfilePic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.FileUpload fuProfilePic;
 
         /// <summary>
-        /// ValidationSummary1 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }
