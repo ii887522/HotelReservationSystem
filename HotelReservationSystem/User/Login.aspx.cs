@@ -23,10 +23,19 @@ namespace HotelReservationSystem.User
         return;
       }
 
-      var rememberMeCookie = new HttpCookie(Constants.RememberMe, "1");
-      rememberMeCookie.Expires = DateTime.Now.AddDays(chkRemember.Checked ? 7 : -1);
-      Response.SetCookie(rememberMeCookie);
-      Session[Constants.AuthUserId] = Models.User.GetUserId(userName: txtUsername.Text.Trim());
+      var userId = Models.User.GetIdFromUserName(userName: txtUsername.Text.Trim()); 
+
+      if (chkRemember.Checked)
+      {
+        // Generate a random GUID
+        var permaToken = Guid.NewGuid();
+        Models.User.Update(userId: userId, permaToken: permaToken);
+        var permaTokenCookie = new HttpCookie(Constants.PermaToken, permaToken.ToString());
+        permaTokenCookie.Expires = DateTime.Now.AddDays(7);
+        Response.SetCookie(permaTokenCookie);
+      }
+
+      Session[Constants.AuthUserId] = userId;
       FormsAuthentication.RedirectFromLoginPage(txtUsername.Text.Trim(), true);
     }
   }

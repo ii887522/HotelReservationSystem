@@ -7,6 +7,7 @@ namespace HotelReservationSystem
 
     // Cookie keys
     public const string RememberMe = "remember_me";
+    public const string PermaToken = "perma_token";
 
     // Session keys
     public const string IsLoggedIn = "IsLoggedIn";

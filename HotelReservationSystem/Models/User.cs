@@ -71,6 +71,20 @@ namespace HotelReservationSystem.Models
       conn.Close();
     }
 
+    public static void Update(string userId, Guid? permaToken = null)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var sql = "UPDATE [User] SET ";
+      if (permaToken != null) sql += "PermaToken = @PermaToken ";
+      sql += "WHERE Id = @Id";
+      var cmd = new SqlCommand(sql, conn);
+      if (permaToken != null) cmd.Parameters.AddWithValue("@PermaToken", permaToken);
+      cmd.Parameters.AddWithValue("@Id", userId);
+      cmd.ExecuteNonQuery();
+      conn.Close();
+    }
+
     public static string GetUserId(string userName)
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
@@ -86,8 +100,46 @@ namespace HotelReservationSystem.Models
     {
       var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
       conn.Open();
-      var cmd = new SqlCommand("SELECT aspnet_Roles.RoleName FROM aspnet_Users INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserId = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId WHERE aspnet_Users.UserName = @UserName", conn);
+
+      var cmd = new SqlCommand(
+        "SELECT aspnet_Roles.RoleName FROM aspnet_Users INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserId = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId WHERE aspnet_Users.UserName = @UserName",
+        conn
+      );
+
       cmd.Parameters.AddWithValue("@UserName", userName);
+      var result = (string)cmd.ExecuteScalar();
+      conn.Close();
+      return result;
+    }
+
+    public static string GetIdFromPermaToken(Guid permaToken)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var cmd = new SqlCommand("SELECT Id FROM [User] WHERE PermaToken = @PermaToken", conn);
+      cmd.Parameters.AddWithValue("@PermaToken", permaToken);
+      var result = cmd.ExecuteScalar();
+      conn.Close();
+      return result != null ? result.ToString() : null;
+    }
+
+    public static string GetIdFromUserName(string userName)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var cmd = new SqlCommand("SELECT [User].Id FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId WHERE aspnet_Users.UserName = @UserName", conn);
+      cmd.Parameters.AddWithValue("@UserName", userName);
+      var result = cmd.ExecuteScalar();
+      conn.Close();
+      return result != null ? result.ToString() : null;
+    }
+
+    public static string GetUserName(string id)
+    {
+      var conn = new SqlConnection(ConfigurationManager.ConnectionStrings[Constants.LocalSqlServer].ConnectionString);
+      conn.Open();
+      var cmd = new SqlCommand("SELECT aspnet_Users.UserName FROM [User] INNER JOIN aspnet_Users ON [User].MembershipId = aspnet_Users.UserId WHERE [User].Id = @Id", conn);
+      cmd.Parameters.AddWithValue("@Id", id);
       var result = (string)cmd.ExecuteScalar();
       conn.Close();
       return result;

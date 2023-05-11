@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[User] (
     [PhoneOtpUpdatedAt] DATETIME         NULL,
     [RtcCoinEarned]     BIGINT           DEFAULT ((0)) NOT NULL,
     [RtcCoin]           BIGINT           DEFAULT ((0)) NOT NULL,
+	  [PermaToken]        UNIQUEIDENTIFIER NULL,
     [MembershipId]      UNIQUEIDENTIFIER NOT NULL,
     [RoleId]            UNIQUEIDENTIFIER NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),

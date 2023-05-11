@@ -60,10 +60,7 @@
                     </ul>
                 </div>
 
-                <% if (
-                     (Request.Cookies["remember_me"] == null ||
-                     Request.Cookies["remember_me"].Value != "1")
-                   ) %>
+                <% if (Session["AuthUserId"] == null) %>
                 <% { %>
                      <asp:HyperLink
                        CssClass="d-flex nav-link"

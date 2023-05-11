@@ -21,7 +21,14 @@ namespace HotelReservationSystem
 
     protected void Session_Start(object sender, EventArgs e)
     {
-
+      var permaTokenCookie = Request.Cookies[Constants.PermaToken];
+      if (permaTokenCookie == null) return;
+      Guid permaToken;
+      if (!Guid.TryParse(permaTokenCookie.Value, out permaToken)) return;
+      var userId = Models.User.GetIdFromPermaToken(permaToken);
+      if (userId == null) return;
+      Session[Constants.AuthUserId] = userId;
+      FormsAuthentication.RedirectFromLoginPage(Models.User.GetUserName(id: userId), true);
     }
 
     protected void Application_BeginRequest(object sender, EventArgs e)
