@@ -437,6 +437,7 @@
     <Content Include="Room\Admin\Web.config" />
     <Content Include="User\Admin\Web.config" />
     <Content Include="User\Web.config" />
+    <Content Include="Room\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

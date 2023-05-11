@@ -11,7 +11,7 @@ namespace HotelReservationSystem
 {
 
 
-    public partial class _Error
+    public partial class Error
     {
 
         /// <summary>
