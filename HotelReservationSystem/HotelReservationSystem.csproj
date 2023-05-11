@@ -253,6 +253,13 @@
       <DependentUpon>DoubleDoubleRm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Room\RoomDetails\DoubleDoubleRm.aspx.designer.cs">
+      <DependentUpon>DoubleDoubleRm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomDetails\DoubleRm.aspx.cs">
+      <DependentUpon>DoubleRm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Room\RoomDetails\DoubleRm.aspx.designer.cs">
       <DependentUpon>DoubleRm.aspx</DependentUpon>
     </Compile>
