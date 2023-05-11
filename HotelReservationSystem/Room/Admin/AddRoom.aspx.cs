@@ -32,6 +32,12 @@ namespace HotelReservationSystem.Room.Admin
       }
       reader.Close();
 
+      string description = Request.Form["RoomDescTxt"];
+      int availableRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
+      int totalRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
+      int maxAdults = Convert.ToInt32(Request.Form["MaxAdultsTxt"]);
+      int maxChildren = Convert.ToInt32(Request.Form["MaxChildrenTxt"]);
+
       // insert record
       SqlCommand cmd = new SqlCommand("INSERT INTO Room (RoomId, RoomType, RoomDesc, AvailableQty, TotalQty, MaxAdults, MaxChildren, Price, Image) " +
         "VALUES (@RoomId, @RoomType, @RoomDesc, @AvailableQty, @TotalQty, @MaxAdults, @MaxChildren, @Price, @Image) ", con);

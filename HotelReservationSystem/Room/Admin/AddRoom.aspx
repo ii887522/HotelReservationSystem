@@ -8,27 +8,10 @@
         var reader = new FileReader();
         reader.onload = function (e) {
           imagePreview.src = e.target.result;
-          imagePreview.style.display = "block";
         };
 
         reader.readAsDataURL(fileUpload.files[0]);
       }
-
-      //var preview = document.querySelector('#preview');
-      //var file = document.querySelector('input[type=file]').files[0];
-      //var reader = new FileReader();
-
-      //reader.onloadend = function () {
-      //  preview.src = reader.result;
-      //  preview.style.display = "block";
-      //}
-
-      //if (file) {
-      //  reader.readAsDataURL(file);
-      //} else {
-      //  preview.src = "#";
-      //  preview.style.display = "none";
-      //}
     }
 </script>
 </asp:Content>
