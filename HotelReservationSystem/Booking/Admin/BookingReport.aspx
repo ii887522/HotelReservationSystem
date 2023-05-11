@@ -3,11 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1119px" DataKeyNames="BookingID" DataSourceID="SqlDataSource1" AllowSorting="True">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1119px" DataKeyNames="BookID" DataSourceID="SqlDataSource1" AllowSorting="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:CommandField CancelImageUrl="~/icons/cancel.png" DeleteImageUrl="~/icons/delete.png" ShowDeleteButton="True" />
-            <asp:BoundField DataField="BookingID" HeaderText="BookingID" ReadOnly="True" SortExpression="BookingID" />
+            <asp:BoundField DataField="BookID" HeaderText="BookID" ReadOnly="True" SortExpression="BookID" />
             <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
             <asp:BoundField DataField="StartBookDate" HeaderText="StartBookDate" SortExpression="StartBookDate" />
             <asp:BoundField DataField="EndBookDate" HeaderText="EndBookDate" SortExpression="EndBookDate" />
@@ -26,12 +26,12 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HotelReservationSystem.mdf;Integrated Security=True" DeleteCommand="DELETE FROM [Booking] WHERE [BookingID] = @BookingID" InsertCommand="INSERT INTO [Booking] ([BookingID], [UserID], [StartBookDate], [EndBookDate], [Qty], [RoomId], [OrderId]) VALUES (@BookingID, @UserID, @StartBookDate, @EndBookDate, @Qty, @RoomId, @OrderId)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Booking]" UpdateCommand="UPDATE [Booking] SET [UserID] = @UserID, [StartBookDate] = @StartBookDate, [EndBookDate] = @EndBookDate, [Qty] = @Qty, [RoomId] = @RoomId, [OrderId] = @OrderId WHERE [BookingID] = @BookingID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HotelReservationSystem.mdf;Integrated Security=True" DeleteCommand="DELETE FROM [Book] WHERE [BookID] = @BookID" InsertCommand="INSERT INTO [Book] ([BookID], [UserID], [StartBookDate], [EndBookDate], [Qty], [RoomId], [OrderId]) VALUES (@BookID, @UserID, @StartBookDate, @EndBookDate, @Qty, @RoomId, @OrderId)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Book]" UpdateCommand="UPDATE [Book] SET [UserID] = @UserID, [StartBookDate] = @StartBookDate, [EndBookDate] = @EndBookDate, [Qty] = @Qty, [RoomId] = @RoomId, [OrderId] = @OrderId WHERE [BookID] = @BookID">
         <DeleteParameters>
-            <asp:Parameter Name="BookingID" Type="String" />
+            <asp:Parameter Name="BookID" Type="String" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="BookingID" Type="String" />
+            <asp:Parameter Name="BookID" Type="String" />
             <asp:Parameter Name="UserID" Type="Int32" />
             <asp:Parameter Name="StartBookDate" Type="DateTime" />
             <asp:Parameter Name="EndBookDate" Type="DateTime" />
@@ -46,7 +46,7 @@
             <asp:Parameter Name="Qty" Type="Int32" />
             <asp:Parameter Name="RoomId" Type="Int32" />
             <asp:Parameter Name="OrderId" Type="Int32" />
-            <asp:Parameter Name="BookingID" Type="String" />
+            <asp:Parameter Name="BookID" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <br />
