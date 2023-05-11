@@ -129,7 +129,7 @@
     <Content Include="Room\Admin\AddRoom.aspx" />
     <Content Include="Room\Admin\RoomAddSuccess.aspx" />
     <Content Include="Room\Admin\RoomList.aspx" />
-    <Content Include="Room\SearchRooms.aspx" />
+    <Content Include="Room\SearchResults.aspx" />
     <Content Include="images\tripleRoom.jpg" />
     <Content Include="images\twinRoom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -245,6 +245,10 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Room\RoomDetails\DeluxeRoomDetails.aspx.cs">
       <DependentUpon>DeluxeRoomDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rooms.cs" />
+    <Compile Include="Room\RoomDetails.aspx.cs">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Room\RoomDetails\DeluxeRoomDetails.aspx.designer.cs">
@@ -321,13 +325,12 @@
     <Compile Include="Room\Admin\RoomList.aspx.designer.cs">
       <DependentUpon>RoomList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Hotel.cs" />
-    <Compile Include="Room\SearchRooms.aspx.cs">
-      <DependentUpon>SearchRooms.aspx</DependentUpon>
+    <Compile Include="Room\SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Room\SearchRooms.aspx.designer.cs">
-      <DependentUpon>SearchRooms.aspx</DependentUpon>
+    <Compile Include="Room\SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

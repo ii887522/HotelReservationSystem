@@ -13,34 +13,33 @@ namespace HotelReservationSystem.Room.Admin
     protected void Page_Load(object sender, EventArgs e)
     {
       string roomId = "";
-      string roomName = "";
-      string roomLocation = "";
-      string noRooms = "";
+      string roomType = "";
+      string roomDesc = "";
+      string availableQty = "";
+      string totalQty = "";
       string maxAdults = "";
       string maxChildren = "";
-      string priceAdult = "";
-      string priceChildren = "";
+      string price = "";
       string image = "";
 
       HttpCookie cookie = Request.Cookies["AddRoomData"];
       if (cookie != null)
       {
         roomId = cookie.Values["RoomID"];
-        roomName = cookie.Values["RoomName"];
-        roomLocation = cookie.Values["RoomLocation"];
-        noRooms = cookie.Values["NoRooms"];
+        roomType = cookie.Values["RoomType"];
+        roomDesc = cookie.Values["RoomDesc"];
+        availableQty = cookie.Values["AvailableQty"];
+        totalQty = cookie.Values["TotalQty"];
         maxAdults = cookie.Values["MaxAdults"];
         maxChildren = cookie.Values["MaxChildren"];
-        priceAdult = cookie.Values["PricePerAdult"];
-        priceChildren = cookie.Values["PricePerChildren"];
+        price = cookie.Values["Price"];
         image = cookie.Values["Image"];
       }
 
-      Content.Text = "Room ID: " + roomId + "<br/>Room Name: " + roomName + "<br/>Room Location: " +
-        roomLocation + "<br/>No. Rooms: " + noRooms + "<br/>Max. number of Adults: " +
-        maxAdults + "<br/>Max. number of Children" + maxChildren +
-        "<br/>Price per Adult: " + priceAdult + "<br/>Price per Children: " + priceChildren
-        + "<br/>Image:<br/>" + "<img src=../../images/" + image + " height=150 width=150 />";
+      Content.Text = "Room ID: " + roomId + "<br/>Room Type: " + roomType + "<br/>Room Description: " +
+        roomDesc + "<br/>Available Rooms: " + availableQty + "<br/>Total Rooms: " +
+        totalQty + "<br/>Max. number of Adults" + maxAdults + "<br/>Max. number of Children" + maxChildren +
+        "<br/>Room Price: " + price + "<br/>Image:<br/>" + "<img src=../../images/" + image + " height=150 width=150 />";
     }
   }
 }

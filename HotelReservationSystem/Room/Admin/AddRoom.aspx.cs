@@ -14,7 +14,7 @@ namespace HotelReservationSystem.Room.Admin
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+      
     }
 
     protected void BtnSubmit_Click(object sender, EventArgs e)
@@ -32,28 +32,30 @@ namespace HotelReservationSystem.Room.Admin
       }
       reader.Close();
 
-      int noRooms = Convert.ToInt32(Request.Form["NoRoomTxt"]);
-      int noAdults = Convert.ToInt32(Request.Form["NoAdultsTxt"]);
-      int noChildren = Convert.ToInt32(Request.Form["NoChildrenTxt"]);
+      string description = Request.Form["RoomDescTxt"];
+      int availableRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
+      int totalRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
+      int maxAdults = Convert.ToInt32(Request.Form["MaxAdultsTxt"]);
+      int maxChildren = Convert.ToInt32(Request.Form["MaxChildrenTxt"]);
 
       // insert record
-      SqlCommand cmd = new SqlCommand("INSERT INTO Room (RoomId, RoomName, RoomLocation, NoRooms, MaxAdults, MaxChildren, PricePerAdult, PricePerChildren, Image) " +
-        "VALUES (@RoomId, @RoomName, @RoomLocation, @NoRooms, @MaxAdults, @MaxChildren, @PricePerAdult, @PricePerChildren, @Image) ", con);
+      SqlCommand cmd = new SqlCommand("INSERT INTO Room (RoomId, RoomType, RoomDesc, AvailableQty, TotalQty, MaxAdults, MaxChildren, Price, Image) " +
+        "VALUES (@RoomId, @RoomType, @RoomDesc, @AvailableQty, @TotalQty, @MaxAdults, @MaxChildren, @Price, @Image) ", con);
       cmd.Parameters.AddWithValue("@RoomId", id);
-      cmd.Parameters.AddWithValue("@RoomName", RoomNameTxt.Text);
-      cmd.Parameters.AddWithValue("@RoomLocation", RoomLocationTxt.Text);
-      cmd.Parameters.AddWithValue("@NoRooms", noRooms);
-      cmd.Parameters.AddWithValue("@MaxAdults", noAdults);
-      cmd.Parameters.AddWithValue("@MaxChildren", noChildren);
-      cmd.Parameters.AddWithValue("@PricePerAdult", PriceAdult.Text);
-      cmd.Parameters.AddWithValue("@PricePerChildren", PriceChildren.Text);
-      cmd.Parameters.AddWithValue("@Image", "../images/" + Path.GetFileName(ImageFile.FileName));
+      cmd.Parameters.AddWithValue("@RoomType", RoomType.Text);
+      cmd.Parameters.AddWithValue("@RoomDesc", RoomDescTxt.Text);
+      cmd.Parameters.AddWithValue("@AvailableQty", availableRooms);
+      cmd.Parameters.AddWithValue("@TotalQty", totalRooms);
+      cmd.Parameters.AddWithValue("@MaxAdults", maxAdults);
+      cmd.Parameters.AddWithValue("@MaxChildren", maxChildren);
+      cmd.Parameters.AddWithValue("@Price", double.Parse(PriceTxt.Text));
+      cmd.Parameters.AddWithValue("@Image", Path.GetFileName(RoomImg.FileName));
 
-      if (ImageFile.HasFile)
+      if (RoomImg.HasFile)
       {
-        string fileName = Path.GetFileName(ImageFile.PostedFile.FileName);
+        string fileName = Path.GetFileName(RoomImg.PostedFile.FileName);
         string filePath = Server.MapPath("~/images/") + fileName;
-        ImageFile.SaveAs(filePath);
+        RoomImg.SaveAs(filePath);
       }
 
       cmd.ExecuteNonQuery();
@@ -62,17 +64,28 @@ namespace HotelReservationSystem.Room.Admin
       // add data to cookie
       HttpCookie cookie = new HttpCookie("AddRoomData");
       cookie.Values["RoomID"] = id.ToString();
-      cookie.Values["RoomName"] = RoomNameTxt.Text;
-      cookie.Values["RoomLocation"] = RoomLocationTxt.Text;
-      cookie.Values["NoRooms"] = noRooms.ToString();
-      cookie.Values["MaxAdults"] = noAdults.ToString();
-      cookie.Values["MaxChildren"] = noChildren.ToString();
-      cookie.Values["PricePerAdult"] = PriceAdult.Text;
-      cookie.Values["PricePerChildren"] = PriceChildren.Text;
-      cookie.Values["Image"] = Path.GetFileName(ImageFile.FileName);
+      cookie.Values["RoomType"] = RoomType.Text;
+      cookie.Values["RoomDesc"] = RoomDescTxt.Text;
+      cookie.Values["AvailableQty"] = availableRooms.ToString();
+      cookie.Values["TotalQty"] = availableRooms.ToString();
+      cookie.Values["MaxAdults"] = maxAdults.ToString();
+      cookie.Values["MaxChildren"] = maxChildren.ToString();
+      cookie.Values["Price"] = PriceTxt.Text;
+      cookie.Values["Image"] = Path.GetFileName(RoomImg.FileName);
       Response.Cookies.Add(cookie);
 
       Response.Redirect("RoomAddSuccess.aspx");
+    }
+
+    protected void BtnReset_Click(object sender, EventArgs e)
+    {
+      RoomType.Text = "&lt; Select &gt;";
+      RoomDescTxt.Text = "";
+      NoRoomsTxt.Text = "";
+      MaxAdultsTxt.Text = "";
+      MaxChildrenTxt.Text = "";
+      PriceTxt.Text = "";
+      RoomImg.Attributes.Clear();
     }
   }
 }
