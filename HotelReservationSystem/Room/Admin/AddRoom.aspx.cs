@@ -32,22 +32,16 @@ namespace HotelReservationSystem.Room.Admin
       }
       reader.Close();
 
-      string description = Request.Form["RoomDescTxt"];
-      int availableRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
-      int totalRooms = Convert.ToInt32(Request.Form["NoRoomsTxt"]);
-      int maxAdults = Convert.ToInt32(Request.Form["MaxAdultsTxt"]);
-      int maxChildren = Convert.ToInt32(Request.Form["MaxChildrenTxt"]);
-
       // insert record
       SqlCommand cmd = new SqlCommand("INSERT INTO Room (RoomId, RoomType, RoomDesc, AvailableQty, TotalQty, MaxAdults, MaxChildren, Price, Image) " +
         "VALUES (@RoomId, @RoomType, @RoomDesc, @AvailableQty, @TotalQty, @MaxAdults, @MaxChildren, @Price, @Image) ", con);
       cmd.Parameters.AddWithValue("@RoomId", id);
       cmd.Parameters.AddWithValue("@RoomType", RoomType.Text);
       cmd.Parameters.AddWithValue("@RoomDesc", RoomDescTxt.Text);
-      cmd.Parameters.AddWithValue("@AvailableQty", availableRooms);
-      cmd.Parameters.AddWithValue("@TotalQty", totalRooms);
-      cmd.Parameters.AddWithValue("@MaxAdults", maxAdults);
-      cmd.Parameters.AddWithValue("@MaxChildren", maxChildren);
+      cmd.Parameters.AddWithValue("@AvailableQty", int.Parse(NoRoomsTxt.Text));
+      cmd.Parameters.AddWithValue("@TotalQty", int.Parse(NoRoomsTxt.Text));
+      cmd.Parameters.AddWithValue("@MaxAdults", int.Parse(MaxAdultsTxt.Text));
+      cmd.Parameters.AddWithValue("@MaxChildren", int.Parse(MaxChildrenTxt.Text));
       cmd.Parameters.AddWithValue("@Price", double.Parse(PriceTxt.Text));
       cmd.Parameters.AddWithValue("@Image", Path.GetFileName(RoomImg.FileName));
 
@@ -66,10 +60,10 @@ namespace HotelReservationSystem.Room.Admin
       cookie.Values["RoomID"] = id.ToString();
       cookie.Values["RoomType"] = RoomType.Text;
       cookie.Values["RoomDesc"] = RoomDescTxt.Text;
-      cookie.Values["AvailableQty"] = availableRooms.ToString();
-      cookie.Values["TotalQty"] = availableRooms.ToString();
-      cookie.Values["MaxAdults"] = maxAdults.ToString();
-      cookie.Values["MaxChildren"] = maxChildren.ToString();
+      cookie.Values["AvailableQty"] = NoRoomsTxt.Text;
+      cookie.Values["TotalQty"] = NoRoomsTxt.Text;
+      cookie.Values["MaxAdults"] = MaxAdultsTxt.Text;
+      cookie.Values["MaxChildren"] = MaxChildrenTxt.Text;
       cookie.Values["Price"] = PriceTxt.Text;
       cookie.Values["Image"] = Path.GetFileName(RoomImg.FileName);
       Response.Cookies.Add(cookie);

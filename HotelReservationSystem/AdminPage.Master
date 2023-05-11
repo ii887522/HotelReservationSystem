@@ -119,16 +119,6 @@
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#speedometer2"/></svg>--%>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#grid"/></svg>--%>Sales
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>Staff
-                    </a>
-                </li>
-                <li class="nav-item">
                     <asp:Hyperlink
                       runat="server"
                       CssClass="nav-link"
@@ -146,16 +136,16 @@
                     />
                     <%--<svg class="bi me-1" width="16" height="16"><use xlink:href="#people-circle"/></svg>--%>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Reports 
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu" style="padding-left: 20px;">
-                        <li><a class="dropdown-item" href="#"> Customer Report </a></li>
-                        <li><a class="dropdown-item" href="#"> Sales Report </a></li>
-                    </ul>
-                </li>
             </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Reports 
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" style="padding-left: 20px;">
+                    <li><a class="dropdown-item" href="#"> Customer Report </a></li>
+                    <li><a class="dropdown-item" href="#"> Sales Report </a></li>
+                </ul>
+            </li>
         </div>
         <div>
             <nav class="TopNavigation" style="margin-left:200px">

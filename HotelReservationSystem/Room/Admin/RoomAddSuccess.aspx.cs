@@ -38,7 +38,7 @@ namespace HotelReservationSystem.Room.Admin
 
       Content.Text = "Room ID: " + roomId + "<br/>Room Type: " + roomType + "<br/>Room Description: " +
         roomDesc + "<br/>Available Rooms: " + availableQty + "<br/>Total Rooms: " +
-        totalQty + "<br/>Max. number of Adults" + maxAdults + "<br/>Max. number of Children" + maxChildren +
+        totalQty + "<br/>Max. number of Adults: " + maxAdults + "<br/>Max. number of Children: " + maxChildren +
         "<br/>Room Price: " + price + "<br/>Image:<br/>" + "<img src=../../images/" + image + " height=150 width=150 />";
     }
   }

@@ -93,7 +93,7 @@
     </div>
     </ItemTemplate>
     </asp:Repeater>
-    <asp:Label ID="NotFound" runat="server" CssClass="alert alert-danger"></asp:Label>
+    <asp:Label ID="NotFound" runat="server"></asp:Label>
 
     </div>
 </asp:Content>
