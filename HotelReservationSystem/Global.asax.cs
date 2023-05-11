@@ -36,7 +36,10 @@ namespace HotelReservationSystem
 
     protected void Application_Error(object sender, EventArgs e)
     {
-
+      // Code that runs when an unhandled error occurs
+      Application.Lock();
+      Application["ErrorMsg"] +=  Server.GetLastError().Message;
+      Application.UnLock();
     }
 
     protected void Session_End(object sender, EventArgs e)

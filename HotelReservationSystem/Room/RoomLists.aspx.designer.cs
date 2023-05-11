@@ -24,6 +24,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.TextBox NoRoomsText;
 
         /// <summary>
+        /// NoRoomRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoRoomRequiredValidator;
+
+        /// <summary>
         /// NoAdultsText control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.TextBox NoAdultsText;
 
         /// <summary>
+        /// NoAdultsRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoAdultsRequiredValidator;
+
+        /// <summary>
         /// NoChildrenText control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace HotelReservationSystem.Room_Detail
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NoChildrenText;
+
+        /// <summary>
+        /// NoChildrenRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoChildrenRequiredValidator;
 
         /// <summary>
         /// DropDownList1 control.
@@ -69,6 +96,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.Button Search;
 
         /// <summary>
+        /// SingleRmDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink SingleRmDetails;
+
+        /// <summary>
         /// bookNowSingleRm control.
         /// </summary>
         /// <remarks>
@@ -76,6 +112,15 @@ namespace HotelReservationSystem.Room_Detail
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink bookNowSingleRm;
+
+        /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 
         /// <summary>
         /// bookNowDoubleRm control.
@@ -87,6 +132,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.HyperLink bookNowDoubleRm;
 
         /// <summary>
+        /// HyperLink2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+
+        /// <summary>
         /// bookNowTripleRm control.
         /// </summary>
         /// <remarks>
@@ -94,6 +148,15 @@ namespace HotelReservationSystem.Room_Detail
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink bookNowTripleRm;
+
+        /// <summary>
+        /// HyperLink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
 
         /// <summary>
         /// bookNowDeluxeRm control.
@@ -105,6 +168,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.HyperLink bookNowDeluxeRm;
 
         /// <summary>
+        /// HyperLink4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+
+        /// <summary>
         /// bookNowDoubleDoubleRm control.
         /// </summary>
         /// <remarks>
@@ -114,6 +186,15 @@ namespace HotelReservationSystem.Room_Detail
         protected global::System.Web.UI.WebControls.HyperLink bookNowDoubleDoubleRm;
 
         /// <summary>
+        /// HyperLink5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+
+        /// <summary>
         /// bookNowTwinRm control.
         /// </summary>
         /// <remarks>
@@ -121,6 +202,15 @@ namespace HotelReservationSystem.Room_Detail
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink bookNowTwinRm;
+
+        /// <summary>
+        /// HyperLink6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink6;
 
         /// <summary>
         /// bookNowHollywoodTwinRm control.

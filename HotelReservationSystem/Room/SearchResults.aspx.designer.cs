@@ -24,6 +24,15 @@ namespace HotelReservationSystem.Room
         protected global::System.Web.UI.WebControls.TextBox NoRoomsText;
 
         /// <summary>
+        /// NoRoomRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoRoomRequiredValidator;
+
+        /// <summary>
         /// NoAdultsText control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace HotelReservationSystem.Room
         protected global::System.Web.UI.WebControls.TextBox NoAdultsText;
 
         /// <summary>
+        /// NoAdultsRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoAdultsRequiredValidator;
+
+        /// <summary>
         /// NoChildrenText control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace HotelReservationSystem.Room
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NoChildrenText;
+
+        /// <summary>
+        /// NoChildrenRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NoChildrenRequiredValidator;
 
         /// <summary>
         /// DropDownList1 control.

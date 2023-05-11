@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchResults.aspx.cs" Inherits="HotelReservationSystem.Room.SearchResults" %>
+<%@ Page Title="Search Results | RTC Hotel" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchResults.aspx.cs" Inherits="HotelReservationSystem.Room.SearchResults" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   <style>
     @media (min-width: 1230px) {
@@ -30,8 +30,32 @@
   <div class="text-center" style="background: linear-gradient(to bottom, #00ffff 0%, #99ccff 100%); padding-top:50px; padding-bottom:50px;">
     <p class="monofont fw-bold">Search Your Desired Room</p><br />
     <asp:TextBox ID="NoRoomsText" runat="server" placeholder="Number of rooms"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoRoomRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of rooms field is required"
+            ControlToValidate="NoRoomsText"
+            Display="Dynamic"
+    />
     <asp:TextBox ID="NoAdultsText" runat="server" placeholder="Number of adults"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoAdultsRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of adults field is required"
+            ControlToValidate="NoRoomsText"
+            Display="Dynamic"
+    />
     <asp:TextBox ID="NoChildrenText" runat="server" placeholder="Number of children"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoChildrenRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of children field is required"
+            ControlToValidate="NoChildrenText"
+            Display="Dynamic"
+    />
     <br />
     <br />
     <!-- Advanced search has a button to dropdown -->
@@ -74,7 +98,7 @@
   
   <!-- Rooms Header -->
   <div class="text-center" style="background-color:#ebf6f9;padding-top:15px; padding-bottom:15px;">
-    <h1>Rooms</h1>
+    <h1>Search Results</h1>
   </div>
   <!-- Search results -->
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mx-4">
@@ -91,7 +115,7 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM <%# Eval("Price") %></li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowLink" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl='<%# "~/Booking/Booking.aspx?id=" + Eval("RoomId") %>'>Book Now</asp:HyperLink>
+          <asp:HyperLink ID="bookNowLink" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl='<%# "~/Booking/Booking.aspx?id=" + Eval("RoomId") %>'>Book Now</asp:HyperLink>
         </div>
       </div>
     </div>

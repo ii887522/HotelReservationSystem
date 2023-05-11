@@ -36,8 +36,32 @@
   <div class="text-center" style="background: linear-gradient(to bottom, #00ffff 0%, #99ccff 100%); padding-top:50px; padding-bottom:50px;">
     <p class="monofont fw-bold">Search Your Desired Room</p><br />
     <asp:TextBox ID="NoRoomsText" runat="server" placeholder="Number of rooms"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoRoomRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of rooms field is required"
+            ControlToValidate="NoRoomsText"
+            Display="Dynamic"
+    />
     <asp:TextBox ID="NoAdultsText" runat="server" placeholder="Number of adults"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoAdultsRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of adults field is required"
+            ControlToValidate="NoRoomsText"
+            Display="Dynamic"
+    />
     <asp:TextBox ID="NoChildrenText" runat="server" placeholder="Number of children"></asp:TextBox>
+    <asp:RequiredFieldValidator
+            ID="NoChildrenRequiredValidator"
+            CssClass="text-danger"
+            runat="server"
+            ErrorMessage="Number of children field is required"
+            ControlToValidate="NoChildrenText"
+            Display="Dynamic"
+    />
     <br />
     <br />
     <!-- Advanced search has a button to dropdown -->
@@ -97,7 +121,8 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 199.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowSingleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="SingleRmDetails" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Room/RoomDetails/SingleRm.aspx">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowSingleRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -112,11 +137,11 @@
           <li class="list-group-item">Two double beds/A king size bed</li>
           <li class="list-group-item">Armoire</li>
           <li class="list-group-item">Large TV</li>
-<%--          <li class="list-group-item">Dresser</li>--%>
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 299.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="#">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowDoubleRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -134,7 +159,8 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 399.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowTripleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="#">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowTripleRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -152,7 +178,8 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 388.00</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowDeluxeRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink3" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Room/RoomDetails/DeluxeRoomDetails.aspx">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowDeluxeRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -167,11 +194,11 @@
           <li class="list-group-item">Two double beds</li>
           <li class="list-group-item">A cozy couch</li>
           <li class="list-group-item">Big closet</li>
-<%--          <li class="list-group-item">Safe</li>--%>
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 499.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowDoubleDoubleRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink4" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="#">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowDoubleDoubleRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -189,7 +216,8 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 259.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink5" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="#">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowTwinRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>
@@ -208,7 +236,8 @@
           <li class="list-group-item" style="font-weight:bold;color:red;">Only RM 329.99</li>
         </ul>
         <div class="card-body">
-          <asp:HyperLink ID="bookNowHollywoodTwinRm" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink6" runat="server" CssClass="btn btn-secondary shadow-sm" NavigateUrl="#">View Details</asp:HyperLink>
+          <asp:HyperLink ID="bookNowHollywoodTwinRm" runat="server" CssClass="btn btn-primary me-md-2" NavigateUrl="~/Booking/Booking.aspx">Book Now</asp:HyperLink>
         </div>
       </div>
     </div>

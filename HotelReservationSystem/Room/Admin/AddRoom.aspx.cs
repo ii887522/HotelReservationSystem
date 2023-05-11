@@ -79,7 +79,7 @@ namespace HotelReservationSystem.Room.Admin
 
     protected void BtnReset_Click(object sender, EventArgs e)
     {
-      RoomType.Text = "&lt; Select &gt;";
+      RoomType.Text = "";
       RoomDescTxt.Text = "";
       NoRoomsTxt.Text = "";
       MaxAdultsTxt.Text = "";
