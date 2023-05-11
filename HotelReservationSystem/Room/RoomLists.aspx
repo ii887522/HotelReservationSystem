@@ -42,7 +42,7 @@
             runat="server"
             ErrorMessage="Number of rooms field is required"
             ControlToValidate="NoRoomsText"
-            Display="Dynamic"
+            Display="Dynamic" ValidationGroup="ValidationSummary1"
     />
     <asp:TextBox ID="NoAdultsText" runat="server" placeholder="Number of adults"></asp:TextBox>
     <asp:RequiredFieldValidator
@@ -51,7 +51,7 @@
             runat="server"
             ErrorMessage="Number of adults field is required"
             ControlToValidate="NoRoomsText"
-            Display="Dynamic"
+            Display="Dynamic" ValidationGroup="ValidationSummary1"
     />
     <asp:TextBox ID="NoChildrenText" runat="server" placeholder="Number of children"></asp:TextBox>
     <asp:RequiredFieldValidator
@@ -60,7 +60,7 @@
             runat="server"
             ErrorMessage="Number of children field is required"
             ControlToValidate="NoChildrenText"
-            Display="Dynamic"
+            Display="Dynamic" ValidationGroup="ValidationSummary1"
     />
     <br />
     <br />
@@ -98,6 +98,10 @@
     <!-- End advanced search -->
     </div>
     <!--Search button-->
+      <br />
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server"
+        ForeColor="Red" HeaderText="The following problems have been encountered"
+        ShowMessageBox="True" />
     <br />
     <asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" />
   </div>
