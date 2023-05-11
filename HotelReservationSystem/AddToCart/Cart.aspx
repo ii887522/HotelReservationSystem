@@ -7,7 +7,7 @@
 
 <asp:Content ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <style type="text/css">
+    <style type="text/css">
     .gridHeaderRoom{
       background-color:#389271;
       color:white;
@@ -124,10 +124,10 @@
                             <asp:Label ID="lblRoomType" runat="server" Text='<%# Eval("RoomName") %>'></asp:Label><br />
                             <asp:Label ID="lblTitleQuantity" runat="server" Text="Quantity: "></asp:Label>
                             <asp:Label ID="lblQuantity" runat="server" Text='<%# Eval("RoomName") %>'></asp:Label><br />
-                            <asp:Label ID="lblAdultPrice" runat="server" Text="Adult/Night: RM"></asp:Label>
+                            <%--<asp:Label ID="lblAdultPrice" runat="server" Text="Adult/Night: RM"></asp:Label>
                             <asp:Label ID="lblUnitPriceAdult" runat="server" Text='<%# Eval("PricePerAdult") %>'></asp:Label>&nbsp
                             <asp:Label ID="lblChildPrice" runat="server" Text="Children/Night: RM"></asp:Label>
-                            <asp:Label ID="lblUnitPriceChild" runat="server" Text='<%# Eval("PricePerChildren") %>'></asp:Label><br />
+                            <asp:Label ID="lblUnitPriceChild" runat="server" Text='<%# Eval("PricePerChildren") %>'></asp:Label><br />--%>
                             <asp:Label ID="lblTitleTotalPrice" runat="server" Text="Total Price: RM"></asp:Label>
                             <asp:Label ID="lblTotalPrice" runat="server" Text='<%# Eval("PricePerChildren") %>'></asp:Label>
                           </ItemTemplate>
@@ -153,8 +153,8 @@
                   
                     <SelectedRowStyle BackColor="White" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RoomName], [PricePerAdult], [PricePerChildren] FROM [Room]"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Book]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Room]" ></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Book]"></asp:SqlDataSource>
             </td>
         </tr>
       <tr>

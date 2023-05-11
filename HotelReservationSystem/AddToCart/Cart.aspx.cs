@@ -16,5 +16,12 @@ namespace HotelReservationSystem.AddToCart
       
       //lblTotalPriceOfBooking.Text = total.ToString;
     }
+    void Page_Error()
+    {
+      Response.Write("<p><strong><h3><br/>Sorry. One error is encountered in this page: <br/><br/>");
+      Response.Write(Server.GetLastError().Message + "<h3/></strong></p>");
+      Server.ClearError();
+    }
   }
+  
 }
