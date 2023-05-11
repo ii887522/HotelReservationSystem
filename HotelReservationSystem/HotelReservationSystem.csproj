@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AddToCart\Cart.aspx" />
+    <Content Include="Admin\Home.aspx" />
     <Content Include="App_Data\HotelReservationSystem.mdf" />
     <Content Include="App_Data\HotelReservationSystem_log.ldf">
       <DependentUpon>HotelReservationSystem.mdf</DependentUpon>
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="AdminPage.Master.designer.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Booking\Admin\BookingReport.aspx.cs">
       <DependentUpon>BookingReport.aspx</DependentUpon>
@@ -451,6 +459,7 @@
     <Content Include="Booking\Web.config" />
     <Content Include="MakePayment\AdminPayment\Web.config" />
     <Content Include="MakePayment\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="upload\user\profile_pic\.gitkeep" />

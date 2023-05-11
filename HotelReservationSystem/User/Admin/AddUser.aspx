@@ -272,7 +272,7 @@
         ID="btnSubmit"
         runat="server"
         CssClass="btn btn-primary w-100 mt-3 shadow-sm"
-        Text="Sign Up"
+        Text="Add"
         OnClick="btnSubmit_Click"
       />
     </div>

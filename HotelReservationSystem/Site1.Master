@@ -72,6 +72,8 @@
                 <% } %>
                 <% else %>
                 <% { %>
+                     <asp:HyperLink runat="server" CssClass="me-3" Text="Go to admin portal" NavigateUrl="~/Admin/Home.aspx" />
+
                      <div class="dropdown">
                        <button
                          type="button"
