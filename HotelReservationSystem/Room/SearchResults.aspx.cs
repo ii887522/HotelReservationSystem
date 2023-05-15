@@ -117,7 +117,7 @@ namespace HotelReservationSystem.Room
         room.TotalQty = int.Parse(dr["TotalQty"].ToString());
         room.MaxAdults = int.Parse(dr["MaxAdults"].ToString());
         room.MaxChildren = int.Parse(dr["MaxChildren"].ToString());
-        room.Price = double.Parse(dr["MaxChildren"].ToString());
+        room.Price = double.Parse(dr["Price"].ToString());
         room.Image = "~/images/" + dr["Image"].ToString();
         rooms.Add(room);
       }
@@ -126,7 +126,7 @@ namespace HotelReservationSystem.Room
       if (rooms.Count == 0)
       {
         // if no result found
-        NotFound.Text = "<img src=\"https://cdn1.iconfinder.com/data/icons/error-warning-triangles/24/exclamation-triangle-512.png\" width=\"16\" height=\"16\" /> No results found on your search.";
+        NotFound.Text = "No results found on your search.";
       } else
       {
         rptSearchResults.DataSource = rooms;

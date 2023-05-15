@@ -9,6 +9,7 @@
         reader.onload = function (e) {
           imagePreview.src = e.target.result;
         };
+
         reader.readAsDataURL(fileUpload.files[0]);
       }
     }
@@ -40,7 +41,7 @@
             CssClass="text-danger"
             runat="server"
             ErrorMessage="Room type is required"
-            ControlToValidate="RoomDescTxt"
+            ControlToValidate="RoomType"
             Display="Dynamic"
           />
 
@@ -125,7 +126,7 @@
         </div>
 
         <div class="my-3">
-          <asp:Label CssClass="form-label" runat="server" Text="Max number of adults" />
+          <asp:Label CssClass="form-label" runat="server" Text="Max number of children" />
           <span class="text-bold text-danger">*</span>
           <asp:TextBox ID="MaxChildrenTxt" CssClass="form-control" runat="server" CausesValidation="true" />
           <asp:RequiredFieldValidator
@@ -192,15 +193,7 @@
             CssClass="form-control mt-2"
           />
 
-          <asp:Image
-            ID="RoomImgPreview"
-            runat="server"
-            CssClass="img-thumbnail d-block"
-            Width="300"
-            Height="300"
-            ImageUrl="#"
-            CssStyle="display:none;"
-          />
+          <img id="RoomImgPreview" src="#" alt="Preview" style="display:none;" width="300" height="300"/>
 
           <asp:RequiredFieldValidator
             ID="RoomImgValidator"

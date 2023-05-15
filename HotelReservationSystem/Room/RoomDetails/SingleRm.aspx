@@ -49,7 +49,7 @@
   </div>
 
   <div class="mt-4" style="text-align:center;font-family:'Brush Script MT'";>
-    <h1 >==Room Information==</h1>
+    <h1>==Room Information==</h1>
   </div>
   <div class="container mb-4 mx-auto">
    <div class="col-6 col-md-8 mx-auto">
